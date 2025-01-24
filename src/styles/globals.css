@@ -17,6 +17,18 @@
   font-weight: normal;
   font-style: italic;
 }
+@font-face {
+  font-family: 'Salina-Book';
+  src: url('/fonts/salina/Salina-Trial-Book-BF64b607e29dd58.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Salina-BookItalic';
+  src: url('/fonts/salina/Salina-Trial-BookItalic-BF64b607e2dc77d.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
 
 @tailwind base;
 @tailwind components;
@@ -27,3 +39,19 @@ body {
   font-family: 'Salina-Book', sans-serif;
   font-weight: 300;
 }
+
+#about-capability-cards-wrapper {
+  height: 600px; /* Alanın yüksekliği */
+  overflow: hidden; /* Taşan içerikleri gizler */
+  perspective: 1000px; /* 3D perspektifi sağlar */
+}
+
+.about-capability-card {
+  width: 200px;
+  height: 400px;
+  backface-visibility: hidden; /* Kartın arka yüzünü gizler */
+  position: absolute;
+  transition: transform 0.1s ease, opacity 0.8s ease; /* Animasyon geçişleri */
+  opacity: 0; /* Kartlar başlangıçta görünmez */
+}
+

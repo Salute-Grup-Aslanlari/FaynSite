@@ -9,7 +9,7 @@ const Whowearetwo = () => {
         alt="Who we are two"
         width={8600} 
         height={5000}
-        className="object-cover w-[70%] h-full transform scale-110 mb-[100%] pl-8"  // Görseli büyütme ve üst kısmı hizalama
+        className="object-cover w-[80%] h-full transform scale-70  mb-[120%] pl-14"
         objectFit="contain"
       />
     </div>

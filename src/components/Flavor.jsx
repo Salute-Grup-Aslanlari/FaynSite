@@ -1,77 +1,116 @@
-'use client';
-
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Image from 'next/image';
 
-const Flavor = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  const sections = [
-    { imageSrc: '/assets/flavor.jpg', text: 'FLAVOR' },
-    { imageSrc: '/assets/quality.webp', text: 'QUALITY' },
-    { imageSrc: '/assets/style.webp', text: 'STYLE' },
+const CapabilityCards = () => {
+  const cards = [
+    {
+      title: 'Strategy',
+      letter: 's',
+      list: [
+        'Experience Strategy',
+        'Technology Strategy',
+        'Creative Direction',
+        'Discovery',
+        'Research',
+      ],
+      imageSrc: '/assets/flavor.jpg',
+    },
+    {
+      title: 'Creative',
+      letter: 'c',
+      list: [
+        'Art Direction',
+        'UX/UI Design',
+        'Motion Design',
+        'Game Design',
+        'Illustration',
+      ],
+      imageSrc: '/assets/flavor.jpg',
+    },
+    {
+      title: 'Tech',
+      letter: 't',
+      list: [
+        'WebGL Development',
+        'Web Development',
+        'Unity/Unreal',
+        'Interactive Installations',
+        'VR/AR',
+      ],
+      imageSrc: '/assets/flavor.jpg',
+    },
+    {
+      title: 'Production',
+      letter: 'p',
+      list: [
+        'Procedural Modeling',
+        '3D Asset Creation',
+        '3D Asset Optimization',
+        'Animation',
+        '3D Pipeline',
+      ],
+      imageSrc: '/assets/flavor.jpg',
+    },
   ];
 
-  const handleScroll = (event) => {
-    event.preventDefault(); // Sayfanın kaymasını engeller
-    const direction = event.deltaY > 0 ? 1 : -1;
-    const nextIndex = (currentIndex + direction + sections.length) % sections.length;
-    setCurrentIndex(nextIndex);
+  const [scrollPosition, setScrollPosition] = useState(0);
+
+  const handleScroll = () => {
+    setScrollPosition(window.scrollY);
   };
 
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
-    <div
-      style={{
-        marginTop: '80px',
-        width: '100%',
-        height: '500px',
-        overflow: 'hidden',
-        position: 'relative',
-        textAlign: 'center',
-      }}
-      onWheel={handleScroll}
-    >
-      {sections.map((section, index) => (
-        <div
-          key={index}
-          style={{
-            position: 'absolute',
-            top: 0,
-            left: 0,
-            width: '100%',
-            height: '100%',
-            transition: 'opacity 0.5s ease',
-            opacity: currentIndex === index ? 1 : 0,
-            zIndex: currentIndex === index ? 1 : 0,
-          }}
-        >
-          <Image
-            src={section.imageSrc}
-            alt={`${section.text} Image`}
-            layout="fill"
-            objectFit="contain"
-          />
-          <div
-            style={{
-              position: 'absolute',
-              top: '80%',
-              left: '50%',
-              transform: 'translate(-50%, -50%)',
-              fontSize: '12rem',
-              color: 'white',
-            }}
-          >
-            <h6
-              className="text-16xl mb-2"
-              style={{ fontFamily: 'Salina-TrialLight, sans-serif' }}
+    <div id="about-capability-cards-wrapper" style={{ perspective: '1000px' }}>
+      <div id="about-capability-cards" style={{ position: 'relative', height: '500px' }}>
+        {cards.map((card, index) => {
+          const rotateValue = Math.min(1280, scrollPosition - index * 200); // Dönüş açısını hesapla
+          const opacity = scrollPosition > index * 200 ? 1 : 0; // Görünürlük ayarı
+
+          return (
+            <div
+              key={index}
+              className="about-capability-card"
+              style={{
+                transform: `rotateY(${rotateValue}deg) translateZ(${opacity ? '0' : '-200px'})`,
+                opacity: opacity,
+                transition: 'transform 0.8s ease, opacity 0.8s ease',
+                position: 'absolute',
+                top: 0,
+                left: `${index * 25}%`,
+              }}
             >
-              {section.text}
-            </h6>
-          </div>
-        </div>
-      ))}
+              <div className="about-capability-card-front">
+                <div className="about-capability-card-header">
+                  <p className="about-capability-card-header-text">{card.title}</p>
+                  <div className="about-capability-card-header-letter">{card.letter}</div>
+                </div>
+                <Image
+                  src={card.imageSrc}
+                  alt={card.title}
+                  width={600}
+                  height={400}
+                  style={{ borderRadius: '10px', marginBottom: '10px' }}
+                />
+                <ul className="about-capability-list">
+                  {card.list.map((item, idx) => (
+                    <li className="about-capability-list-item" key={idx}>
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div className="about-capability-card-back" />
+            </div>
+          );
+        })}
+      </div>
     </div>
   );
 };
 
-export default Flavor;
+export default CapabilityCards;
