@@ -95,36 +95,6 @@ const Newsletter = () => {
         </button>
       </div>
 
-      <div className="flex space-x-6 justify-start mt-20">
-        {newsData.slice(currentIndex, currentIndex + 3).map((news, index) => (
-          <a
-            href={`/news/${index + 1}`}
-            key={index}
-            className="flex-none w-96 bg-black rounded-lg shadow-lg overflow-hidden transform transition duration-300 hover:scale-105"
-          >
-            <div className="relative">
-              <img
-                src={news.image}
-                alt={news.title}
-                className="w-full h-96 object-cover rounded-lg"
-              />
-            </div>
-            <div className="p-4">
-              <p
-                className="text-xs text-gray-100"
-                style={{ fontFamily: 'Source Sans 3, sans-serif', fontWeight: 20 }}
-              >
-                {news.date}
-              </p>
-              <h3 className="text-lg font-semibold text-gray-100">{news.title}</h3>
-              <p 
-               className="text-sm text-white mt-2"
-               style={{ fontFamily: 'font-semibold, sans-serif', fontWeight: 50 }}
-               >{news.description}</p>
-            </div>
-          </a>
-        ))}
-      </div>
     </div>
   );
 };

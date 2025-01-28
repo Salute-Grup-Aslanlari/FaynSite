@@ -1,18 +1,69 @@
 'use client';
-
-import React from 'react';
-import Link from 'next/link';
+import styles from './page.module.scss';
+import { projects } from '../data';
+import { flavors } from '../data';
+import Card from '../components/Card';
+import { useScroll } from 'framer-motion';
+import { useEffect, useRef } from 'react';
+import Lenis from '@studio-freight/lenis';
 import Header from '../components/Header';
-import Flavor from '../components/Flavor';
 import Whoweare from '../components/Whoweare';
-import Branches from '../components/Branches';
 import Newsletter from '../components/Newsletter';
+import Link from 'next/link';
+import Flavor from '@/components/Flavor';
 
 export default function HomePage() {
+  const container = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: container,
+    offset: ['start start', 'end end'],
+  });
+
+  useEffect(() => {
+    const lenis = new Lenis();
+
+    function raf(time) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+
+    requestAnimationFrame(raf);
+  }, []);
+
   return (
-    <div className="App">
+    <div>
       <Header />
+      <main ref={container} className={styles.main}>
+        {flavors.map((flavor, i) => {
+          const targetScale = 1 - (flavors.length - i) * 0.08;
+          return (
+            <Flavor
+              key={`p_${i}`}
+              i={i}
+              {...flavor}
+              progress={scrollYProgress}
+              range={[i * 0.25, 1]}
+              targetScale={targetScale}
+            />
+          );
+        })}
+      </main>
       <Whoweare />
+      <main ref={container} className={styles.main}>
+        {projects.map((project, i) => {
+          const targetScale = 1 - (projects.length - i) * 0.05;
+          return (
+            <Card
+              key={`p_${i}`}
+              i={i}
+              {...project}
+              progress={scrollYProgress}
+              range={[i * 0.25, 1]}
+              targetScale={targetScale}
+            />
+          );
+        })}
+      </main>
       <Newsletter />
       <div className="navigation-links">
         <Link href="/about">About</Link>
