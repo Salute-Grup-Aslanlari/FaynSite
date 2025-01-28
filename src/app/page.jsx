@@ -8,7 +8,7 @@ import { useEffect, useRef } from 'react';
 import Lenis from '@studio-freight/lenis';
 import Header from '../components/Header';
 import Whoweare from '../components/Whoweare';
-import Newsletter from '../components/Newsletter';
+import CardWrapper from '../components/Card/CardWrapper/cardwrapper';
 import Link from 'next/link';
 import Flavor from '@/components/Flavor';
 
@@ -49,6 +49,7 @@ export default function HomePage() {
         })}
       </main>
       <Whoweare />
+      <CardWrapper />
       <main ref={container} className={styles.main}>
         {projects.map((project, i) => {
           const targetScale = 1 - (projects.length - i) * 0.05;
@@ -64,7 +65,6 @@ export default function HomePage() {
           );
         })}
       </main>
-      <Newsletter />
       <div className="navigation-links">
         <Link href="/about">About</Link>
         <Link href="/locations">Locations</Link>

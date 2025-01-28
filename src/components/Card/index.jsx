@@ -1,10 +1,10 @@
-'use client';
 import Image from 'next/image';
 import styles from './style.module.scss';
 import { useTransform, motion, useScroll } from 'framer-motion';
 import { useRef } from 'react';
+import Link from 'next/link';
 
-const Card = ({ i, title, description, src, url, color, progress, range, targetScale }) => {
+const Card = ({ i, title, description, src, link, color, progress, range, targetScale }) => {
   const container = useRef(null);
 
   const { scrollYProgress } = useScroll({
@@ -21,15 +21,15 @@ const Card = ({ i, title, description, src, url, color, progress, range, targetS
         style={{ backgroundColor: color, scale, top: `calc(-5vh + ${i * 25}px)` }}
         className={styles.card}
       >
-        <h2>{title}</h2>
-        <div className={styles.body} style={{ fontFamily: 'Salina-BookItalic, sans-serif', fontStyle: 'italic', lineHeight: '1.5' }}>
-          <div className={styles.description} style={{ fontFamily: 'Salina-BookItalic, sans-serif', fontStyle: 'italic', lineHeight: '1.5' }}>
+        <h2 style={{ fontFamily: 'Salina-BookItalic, sans-serif', fontStyle: 'italic', lineHeight: '1.5' }}>{title}</h2>
+        <div className={styles.body}>
+          <div className={styles.description}>
             <p>{description}</p>
-            
-            <span>
-              <a href={url} target="_blank" rel="noopener noreferrer">
+
+            <span className="mt-5">
+              <Link href={link}>
                 See more
-              </a>
+              </Link>
               <svg
                 width="22"
                 height="12"
@@ -47,11 +47,11 @@ const Card = ({ i, title, description, src, url, color, progress, range, targetS
 
           <div className={styles.imageContainer}>
             <motion.div className={styles.inner} style={{ scale: imageScale }}>
-            <Image
+              <Image
                 fill
                 src={src ? src : '/assets/flavor.jpg'}
                 alt="image"
-                />
+              />
             </motion.div>
           </div>
         </div>

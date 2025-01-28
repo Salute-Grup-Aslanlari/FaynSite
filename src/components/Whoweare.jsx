@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 const Whoweare = () => {
   return (
-    <div className="relative mb-40 top-[-60px] flex flex-col items-center overflow-hidden">
+    <div className="relative mb-40 top-[-250px] flex flex-col items-center overflow-hidden">
       <Image 
         src="/assets/whowearee.webp" 
         alt="Who we are"
@@ -16,10 +16,8 @@ const Whoweare = () => {
         WHO ARE WE
       </div>
 
-      {/* Çizgi */}
       <div className="absolute top-[10px] sm:top-[10px] md:top-[2px] lg:top-[450px] left-1/2 transform -translate-x-1/2 w-[1px] h-20 sm:h-16 md:h-20 bg-white"></div>
 
-      {/* Metin bloğu */}
       <div className="absolute top-[80px] sm:top-[30px] md:top-[200px] lg:top-[500px] left-1/2 transform -translate-x-1/2 text-white text-center px-16 sm:px-4 lg:px-8 py-28 rounded-md"
         style={{
             fontFamily: 'Salina-Book, sans-serif',
