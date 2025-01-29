@@ -68,6 +68,7 @@ export default function HomePage() {
       <div className="navigation-links">
         <Link href="/about">About</Link>
         <Link href="/locations">Locations</Link>
+        <Link href="/Products">Products</Link>
         <Link href="/Menu">Menu</Link>
       </div>
     </div>
