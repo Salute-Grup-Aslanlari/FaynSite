@@ -175,8 +175,8 @@ const Portfolio = () => {
             />
             <PortfolioCard
               ImageHref="/assets/foods/ARTICHOKESEABASS.webp"
-              category="Cocktails"
-              title="Whisperring Cherry"
+              category="foods"
+              title="ARTICHOKESEABASS"
               description="SIGNATURE DISHES"
               button="View Details"
               buttonHref="#"
@@ -185,7 +185,7 @@ const Portfolio = () => {
             <PortfolioCard
               ImageHref="/assets/foods/BEEFKATSUVEGGIERICE.webp"
               category="foods"
-              title="Whisperring Cherry"
+              title="BEEFKATSUVEGGIERICE"
               description="SIGNATURE DISHES"
               button="View Details"
               buttonHref="#"
@@ -194,7 +194,7 @@ const Portfolio = () => {
             <PortfolioCard
               ImageHref="/assets/foods/CALIFORNIAROLL.webp"
               category="foods"
-              title="Whisperring Cherry"
+              title="CALIFORNIA ROLL"
               description="SIGNATURE DISHES"
               button="View Details"
               buttonHref="#"
@@ -203,7 +203,7 @@ const Portfolio = () => {
             <PortfolioCard
               ImageHref="/assets/foods/FARFROMHOME.webp"
               category="foods"
-              title="Whisperring Cherry"
+              title="FAR FROM HOME"
               description="SIGNATURE DISHES"
               button="View Details"
               buttonHref="#"
@@ -212,16 +212,16 @@ const Portfolio = () => {
             <PortfolioCard
               ImageHref="/assets/foods/OCTOPUSCORN.webp"
               category="foods"
-              title="Whisperring Cherry"
+              title="OCTOPUS CORN"
               description="SIGNATURE DISHES"
               button="View Details"
               buttonHref="#"
               showCard={showCard}
             />
              <PortfolioCard
-              ImageHref="/assets/foods/PUMPKINRAVIOLI.webp"
+              ImageHref="/assets/foods/CALIFORNIAROLL.webp"
               category="foods"
-              title="Whisperring Cherry"
+              title="CALIFORNIA ROLL"
               description="SIGNATURE DISHES"
               button="View Details"
               buttonHref="#"
@@ -230,7 +230,7 @@ const Portfolio = () => {
             <PortfolioCard
               ImageHref="/assets/foods/FARFROMHOME.webp"
               category="foods"
-              title="Whisperring Cherry"
+              title="FAR FROM HOME"
               description="SIGNATURE DISHES"
               button="View Details"
               buttonHref="#"
@@ -239,7 +239,7 @@ const Portfolio = () => {
             <PortfolioCard
               ImageHref="/assets/foods/OCTOPUSCORN.webp"
               category="foods"
-              title="Whisperring Cherry"
+              title="OCTOPUS CORN"
               description="SIGNATURE DISHES"
               button="View Details"
               buttonHref="#"
@@ -248,12 +248,31 @@ const Portfolio = () => {
              <PortfolioCard
               ImageHref="/assets/foods/PUMPKINRAVIOLI.webp"
               category="foods"
-              title="Whisperring Cherry"
+              title="PUMPKIN RAVIOLI"
               description="SIGNATURE DISHES"
               button="View Details"
               buttonHref="#"
               showCard={showCard}
             />
+            <PortfolioCard
+              ImageHref="/assets/foods/OCTOPUSCORN.webp"
+              category="foods"
+              title="OCTOPUS CORN"
+              description="SIGNATURE DISHES"
+              button="View Details"
+              buttonHref="#"
+              showCard={showCard}
+            />
+             <PortfolioCard
+              ImageHref="/assets/foods/PUMPKINRAVIOLI.webp"
+              category="foods"
+              title="PUMPKIN RAVIOLI"
+              description="SIGNATURE DISHES"
+              button="View Details"
+              buttonHref="#"
+              showCard={showCard}
+            />
+            
           </div>
         </div>
       </section>

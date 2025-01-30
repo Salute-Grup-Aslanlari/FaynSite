@@ -7,6 +7,9 @@ export default {
   ],
   theme: {
     extend: {
+      animation: {
+        'spin-slow': 'spin 2s linear infinite', // 10 saniyede tam tur
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
