@@ -19,7 +19,6 @@ const Navbar = () => {
 
         <ul className="hidden lg:flex space-x-8 mx-auto mr-20">
           <li><a href="/" className="hover:text-gray-300 text-sm mr-10">HOME</a></li>
-          {/* <li><a href="/Menu" className="hover:text-gray-300 text-sm mr-10">MENU</a></li> */}
           <li><a href="/About" className="hover:text-gray-300 text-sm mr-10">ABOUT US</a></li>
           <li><a href="/Locations" className="hover:text-gray-300 text-sm mr-10">LOCATIONS</a></li>
           <li><a href="/Products" className="hover:text-gray-300 text-sm mr-10">PRODUCTS</a></li>
