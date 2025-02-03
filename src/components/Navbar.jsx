@@ -22,7 +22,6 @@ const Navbar = () => {
           <li><a href="/About" className="hover:text-gray-300 text-sm mr-10">ABOUT US</a></li>
           <li><a href="/Locations" className="hover:text-gray-300 text-sm mr-10">LOCATIONS</a></li>
           <li><a href="/Products" className="hover:text-gray-300 text-sm mr-10">PRODUCTS</a></li>
-          <li><a href="/Contact" className="hover:text-gray-300 text-sm">CONTACT</a></li>
         </ul>
 
         <div className="hidden lg:flex space-x-4 ml-auto">
@@ -45,7 +44,6 @@ const Navbar = () => {
             {/* <li className="py-2"><a href="/Menu" className="hover:text-gray-300">MENU</a></li> */}
             <li className="py-2"><a href="/About" className="hover:text-gray-300">ABOUT</a></li>
             <li className="py-2"><a href="/Locations" className="hover:text-gray-300">LOCATIONS</a></li>
-            <li className="py-2"><a href="/Contact" className="hover:text-gray-300">CONTACT</a></li>
           </ul>
 
           <div className="mt-4 space-x-4 flex justify-center pr-4">

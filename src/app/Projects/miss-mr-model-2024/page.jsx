@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 const MissMrmodel = () => {
  return (
-    <div className="mb-48">
+    <div className="mb-36">
       <p className="text-white text-center mb-12 mt-10 text-sm">
         002
       </p>

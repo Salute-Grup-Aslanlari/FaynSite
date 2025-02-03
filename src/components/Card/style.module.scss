@@ -1,78 +1,119 @@
-.cardContainer{
-    height: 120vh;
+.cardContainer {
+  height: 120vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: sticky;
+  top: 0px;
+
+  .card {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    position: sticky;
-    top: 0px;
-    .card{
+    flex-direction: column;
+    position: relative;
+    height: 700px;
+    width: 1000px;
+    border-radius: 25px;
+    padding: 50px;
+    transform-origin: top;
+
+    h2 {
+      text-align: center;
+      margin: 0px;
+      font-size: 48px;
+    }
+
+    .body {
       display: flex;
-      flex-direction: column;
-      position: relative;
-      height: 700px;
-      width: 1000px;
-      border-radius: 25px;
-      padding:50px;
-      transform-origin: top;
-      h2{
-        text-align: center;
-        margin: 0px;
-        font-size: 48px;
-      }
-      .newsletterTitle {
-        position: absolute;
-        top: -20%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        font-size: 3rem;
-        font-weight: bold;
-        color: white;
-        text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
-        z-index: 10;
-      }
-      .body{
-        display: flex;
-        height: 100%;
-        margin-top: 50px;
-        gap: 50px;
-  
-        .description{
-          width: 40%;
-          position: relative;
-          top: 10%;
-          p{
-            font-size: 24px;
-            &::first-letter{
-              font-size: 32px;
-              font-family: 'Title';
-            }
-          }
-          span{
-            display: flex;
-            align-items: center;
-            gap: 5px;
-            a{
-              font-size: 12px;
-              text-decoration: underline;
-              cursor: pointer;
-            }
+      height: 100%;
+      margin-top: 50px;
+      gap: 50px;
+
+      .description {
+        width: 40%;
+        position: relative;
+        top: 10%;
+
+        p {
+          font-size: 24px;
+
+          &::first-letter {
+            font-size: 32px;
+            font-family: 'Title';
           }
         }
-  
-        .imageContainer{
+
+        span {
+          display: flex;
+          align-items: center;
+          gap: 5px;
+
+          a {
+            font-size: 12px;
+            text-decoration: underline;
+            cursor: pointer;
+          }
+        }
+      }
+
+      .imageContainer {
+        position: relative;
+        width: 60%;
+        height: 60%;
+        border-radius: 25px;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .inner {
+          width: 100%;
+          height: 100%;
           position: relative;
-          width: 60%;
-          height: 90%;
-          border-radius: 25px;
-          overflow: hidden;
-          .inner{
+        }
+
+        img {
+          object-fit: cover;
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+
+    // Küçük ekranlar için düzenleme
+    @media (max-width: 768px) {
+      width: 90%;
+      height: auto;
+      padding: 30px;
+
+      .body {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+
+        .description {
+          width: 100%;
+          top: 0;
+          text-align: center;
+        }
+
+        .imageContainer {
+          width: 100%;
+          height: 300px;  // Küçük ekranlarda yükseklik belirli hale getirildi
+          border-radius: 15px;
+
+          .inner {
             width: 100%;
             height: 100%;
           }
-          img{
+
+          img {
+            width: 100%;
+            height: 100%;
             object-fit: cover;
+            position: absolute;
           }
         }
       }
     }
   }
+}

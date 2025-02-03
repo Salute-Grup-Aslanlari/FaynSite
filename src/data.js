@@ -24,6 +24,25 @@ export const projects = [
       color: "#CA1B00"
     },
   ];
+  export const LINKS = [
+    {
+      title: "MENU",
+      items: [
+        { name: "HOME", url: "/" },
+        { name: "About Us", url: "/About" },
+        { name: "Locations", url: "/Locations" },
+        { name: "Products", url: "/Products" },
+        
+      ],
+    },
+    {
+      title: "LINKS",
+      items: [
+        { name: "Privacy Policy", url: "/privacy-policy" },
+        { name: "Terms & Condition", url: "/terms-and-conditions" },
+      ],
+    },
+  ];
   
 
 export const flavors = [
