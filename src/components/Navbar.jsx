@@ -41,9 +41,9 @@ const Navbar = () => {
         <div className="lg:hidden bg-black text-white py-4 px-6">
           <ul>
             <li className="py-2"><a href="/" className="hover:text-gray-300">HOME</a></li>
-            {/* <li className="py-2"><a href="/Menu" className="hover:text-gray-300">MENU</a></li> */}
             <li className="py-2"><a href="/About" className="hover:text-gray-300">ABOUT</a></li>
             <li className="py-2"><a href="/Locations" className="hover:text-gray-300">LOCATIONS</a></li>
+            <li className="py-2"><a href="/Products" className="hover:text-gray-300">PRODUCTS</a></li>
           </ul>
 
           <div className="mt-4 space-x-4 flex justify-center pr-4">

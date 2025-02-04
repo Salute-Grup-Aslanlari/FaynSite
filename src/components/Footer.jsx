@@ -8,9 +8,9 @@ const currentYear = new Date().getFullYear();
 export default function Footer() {
   return (
     <footer className="w-full bg-black text-white py-10">
-      <div className="container mx-auto px-6 lg:px-20">
+      <div className="container mx-10">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div className="flex justify-start items-start">
+          <div className="flex justify-start items-start pr-64">
             <img src="/assets/FAYNLOGOBEYAZ.png" alt="Şirket Logosu" className="w-40 h-auto" />
           </div>
 
@@ -31,6 +31,7 @@ export default function Footer() {
             ))}
           </div>
         </div>
+        
         <div className="mt-8 pt-6 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-400 text-sm">&copy; {currentYear} Fayn. Tüm Hakları Saklıdır.</p>
           <div className="flex space-x-4 mt-4 md:mt-0">

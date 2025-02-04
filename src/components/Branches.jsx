@@ -7,10 +7,10 @@ const Branches = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const images = [
     '/assets/location2.jpg',
-    '/assets/HOMEPAGE.webp',
-    '/assets/faynalsancak1.webp',
-    '/assets/faynalsancak2.webp',
-    '/assets/faynalsancak1.webp',
+    '/assets/location2.jpg',
+    '/assets/location2.jpg',
+    '/assets/location2.jpg',
+    '/assets/location2.jpg',
   ];
 
   const handleDrag = (direction) => {
@@ -21,54 +21,42 @@ const Branches = () => {
     }
   };
 
-  const handleTouchStart = (e) => {
-    e.target.dataset.startX = e.touches[0].clientX;
-  };
-
-  const handleTouchEnd = (e) => {
-    const startX = parseFloat(e.target.dataset.startX);
-    const endX = e.changedTouches[0].clientX;
-    if (startX - endX > 50) {
-      handleDrag('right');
-    } else if (endX - startX > 50) {
-      handleDrag('left');
-    }
-  };
-
   return (
-    <div
-      className="relative flex justify-center items-center h-[800px] overflow-hidden"
-      onTouchStart={handleTouchStart}
-      onTouchEnd={handleTouchEnd}
-    >
-      <div className="flex items-center justify-center gap-16">
+    <div className="relative flex justify-center items-center h-[300px] overflow-hidden">
+      <div
+        className="flex items-center justify-center gap-4 transition-all duration-500"
+        onTouchStart={(e) => (e.clientX = e.touches[0].clientX)}
+        onTouchEnd={(e) => {
+          const endX = e.changedTouches[0].clientX;
+          if (e.clientX - endX > 50) handleDrag('right');
+          if (e.clientX - endX < -50) handleDrag('left');
+        }}
+      >
         {images.map((src, index) => {
           const position = (index - currentIndex + images.length) % images.length;
 
           const isCenter = position === 0;
-          const isLeft = position === images.length - 1;
-          const isRight = position === 1;
+          const isSide = position === 1 || position === images.length - 1;
 
-          const transformClasses = isCenter
-            ? 'scale-110 rotate-0 z-10'
-            : isLeft
-            ? '-rotate-15 translate-x-[-50%] opacity-75 z-5'
-            : isRight
-            ? 'rotate-15 translate-x-[50%] opacity-75 z-5'
-            : 'opacity-0 scale-75';
+          const scale = isCenter ? 'scale-110' : isSide ? 'scale-90' : 'scale-75';
+          const opacity = isCenter ? 'opacity-100' : isSide ? 'opacity-75' : 'opacity-0';
+          const rotation = isSide ? 'rotate-6' : 'rotate-0';
 
           return (
             <div
               key={index}
-              className={`relative transition-all duration-500 ease-in-out ${transformClasses}`}
-              style={{ display: isCenter || isLeft || isRight ? 'block' : 'none' }}
+              className={`relative transform ${scale} ${opacity} ${rotation} transition-all duration-500`}
+              style={{
+                zIndex: isCenter ? 10 : 5,
+                display: isCenter || isSide ? 'block' : 'none',
+              }}
             >
               <Image
                 src={src}
                 alt={`Branch ${index + 1}`}
-                width={600}
-                height={600}
-                className="rounded-lg shadow-lg cursor-pointer"
+                width={200}
+                height={200}
+                className="rounded-lg cursor-pointer"
               />
             </div>
           );
@@ -76,7 +64,7 @@ const Branches = () => {
       </div>
 
       <div
-        className="absolute left-0 h-full w-[120px] cursor-pointer z-10 flex items-center justify-center bg-black/50"
+        className="absolute left-0 h-full w-[50px] cursor-pointer z-10 flex items-center justify-center bg-black/50"
         onClick={() => handleDrag('left')}
       >
         <span className="text-white text-lg">{'<'}</span>
