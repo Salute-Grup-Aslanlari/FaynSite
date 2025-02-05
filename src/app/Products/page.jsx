@@ -28,56 +28,44 @@ const Portfolio = () => {
           </div>
 
           <div className="w-full flex flex-wrap justify-center -mx-4">
-        <div className="w-full px-4">
-          <ul className="flex flex-wrap justify-center mb-16 mt-10 space-x-1">
-            <li className="mb-1">
-              <button
-                onClick={() => handleProject("all")}
-                className={`inline-block bg-black text-white py-2 px-5 text-center transition-transform duration-300 ease-in-out hover:scale-105 md:py-3 lg:px-8 ${
-                  showCard === "all"
-                    ? "activeClasses bg-primary text-white"
-                    : "inactiveClasses text-body-color dark:text-dark-6 hover:bg-primary hover:text-white"
-                }`}
-              >
-                <p style={{ fontSize: "14px", fontFamily: "Source Sans 3, sans-serif", fontWeight: 100 }}>
-                  ALL
-                </p>
-              </button>
-            </li>
-            <li className="mb-1">
-              <button
-                onClick={() => handleProject("foods")}
-                className={`inline-block bg-black py-2 text-white px-5 text-center transition-transform duration-300 ease-in-out hover:scale-105 md:py-3 lg:px-8 ${
-                  showCard === "foods"
-                    ? "activeClasses bg-primary text-white"
-                    : "inactiveClasses text-body-color dark:text-dark-6 hover:bg-primary hover:text-white"
-                }`}
-              >
-                <p style={{ fontSize: "14px", fontFamily: "Source Sans 3, sans-serif", fontWeight: 100 }}>
-                  DISHES
-                </p>
-              </button>
-            </li>
-            <li className="mb-1">
-              <button
-                onClick={() => handleProject("cocktails")}
-                className={`bg-black inline-block py-2 px-5 text-center transition-transform duration-300 ease-in-out hover:scale-105 md:py-3 lg:px-8 ${
-                  showCard === "cocktails"
-                    ? "activeClasses bg-primary text-white"
-                    : "inactiveClasses text-body-color dark:text-dark-6 hover:bg-primary text-white hover:text-white"
-                }`}
-              >
-                <p style={{ fontSize: "14px", fontFamily: "Source Sans 3, sans-serif", fontWeight: 100 }}>
-                  COCKTAILS
-                </p>
-              </button>
-            </li>
-          </ul>
-        </div>
-        </div>
+            <div className="w-full px-4">
+              <ul className="flex flex-wrap justify-center mb-16 mt-10 space-x-1">
+                <li className="mb-1">
+                  <button
+                    onClick={() => handleProject("all")}
+                    className={`inline-block bg-black text-white py-2 px-5 text-center transition-transform duration-300 ease-in-out hover:scale-105 md:py-3 lg:px-8 ${
+                      showCard === "all" ? "activeClasses bg-primary text-white" : "inactiveClasses text-body-color dark:text-dark-6 hover:bg-primary hover:text-white"
+                    }`}
+                  >
+                    <p style={{ fontSize: "14px", fontFamily: "Source Sans 3, sans-serif", fontWeight: 100 }}>ALL</p>
+                  </button>
+                </li>
+                <li className="mb-1">
+                  <button
+                    onClick={() => handleProject("foods")}
+                    className={`inline-block bg-black py-2 text-white px-5 text-center transition-transform duration-300 ease-in-out hover:scale-105 md:py-3 lg:px-8 ${
+                      showCard === "foods" ? "activeClasses bg-primary text-white" : "inactiveClasses text-body-color dark:text-dark-6 hover:bg-primary hover:text-white"
+                    }`}
+                  >
+                    <p style={{ fontSize: "14px", fontFamily: "Source Sans 3, sans-serif", fontWeight: 100 }}>DISHES</p>
+                  </button>
+                </li>
+                <li className="mb-1">
+                  <button
+                    onClick={() => handleProject("cocktails")}
+                    className={`bg-black inline-block py-2 px-5 text-center transition-transform duration-300 ease-in-out hover:scale-105 md:py-3 lg:px-8 ${
+                      showCard === "cocktails" ? "activeClasses bg-primary text-white" : "inactiveClasses text-body-color dark:text-dark-6 hover:bg-primary text-white hover:text-white"
+                    }`}
+                  >
+                    <p style={{ fontSize: "14px", fontFamily: "Source Sans 3, sans-serif", fontWeight: 100 }}>COCKTAILS</p>
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </div>
 
           <div className="flex flex-wrap gap-0">
-          <PortfolioCard
+            <PortfolioCard
               ImageHref="/assets/cocktails/BERGAMOTFIZZ.webp"
               category="cocktails"
               title="Bergamot Fizz"
@@ -248,39 +236,105 @@ const Portfolio = () => {
 
 export default Portfolio;
 
-const PortfolioCard = ({
-  showCard,
-  category,
-  ImageHref,
-  title,
-  description,
-  button,
-  buttonHref,
-}) => {
+
+const PortfolioCard = ({ ImageHref, category, title, description, button, showCard }) => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const handleOpenPopup = () => setIsOpen(true);
+  const handleClosePopup = () => setIsOpen(false);
+
   return (
     <>
       <div
         className={`w-full md:w-1/2 xl:w-1/4 px-0 mx-0 ${showCard === "all" || showCard === category.toLowerCase() ? "block" : "hidden"}`}
       >
-        <div className="relative">
-          <div className="overflow-hidden group">
-            <img
-              src={ImageHref}
-              alt="portfolio"
-              className="w-full h-full object-cover transform group-hover:scale-110 transition-all duration-300"
-            />
-            <div className="absolute top-0 left-0 w-full h-full bg-black bg-opacity-30"></div>
-            <div className="absolute top-0 left-0 p-4 text-white">
-              <p className="text-opacity-10" style={{ fontSize: "8px", fontFamily: 'Source Sans 3, sans-serif', fontWeight: 100 }}>
-                {description}
-              </p>
-              <h3 className="text-md font-light" style={{ fontSize: "18px", fontFamily: 'Salina-TrialLight, sans-serif', weight: 400 }}>
-                {title}
-              </h3>
-            </div>
+        <div className="card" onClick={handleOpenPopup}>
+          <img src={ImageHref} alt={title} className="w-full h-full object-cover portfolio" />
+          <div className="absolute top-0 left-0 p-4 text-white">
+            <p className="text-opacity-10" style={{ fontSize: "8px", fontFamily: 'Source Sans 3, sans-serif', fontWeight: 100 }}>
+              {description}
+            </p>
+            <h3 className="text-md font-light" style={{ fontSize: "18px", fontFamily: 'Salina-TrialLight, sans-serif', weight: 400 }}>
+              {title}
+            </h3>
           </div>
         </div>
+
+        {isOpen && (
+          <div className="popup-overlay" onClick={handleClosePopup}>
+            <div className="popup-content">
+              <img src="/assets/tarif1.webp" className="popup-image left" />
+              <img src="/assets/tarif2.webp" className="popup-image right" />
+            </div>
+          </div>
+        )}
       </div>
+   
+
+      <style jsx>{`
+        .cards-container {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+        }
+
+        .card {
+          width: full;
+          height: full;
+          padding: 30px;
+          cursor: pointer;
+          text-align: center;
+          padding: 0px;
+          border-radius: 20px;
+          transition: 0.6s;
+        }
+        .card:hover {
+          transform: scale(1.05);
+        }
+
+        .popup-overlay {
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: rgba(0, 0, 0, 0.7);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+        .popup-content {
+          top: 20px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          position: relative;
+          width: 1500px;
+          height: 400px;
+        }
+        .popup-image {
+          
+          transition: all 0.5s ease-in-out;
+        }
+        .left {
+        width: 75%;
+          transform: translateX(-5%);
+        }
+        .right {
+        width: 35%;
+          transform: translateX(10%);
+        }
+        .popup-overlay:hover .left {
+          transform: translateX(25%);
+        }
+        .popup-overlay:hover .right {
+          transform: translateX(0);
+        }
+      `}</style>
     </>
   );
 };
+
+
+
+

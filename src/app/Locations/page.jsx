@@ -67,7 +67,7 @@ export default function LocationsPage() {
           {branches.map((branch) => (
             <li
               key={branch.id}
-              className={`cursor-pointer p-4 text-xl md:text-3xl ${
+              className={`cursor-pointer p-4 text-xl md:text-3xl  transition-transform duration-300 ease-in-out hover:scale-105 ${
                 selectedBranch.id === branch.id ? 'border-b border-white' : ''
               }`}
               onClick={() => setSelectedBranch(branch)}
