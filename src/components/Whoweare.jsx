@@ -7,7 +7,7 @@ const Whoweare = () => {
       <Image 
         src="/assets/whowearee.webp" 
         alt="Who we are"
-        width={6000} 
+        width={5000} 
         height={4000}
         className="object-cover mb-16 w-[80%] sm:w-[60%] md:w-[40%] lg:w-[33%] h-auto transform scale-110 mt-[50%]"
       />
@@ -24,7 +24,7 @@ const Whoweare = () => {
             fontSize: '0.1rem',
             whiteSpace: 'normal',
             overflow: 'visible',
-            width: '50%',
+            width: '40%',
             letterSpacing: '0.1em',
         }}
       >

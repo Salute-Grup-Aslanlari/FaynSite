@@ -1,5 +1,6 @@
 'use client';
 import { useState } from 'react';
+import Zoom from '../../components/Zoom';
 
 const branches = [
   {
@@ -28,7 +29,7 @@ const branches = [
     location: 'ALAÇATI',
     reservation: '0 501 152 60 14',
     web: 'iamfayn.com/alsancak',
-    image: '/assets/locations/faynals.webp',
+    image: '/assets/images/alacati.jpg',
     description: 'Experience the vibrant atmosphere of our Alaçatı branch.',
     mapUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3112.133564289737!2d26.3720333!3d38.2821877!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14bb79c3a9f8f27f%3A0x387d559611810001!2sFayn%20Ala%C3%A7at%C4%B1!5e0!3m2!1str!2str!4v1706790456789!5m2!1str!2str',
   },  
@@ -38,7 +39,7 @@ const branches = [
     location: 'MARINA',
     reservation: '0 501 152 60 14',
     web: 'iamfayn.com/alsancak',
-    image: '/assets/locations/faynals.webp',
+    image: '/assets/images/faynbeach.jpg',
     description: 'Enjoy the unique ambiance of FAYN’99 by the marina.',
     mapUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3109.9829485953016!2d26.3334085!3d38.282252!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14bb7f9ffa87019f%3A0x57d377a394b74b4e!2sFayn%E2%80%9999!5e0!3m2!1str!2str!4v1706791289876!5m2!1str!2str',
   },
@@ -46,7 +47,7 @@ const branches = [
     id: 5,
     name: 'FAYN DOHA',
     location: 'DOHA',
-    image: '/assets/locations/faynals.webp',
+    image: '/assets/images/doha.jpg',
     reservation: '0 501 152 60 14',
     web: 'iamfayn.com/alsancak',
     description: 'Our Doha branch offers premium services.',
@@ -58,11 +59,13 @@ export default function LocationsPage() {
   const [selectedBranch, setSelectedBranch] = useState(branches[0]);
 
   return (
-    <div className="flex flex-col md:flex-row mt-8 h-auto md:h-screen text-white">
+<div>
+  <h1 className="text-2xl text-white text-center mt-20 mb-24">OUR LOCATIONS</h1>
+  <div className="absolute top-[10px] sm:top-[10px] md:top-[2px] lg:top-[230px] left-1/2 transform -translate-x-1/2 w-[1px] h-20 sm:h-16 md:h-20 bg-white"></div>
+  <Zoom />
+  <div className="flex flex-col md:flex-row mt-10 h-auto md:h-screen text-white">
+
       <div className="w-full md:w-1/3 p-4 md:p-10 border-b md:border-b-0 md:border-r">
-        <h2 className="mb-6 text-3xl md:text-4xl" style={{ fontFamily: 'Salina-TrialLight, sans-serif' }}>
-          OUR LOCATIONS
-        </h2>
         <ul>
           {branches.map((branch) => (
             <li
@@ -109,6 +112,7 @@ export default function LocationsPage() {
           </div>
         </div>
       </div>
+    </div>
     </div>
   );
 }

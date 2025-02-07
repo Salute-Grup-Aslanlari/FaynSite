@@ -11,10 +11,12 @@ const Portfolio = () => {
 
   return (
     <>
-      <section className="pt-20 lg:pt-[120px] bg-[#E4E0D8]">
+      <section className="pt-20 lg:pt-[80px] bg-[#E4E0D8]">
         <div className="container mx-auto px-0 max-w-full">
-          <div className="flex flex-wrap -mx-4">
+          <div className="flex flex-wrap">
             <div className="w-full px-4">
+            <h1 className="text-2xl text-black text-center mt-2 mb-28">OUR PRODUCT</h1>
+            <div className="absolute top-[10px] sm:top-[10px] md:top-[2px] lg:top-[220px] left-1/2 transform -translate-x-1/2 w-[1px] h-20 sm:h-16 md:h-20 bg-black"></div>
               <div className="mx-auto mb-[10px] max-w-[510px] text-center">
                 <span className="text-primary mb-6 block text-5xl mt-4 text-black" style={{ fontFamily: 'Salina-TrialLight, sans-serif' }}>
                   OUR <span className="text-black mt-4" style={{ fontFamily: 'Salina-BookItalic, sans-serif' }}>(finest)</span> DRINKS & DISHES FROM THE MENU

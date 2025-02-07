@@ -8,8 +8,8 @@ const CardWrapper = ({ cards = [] }) => {
 
   return (
     <div className={styles.cardWrapper}>
-      <div className="relative top-[-90px] flex flex-col items-center">
-        <div className="flex flex-col items-center mt-8">
+      <div className="relative top-[-50px] flex flex-col items-center">
+        <div className="flex flex-col items-center mt-2">
           <div className="absolute top-[-100px] sm:top-[-50px] md:top-[10px] lg:top-[-20px] left-1/2 transform -translate-x-1/2 text-white text-2xl sm:text-2xl md:text-xl">
             STAY IN THE LOOP
           </div>
@@ -30,9 +30,11 @@ const CardWrapper = ({ cards = [] }) => {
           </p>
         </div>
       </div>
-      {cards.length > 0 ? (
+            {cards.length > 0 ? (
         cards.map((card, index) => (
-          <Card key={index} {...card} i={index} />
+          <div key={index} className="mb-2 last:mb-0">
+            <Card {...card} i={index} />
+          </div>
         ))
       ) : (
         <p>No cards available</p>
