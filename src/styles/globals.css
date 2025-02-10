@@ -69,3 +69,22 @@ body {
   opacity: 0; /* Kartlar başlangıçta görünmez */
 }
 
+.slick-center {
+  @apply scale-125; /* Ortadaki görseli büyüt */
+}
+
+.slick-slide {
+  @apply transition-transform duration-500 ease-in-out;
+}
+
+.slick-slide:not(.slick-center) {
+  @apply opacity-70; /* Yanlardaki görselleri hafif saydam yap */
+}
+
+.slick-slide:nth-child(odd):not(.slick-center) {
+  transform: rotateY(-15deg); /* Soldaki görseller sola eğilir */
+}
+
+.slick-slide:nth-child(even):not(.slick-center) {
+  transform: rotateY(15deg); /* Sağdaki görseller sağa eğilir */
+}

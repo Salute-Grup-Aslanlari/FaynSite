@@ -24,6 +24,24 @@ export const projects = [
       color: "#CA1B00"
     },
   ];
+
+  export const quality = [
+    {
+      title: "Matthias Leidinger",
+      src: "/assets/flavor.jpg",
+    },
+    {
+      title: "Clément Chapillon",
+      src: "/assets/style.webp",
+    },
+    {
+      title: "Zissou",
+      src: "/assets/quality.webp",
+    }
+  ];
+
+ 
+
   export const LINKS = [
     {
       title: "MENU",
