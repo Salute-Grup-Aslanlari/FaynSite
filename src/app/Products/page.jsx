@@ -252,7 +252,7 @@ const PortfolioCard = ({ ImageHref, category, title, description, button, showCa
       >
         <div className="card" onClick={handleOpenPopup}>
           <img src={ImageHref} alt={title} className="w-full h-full object-cover portfolio" />
-          <div className="absolute top-0 left-0 p-4 text-white">
+          <div className="absolute top-0 left-0 p-4 text-white z-10">
             <p className="text-opacity-10" style={{ fontSize: "8px", fontFamily: 'Source Sans 3, sans-serif', fontWeight: 100 }}>
               {description}
             </p>
@@ -272,15 +272,38 @@ const PortfolioCard = ({ ImageHref, category, title, description, button, showCa
         )}
       </div>
    
-
       <style jsx>{`
-        .cards-container {
-          display: flex;
-          flex-wrap: wrap;
-          justify-content: space-between;
-        }
-
-        .card {
+      .cards-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+          .card {
+        width: full;
+        height: full;
+        padding: 30px;
+        cursor: pointer;
+        text-align: center;
+        padding: 0px;
+        border-radius: 20px;
+        transition: 0.6s;
+      }
+      .card:hover {
+        transform: scale(1.05);
+      }
+      .popup-overlay {
+      position: fixed;
+      gap: 80px;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.7);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+      .card {
           width: full;
           height: full;
           padding: 30px;
@@ -290,49 +313,61 @@ const PortfolioCard = ({ ImageHref, category, title, description, button, showCa
           border-radius: 20px;
           transition: 0.6s;
         }
-        .card:hover {
-          transform: scale(1.05);
-        }
 
-        .popup-overlay {
-          position: fixed;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          background: rgba(0, 0, 0, 0.7);
-          display: flex;
-          align-items: center;
-          justify-content: center;
-        }
-        .popup-content {
-          top: 20px;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          position: relative;
-          width: 1500px;
-          height: 400px;
-        }
-        .popup-image {
-          
-          transition: all 0.5s ease-in-out;
-        }
-        .left {
-        width: 75%;
-          transform: translateX(-5%);
-        }
-        .right {
-        width: 35%;
-          transform: translateX(10%);
-        }
-        .popup-overlay:hover .left {
-          transform: translateX(25%);
-        }
-        .popup-overlay:hover .right {
-          transform: translateX(0);
-        }
-      `}</style>
+    .popup-content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      width: 80%;
+      height: 400px;
+      transform: scale(0.9);
+      animation: popup-slide 0.5s forwards;
+    }
+
+    .left {
+      width: 60%;
+      transform: translateX(-100%) rotate(-10deg);
+      animation: slide-left 0.9s forwards;
+      z-index: 1; /* Keep the left image below */
+    }
+
+    .right {
+      width: 30%;
+      transform: translateX(100%) rotate(10deg);
+      animation: slide-right 0.9s forwards;
+      z-index: 2; /* Make the right image appear on top */
+    }
+
+    @keyframes slide-left {
+      0% {
+        transform: translateX(-100%) rotate(-10deg);
+      }
+      100% {
+        transform: translateX(0) rotate(0deg);
+      }
+    }
+
+    @keyframes slide-right {
+      0% {
+        transform: translateX(100%) rotate(10deg);
+      }
+      100% {
+        transform: translateX(0) rotate(0deg);
+      }
+    }
+
+    @keyframes popup-slide {
+      0% {
+        transform: scale(0.9);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+`}</style>
+
+
     </>
   );
 };

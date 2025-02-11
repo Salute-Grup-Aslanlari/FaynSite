@@ -1,4 +1,4 @@
-'use client'
+'use client';
 import Image from 'next/image';
 import styles from './style.module.scss';
 import { useTransform, motion, useScroll } from 'framer-motion';
@@ -21,6 +21,8 @@ const Quality = ({ i, title, src, color, progress, range, targetScale }) => {
 
   const y = useParallax(scrollYProgress, 300);
 
+  const opacity = useTransform(scrollYProgress, [i * 0.2, (i + 1) * 0.2], [1, 0]);
+
   return (
     <div ref={container} className={styles.cardContainer}>
       <motion.div
@@ -39,10 +41,11 @@ const Quality = ({ i, title, src, color, progress, range, targetScale }) => {
           </div>
         </div>
       </motion.div>
+
       <motion.h2
         initial={{ visibility: 'hidden' }}
         animate={{ visibility: 'visible' }}
-        style={{ y, color: 'red' }}
+        style={{ y, opacity, color: 'red' }}
       >
         {title}
       </motion.h2>

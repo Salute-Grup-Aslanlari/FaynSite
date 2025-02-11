@@ -46,34 +46,61 @@ const AboutUs = () => {
           </div>
         </div>
         <div className="text-white w-full lg:text-pretty mt-8 lg:mt-12 lg:ml-48 sm:ml-8 px-4 sm:px-8 lg:text-right">
-          <h1
+          <motion.h1
             className="flex justify-center mb-4 text-2xl lg:text-4xl xl:text-8xl lg:pr-48 lg:mt-4 sm:mt-32 sm:w-full"
             style={{
               fontFamily: 'Salina-TrialLight, sans-serif',
               lineHeight: '1.4'
             }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1 }}
           >
             ABOUT US
-          </h1>
-          <p
+          </motion.h1>
+          <motion.p
             className="justify-end sm:text-pretty sm:p-6 text-xl lg:text-2xl leading-relaxed font-light lg:w-3/4 sm:w-full lg:text-right"
             style={{ lineHeight: '1.4' }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1.5 }}
           >
             Fayn, located in the heart of the city, is a vibrant gathering place where guests can enjoy cocktails, cuisine,
             live music, and great company. With its chic decor, inviting ambiance, and attentive staff, Fayn is the ideal choice for both casual meetings and special celebrations.
-          </p>
+          </motion.p>
 
           <div className="flex flex-wrap justify-center space-x-5 mt-12 px-4 sm:pl-20 lg:pr-60 text-center">
             <div>
-              <span className="text-4xl lg:text-6xl">{countries < 10 ? `0${countries}` : countries}</span>
+              <motion.span
+                className="text-4xl lg:text-6xl"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 2 }}
+              >
+                {countries < 10 ? `0${countries}` : countries}
+              </motion.span>
               <div className="text-sm lg:text-3xl">COUNTRIES</div>
             </div>
             <div>
-              <span className="text-4xl lg:text-6xl">{branches < 10 ? `0${branches}` : branches}</span>
+              <motion.span
+                className="text-4xl lg:text-6xl"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 2.5 }}
+              >
+                {branches < 10 ? `0${branches}` : branches}
+              </motion.span>
               <div className="text-sm lg:text-3xl">BRANCHES</div>
             </div>
             <div>
-              <span className="text-4xl lg:text-6xl">{customers.toLocaleString()}</span>
+              <motion.span
+                className="text-4xl lg:text-6xl"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 3 }}
+              >
+                {customers.toLocaleString()}
+              </motion.span>
               <div className="text-sm lg:text-3xl">CUSTOMERS</div>
             </div>
           </div>
@@ -82,8 +109,18 @@ const AboutUs = () => {
 
       <div className="flex flex-col lg:flex-row mt-4 px-4 sm:px-0 lg:mt-24">
         <div className="w-full lg:w-1/2 flex flex-col items-center sm:items-start lg:pl-20">
-          <div className="text-white text-center sm:text-left mt-16 sm:mt-48 lg:mt-9">
-            <p className="text-2xl sm:text-4xl lg:text-2xl leading-relaxed">
+          <motion.div
+            className="text-white text-center sm:text-left mt-16 sm:mt-48 lg:mt-9"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1.5 }}
+          >
+            <p 
+            className="text-2xl sm:text-4xl lg:text-2xl leading-relaxed"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1 }}
+            >
               Fayn enhances the guest experience with dynamic live DJ performances,
               providing an engaging atmosphere that complements its premium offerings.
               Committed to excellence, Fayn strives daily to exceed expectations,
@@ -92,13 +129,19 @@ const AboutUs = () => {
               Its carefully curated menu showcases a fusion of global flavors,
               complemented by signature cocktails crafted with precision and dishes prepared using premium, fresh ingredients.
             </p>
-          </div>
+          </motion.div>
 
           <div className="relative w-full mt-16 sm:mt-28">
             <div className="absolute top-[-50px] left-0 text-left z-10">
-              <h2 className="text-white text-sm sm:text-4xl" style={{ fontSize: "28px", fontFamily: 'Salina-TrialLight, sans-serif' }}>
+              <motion.h2
+                className="text-white text-sm sm:text-4xl"
+                style={{ fontSize: "28px", fontFamily: 'Salina-TrialLight, sans-serif' }}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 1.8 }}
+              >
                 Our Collaborations
-              </h2>
+              </motion.h2>
             </div>
             <div className="overflow-hidden w-full">
               <motion.div
@@ -113,7 +156,7 @@ const AboutUs = () => {
                     alt={`Logo ${index + 1}`}
                     width={1200}
                     height={600}
-                    className="w-20 h-16 lg:w-95 lg:h-20 mt-10 repeat: Infinity"
+                    className="w-20 h-16 lg:w-95 lg:h-20 mt-10"
                   />
                 ))}
               </motion.div>
@@ -140,43 +183,49 @@ const AboutUs = () => {
       <div className="flex flex-col lg:flex-row mt-56 lg:mt-32 sm:mt-72 xl:mt-60 px-4 sm:px-8 lg:px-0">
         <div className="w-full lg:w-1/2 flex items-center lg:pr-20 justify-center lg:justify-end pl-4 lg:pl-36 relative">
           <div className="text-white text-center lg:text-left mb-20 lg:mb-60 relative z-10 top-8 lg:top-16">
-          <div className="absolute top-[-30px] left-1/2 transform -translate-x-1/2 w-32 h-32 sm:w-50 sm:h-60 lg:w-40 lg:h-40">
-            <motion.div
-              animate={{ rotate: [0, 360] }}
-              transition={{ repeat: Infinity, duration: 6, ease: "linear" }}
-              className="w-full h-full"
-            >
-              <Image
-                src="/assets/aboutus/limon.png"
-                alt="Lemon Slice"
-                width={160}
-                height={160}
-                objectFit="contain"
-              />
-            </motion.div>
-          </div>
-            <p
+            <div className="absolute top-[-30px] left-1/2 transform -translate-x-1/2 w-32 h-32 sm:w-50 sm:h-60 lg:w-40 lg:h-40">
+              <motion.div
+                animate={{ rotate: [0, 360] }}
+                transition={{ repeat: Infinity, duration: 6, ease: "linear" }}
+                className="w-full h-full"
+              >
+                <Image
+                  src="/assets/aboutus/limon.png"
+                  alt="Lemon Slice"
+                  width={160}
+                  height={160}
+                  objectFit="contain"
+                />
+              </motion.div>
+            </div>
+            <motion.p
               className="text-xl sm:text-2xl w-[95%] max-w-4xl lg:text-3xl xl:text-2xl leading-loose font-light mt-32 lg:mt-80"
               style={{ fontFamily: 'Source Sans 3, sans-serif', fontWeight: 100 }}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 2 }}
             >
               Our dedicated factory serves as the heart of our operation,
               where we produce the premium ingredients that define the food and cocktails served across all our branches.
               By creating our own ingredients, we ensure unmatched quality, consistency, and flavor in every dish and drink.
               This commitment to in-house production allows us to deliver a seamless and exceptional experience,
               uniting all our locations with the same standard of taste and excellence.
-            </p>
+            </motion.p>
           </div>
         </div>
 
         <div className="w-full lg:w-1/2 mt-8 lg:mt-0 flex justify-center lg:justify-end pl-0 lg:pl-36">
           <div className="relative w-full max-w-[800px] h-[300px] sm:h-[400px] lg:h-[500px]">
-            <h2
+            <motion.h2
               className="text-white text-3xl sm:text-4xl lg:text-6xl absolute top-[20%] sm:top-[30%] left-1/2 lg:left-[-20%] transform -translate-x-1/2 -translate-y-1/2 
                 z-20 p-4 sm:p-6 rounded-lg w-[95%] max-w-3xl leading-snug text-center lg:text-right"
               style={{ fontFamily: 'Salina-TrialLight, sans-serif', fontWeight: 400 }}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 3 }}
             >
               AT FAYN, WE TAKE FAYN PRIDE IN CRAFTING EXCELLENCE FROM THE GROUND UP.
-            </h2>
+            </motion.h2>
             <Image
               src="/assets/aboutus/aboutus3.webp"
               alt="Our Story"
