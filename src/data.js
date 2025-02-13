@@ -27,15 +27,15 @@ export const projects = [
 
   export const quality = [
     {
-      title: "Matthias Leidinger",
+      title: "FLAVOR",
       src: "/assets/flavor.jpg",
     },
     {
-      title: "Clément Chapillon",
+      title: "QUALITY",
       src: "/assets/style.webp",
     },
     {
-      title: "Zissou",
+      title: "STYLE",
       src: "/assets/quality.webp",
     }
   ];
@@ -76,4 +76,19 @@ export const flavors = [
         title: "STYLE",
         src: "/assets/style.webp",
     },
+];
+
+export const homes = [
+  {
+      title: "FLAVOR",
+      src: "/assets/flavor.jpg",
+  },
+  {
+      title: "QUALITY",
+      src: "/assets/quality.webp",
+  },
+  {
+      title: "STYLE",
+      src: "/assets/style.webp",
+  },
 ];

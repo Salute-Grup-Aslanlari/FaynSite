@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState } from "react";
+import { motion } from "framer-motion";
 
 const Portfolio = () => {
   const [showCard, setShowCard] = useState("all");
@@ -15,16 +16,46 @@ const Portfolio = () => {
         <div className="container mx-auto px-0 max-w-full">
           <div className="flex flex-wrap">
             <div className="w-full px-4">
-            <h1 className="text-2xl text-black text-center mt-2 mb-28">OUR PRODUCT</h1>
+            <motion.h1 
+              initial={{ opacity: 0, y: -50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1 }}
+              className="text-2xl text-black text-center mt-2 mb-28"
+            >
+              OUR PRODUCT
+            </motion.h1>
             <div className="absolute top-[10px] sm:top-[10px] md:top-[2px] lg:top-[220px] left-1/2 transform -translate-x-1/2 w-[1px] h-20 sm:h-16 md:h-20 bg-black"></div>
               <div className="mx-auto mb-[10px] max-w-[510px] text-center">
-                <span className="text-primary mb-6 block text-5xl mt-4 text-black" style={{ fontFamily: 'Salina-TrialLight, sans-serif' }}>
-                  OUR <span className="text-black mt-4" style={{ fontFamily: 'Salina-BookItalic, sans-serif' }}>(finest)</span> DRINKS & DISHES FROM THE MENU
-                </span>
-                <p className="text-black text-body-color mt-6 dark:text-dark-6 text-3xl font-light">
-                  There are many variations of passages of Lorem Ipsum available
-                  but the majority have suffered alteration in some form.
-                </p>
+              <span
+                className="text-primary mb-6 block text-5xl mt-4 text-black transition-colors duration-1000 animate-colorChange"
+                style={{ fontFamily: 'Salina-TrialLight, sans-serif' }}
+              >
+                OUR <span className="mt-4" style={{ fontFamily: 'Salina-BookItalic, sans-serif' }}>
+                  (finest)
+                </span> DRINKS & DISHES FROM THE MENU
+              </span>
+
+              <style>
+              {`
+              @keyframes colorChange {
+                0% { color: #a33923; }
+                100% { color: black; }
+              }
+
+              .animate-colorChange {
+                animation: colorChange 2s ease-in-out infinite alternate;
+              }
+              `}
+              </style>
+
+                <motion.p 
+                  initial={{ opacity: 0, x: -50 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 1, delay: 0.5 }}
+                  className="text-black text-body-color mt-6 dark:text-dark-6 text-3xl font-light"
+                >
+                  There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some form.
+                </motion.p>
               </div>
             </div>
           </div>
@@ -329,14 +360,15 @@ const PortfolioCard = ({ ImageHref, category, title, description, button, showCa
       width: 60%;
       transform: translateX(-100%) rotate(-10deg);
       animation: slide-left 0.9s forwards;
-      z-index: 1; /* Keep the left image below */
+      z-index: -1; /* Keep the left image below */
     }
 
     .right {
       width: 30%;
       transform: translateX(100%) rotate(10deg);
       animation: slide-right 0.9s forwards;
-      z-index: 2; /* Make the right image appear on top */
+      z-index: 20; /* Make the right image appear on top */
+      padding-right: 36px;
     }
 
     @keyframes slide-left {

@@ -3,7 +3,7 @@
 import styles from './styles.module.scss';
 import Image from 'next/image';
 import { useScroll, useTransform, motion } from 'framer-motion';
-import { useRef } from 'react';
+import { useRef, useEffect, useState } from 'react';
 
 export default function Index() {
     
@@ -13,11 +13,45 @@ export default function Index() {
         offset: ['start start', 'end end']
     });
 
-    const scale4 = useTransform(scrollYProgress, [0, 1], [1, 4]);
-    const scale5 = useTransform(scrollYProgress, [0, 1], [1, 5]);
-    const scale6 = useTransform(scrollYProgress, [0, 1], [1, 6]);
-    const scale8 = useTransform(scrollYProgress, [0, 1], [1, 8]);
-    const scale9 = useTransform(scrollYProgress, [0, 1], [1, 9]);
+    const [scales, setScales] = useState({
+        scale4: [1, 4],
+        scale5: [1, 5],
+        scale6: [1, 6],
+        scale8: [1, 8],
+        scale9: [1, 9]
+    });
+
+    useEffect(() => {
+        const handleResize = () => {
+            if (window.innerWidth < 768) {
+                setScales({
+                    scale4: [1.2, 4.5],
+                    scale5: [1.3, 5.5],
+                    scale6: [1.4, 6.5],
+                    scale8: [1.5, 8.5],
+                    scale9: [1.6, 9.5]
+                });
+            } else {
+                setScales({
+                    scale4: [1, 4],
+                    scale5: [1, 5],
+                    scale6: [1, 6],
+                    scale8: [1, 8],
+                    scale9: [1, 9]
+                });
+            }
+        };
+
+        handleResize();
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
+
+    const scale4 = useTransform(scrollYProgress, [0, 1], scales.scale4);
+    const scale5 = useTransform(scrollYProgress, [0, 1], scales.scale5);
+    const scale6 = useTransform(scrollYProgress, [0, 1], scales.scale6);
+    const scale8 = useTransform(scrollYProgress, [0, 1], scales.scale8);
+    const scale9 = useTransform(scrollYProgress, [0, 1], scales.scale9);
 
     const pictures = [
         { src: '/images/6.jpg', scale: scale4 },

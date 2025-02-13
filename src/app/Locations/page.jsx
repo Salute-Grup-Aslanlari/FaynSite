@@ -65,7 +65,7 @@ export default function LocationsPage() {
   <Zoom />
   <div className="flex flex-col md:flex-row mt-10 h-auto md:h-screen text-white">
 
-      <div className="w-full md:w-1/3 p-4 md:p-10 border-b md:border-b-0 md:border-r">
+      <div className="w-full sm:w-full md:w-1/3 p-4 md:p-10 border-b md:border-b-0 md:border-r">
         <ul>
           {branches.map((branch) => (
             <li
