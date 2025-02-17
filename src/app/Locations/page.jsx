@@ -1,13 +1,12 @@
 'use client';
 import { useState } from 'react';
-import Zoom from '../../components/Zoom';
 
 const branches = [
   {
     id: 1,
     name: 'FAYN ALSANCAK',
     location: 'ALSANCAK',
-    image: '/assets/locations/faynals.webp',
+    image: '/assets/locations/images/faynals.webp',
     reservation: '0 501 152 60 14',
     web: 'iamfayn.com/alsancak',
     description: 'Enjoy our signature cocktails at our Alsancak branch.',
@@ -19,7 +18,7 @@ const branches = [
     location: 'BOSTANLI',
     reservation: '0 501 152 60 14',
     web: 'iamfayn.com/alsancak',
-    image: '/assets/locations/faynals.webp',
+    image: '/assets/locations/images/faynbos.jpg',
     description: 'Enjoy our signature cocktails at our Bostanlı branch.',
     mapUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3125.1627775191215!2d27.092747!3d38.4585162!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14bbd9a9894b33dd%3A0xa521bda2efb4b453!2sFayn%20Bostanl%C4%B1!5e0!3m2!1str!2str!4v1706790201234!5m2!1str!2str',
   },
@@ -28,8 +27,7 @@ const branches = [
     name: 'FAYN ALAÇATI',
     location: 'ALAÇATI',
     reservation: '0 501 152 60 14',
-    web: 'iamfayn.com/alsancak',
-    image: '/assets/images/alacati.jpg',
+    image: '/assets/locations/images/alacati.jpg',
     description: 'Experience the vibrant atmosphere of our Alaçatı branch.',
     mapUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3112.133564289737!2d26.3720333!3d38.2821877!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14bb79c3a9f8f27f%3A0x387d559611810001!2sFayn%20Ala%C3%A7at%C4%B1!5e0!3m2!1str!2str!4v1706790456789!5m2!1str!2str',
   },  
@@ -39,7 +37,7 @@ const branches = [
     location: 'MARINA',
     reservation: '0 501 152 60 14',
     web: 'iamfayn.com/alsancak',
-    image: '/assets/images/faynbeach.jpg',
+    image: '/assets/locations/images/faynbeach.jpg',
     description: 'Enjoy the unique ambiance of FAYN’99 by the marina.',
     mapUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3109.9829485953016!2d26.3334085!3d38.282252!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14bb7f9ffa87019f%3A0x57d377a394b74b4e!2sFayn%E2%80%9999!5e0!3m2!1str!2str!4v1706791289876!5m2!1str!2str',
   },
@@ -47,7 +45,7 @@ const branches = [
     id: 5,
     name: 'FAYN DOHA',
     location: 'DOHA',
-    image: '/assets/images/doha.jpg',
+    image: '/assets/locations/images/doha.jpg',
     reservation: '0 501 152 60 14',
     web: 'iamfayn.com/alsancak',
     description: 'Our Doha branch offers premium services.',
@@ -59,60 +57,65 @@ export default function LocationsPage() {
   const [selectedBranch, setSelectedBranch] = useState(branches[0]);
 
   return (
-<div>
-  <h1 className="text-2xl text-white text-center mt-20 mb-24">OUR LOCATIONS</h1>
-  <div className="absolute top-[10px] sm:top-[10px] md:top-[2px] lg:top-[230px] left-1/2 transform -translate-x-1/2 w-[1px] h-20 sm:h-16 md:h-20 bg-white"></div>
-  <Zoom />
-  <div className="flex flex-col md:flex-row mt-10 h-auto md:h-screen text-white">
-
-      <div className="w-full sm:w-full md:w-1/3 p-4 md:p-10 border-b md:border-b-0 md:border-r">
-        <ul>
-          {branches.map((branch) => (
-            <li
-              key={branch.id}
-              className={`cursor-pointer p-4 text-xl md:text-3xl  transition-transform duration-300 ease-in-out hover:scale-105 ${
-                selectedBranch.id === branch.id ? 'border-b border-white' : ''
-              }`}
-              onClick={() => setSelectedBranch(branch)}
-            >
-              {branch.name}
-            </li>
-          ))}
-        </ul>
-      </div>
-      <div className="w-full md:w-2/3 p-4 md:p-14 flex flex-col">
-        <img
-          src={selectedBranch.image}
-          alt={selectedBranch.name}
-          className="w-full h-48 md:h-64 object-cover rounded-lg mb-4"
-        />
-
-        <div className="flex flex-col md:flex-row w-full">
-          <div className="w-full md:w-1/2 p-4">
-            <p className="text-lg md:text-1xl font-extralight mb-2">{selectedBranch.location}</p>
-            <h2 className="text-2xl md:text-3xl mb-2" style={{ fontFamily: 'Salina-BookItalic, sans-serif' }}>
-              {selectedBranch.name}
-            </h2>
-            <p className="text-md md:text-lg font-extralight mb-4">{selectedBranch.description}</p>
-            <p className="text-md md:text-xl font-extralight mb-4">
-              <span className="font-bold">Reservation:</span> {selectedBranch.reservation}
-            </p>
-            <p className="text-md md:text-xl font-extralight">{selectedBranch.web}</p>
-          </div>
-          <div className="w-full md:w-1/2 p-4 rounded-lg">
-            <iframe
-              src={selectedBranch.mapUrl}
-              className="rounded-lg"
-              width="100%"
-              height="250"
-              style={{ border: 0 }}
-              allowFullScreen=""
-              loading="lazy"
-            ></iframe>
+    <div>
+      <h1 className="text-2xl text-white text-center mt-20 mb-24 hover:text-yellow-500 transition-all duration-300">
+        OUR LOCATIONS
+      </h1>
+      <div className="absolute top-[10px] sm:top-[10px] md:top-[2px] lg:top-[230px] left-1/2 transform -translate-x-1/2 w-[1px] h-20 sm:h-16 md:h-20 bg-white"></div>
+      <div className="flex flex-col md:flex-row mt-10 h-auto md:h-screen text-white">
+        <div className="w-full sm:w-full md:w-1/3 p-4 md:p-10 border-b md:border-b-0 md:border-r">
+          <ul>
+            {branches.map((branch) => (
+              <li
+                key={branch.id}
+                className={`cursor-pointer p-4 text-xl md:text-3xl transition-transform duration-300 ease-in-out hover:scale-105 hover:text-yellow-500 ${
+                  selectedBranch.id === branch.id ? 'border-b border-white' : ''
+                }`}
+                onClick={() => setSelectedBranch(branch)}
+              >
+                {branch.name}
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div className="w-full md:w-2/3 p-4 md:p-14 flex flex-col">
+          <img
+            src={selectedBranch.image}
+            alt={selectedBranch.name}
+            className="w-full h-48 md:h-64 object-cover rounded-lg mb-4 transform transition-transform duration-300 ease-in-out hover:scale-105"
+          />
+          <div className="flex flex-col md:flex-row w-full">
+            <div className="w-full md:w-1/2 p-4">
+              <p className="text-lg md:text-1xl font-extralight mb-2 transition-all duration-300 hover:text-yellow-500 hover:scale-105">
+                {selectedBranch.location}
+              </p>
+              <h2 className="text-2xl md:text-3xl mb-2 transition-all duration-300 hover:text-yellow-500 hover:scale-105" style={{ fontFamily: 'Salina-BookItalic, sans-serif' }}>
+                {selectedBranch.name}
+              </h2>
+              <p className="text-md md:text-lg font-extralight mb-4 transition-all duration-300 hover:text-yellow-500 hover:scale-105">
+                {selectedBranch.description}
+              </p>
+              <p className="text-md md:text-xl font-extralight mb-4 transition-all duration-300 hover:text-yellow-500 hover:scale-105">
+                <span className="font-bold">Reservation:</span> {selectedBranch.reservation}
+              </p>
+              <p className="text-md md:text-xl font-extralight transition-all duration-300 hover:text-yellow-500 hover:scale-105">
+                {selectedBranch.web}
+              </p>
+            </div>
+            <div className="w-full md:w-1/2 p-4 rounded-lg">
+              <iframe
+                src={selectedBranch.mapUrl}
+                className="rounded-lg"
+                width="100%"
+                height="250"
+                style={{ border: 0 }}
+                allowFullScreen=""
+                loading="lazy"
+              ></iframe>
+            </div>
           </div>
         </div>
       </div>
-    </div>
     </div>
   );
 }

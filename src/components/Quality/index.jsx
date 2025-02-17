@@ -1,60 +1,85 @@
-'use client'
-import Image from 'next/image';
-import styles from './style.module.scss';
-import { useTransform, motion, useScroll } from 'framer-motion';
-import { useRef } from 'react';
-import { quality } from '@/data';
+import { motion, useScroll, useTransform } from "framer-motion";
+import { useEffect, useRef, useState } from "react";
+import { quality } from "../../data";
 
-function useParallax(value, distance) {
-    return useTransform(value, [0, 1], [-distance, distance]);
-}
+export const Quality = () => {
+  const [currentTitle, setCurrentTitle] = useState(quality[0].title);
+  const [activeIndex, setActiveIndex] = useState(0);
+  const containerRef = useRef(null);
 
-const Quality = ({ i, src, color, progress, range, targetScale }) => {
-    const container = useRef(null);
-    const { scrollYProgress } = useScroll({
-        target: container,
-        offset: ['start end', 'start start']
+  useEffect(() => {
+    setCurrentTitle(quality[activeIndex].title);
+  }, [activeIndex]);
+
+  return (
+    <div ref={containerRef} className="relative w-full mb-24 mt-36 px-4 md:px-8">
+      {quality.map((item, index) => (
+        <ImageSection
+          key={index}
+          data={item}
+          index={index}
+          setActiveIndex={setActiveIndex}
+          currentTitle={currentTitle}
+        />
+      ))}
+    </div>
+  );
+};
+
+const ImageSection = ({ data, index, setActiveIndex, currentTitle }) => {
+  const sectionRef = useRef(null);
+
+  const { scrollYProgress } = useScroll({
+    target: sectionRef,
+    offset: ["start center", "center center"],
+  });
+
+  const y = useTransform(scrollYProgress, [0, 1], [100, 0]);
+  const opacity = useTransform(scrollYProgress, [0, 1], [0, 1]);
+
+  useEffect(() => {
+    let prevScroll = 0;
+    const unsubscribe = scrollYProgress.on("change", (latest) => {
+      if (latest > prevScroll && latest > 0.5 && latest < 1) {
+        setActiveIndex(index);
+      } else if (latest < prevScroll && latest < 0.2) {
+        if (index > 0) {
+          setActiveIndex(index - 1);
+        }
+      }
+      prevScroll = latest;
     });
+    return () => unsubscribe();
+  }, [scrollYProgress, index, setActiveIndex]);
 
-    const scale = useTransform(progress, range, [1, targetScale]);
-    const y = useParallax(scrollYProgress, 100);
+  const initial = index === 0 ? { y: 100, opacity: 0 } : false;
 
-    // **Opacity ayarı: Scroll ilerledikçe eski başlık kaybolur**
-    const opacity = useTransform(scrollYProgress, [0, 0.3, 0.6, 1], [1, 1, 0, 0]);
-
-    // **Z-index ayarı: Yeni başlık en önde olur**
-    const zIndex = useTransform(scrollYProgress, [0, 0.5, 1], [10, 5, 0]);
-
-    return (
-        <div ref={container} className={styles.cardContainer}>
-            <motion.div 
-                style={{ 
-                    backgroundColor: color, 
-                    scale, 
-                    top: `calc(-5vh + ${i * 25}px)`, 
-                    zIndex 
-                }} 
-                className={styles.card}
-            >
-                <div className={styles.body}>
-                    <div className={styles.imageContainer}>
-                        <motion.div className={styles.inner}>
-                            <Image
-                                fill
-                                src={src}
-                                alt="image" 
-                            />
-                        </motion.div>
-                        <motion.h2
-                            style={{ y, opacity }}
-                        >
-                            {quality[i].title}
-                        </motion.h2>
-                    </div>
-                </div>
-            </motion.div>
-        </div>
-    )
-}
-
-export default Quality;
+  return (
+    <div ref={sectionRef} className="h-screen flex items-center justify-center sticky top-5 mb-20">
+      <motion.div
+        className="w-full max-w-full sm:max-w-[500px] mx-auto px-4 py-10 relative"
+        style={{
+          y,
+          opacity,
+        }}
+        initial={initial}
+      >
+        <img
+          src={data.src}
+          alt={data.title}
+          className="w-full rounded-lg shadow-lg block top-10 mb-20"
+        />
+        <motion.div
+          className="absolute bottom-[-40px] left-1/2 transform -translate-x-1/2 text-[6rem] sm:text-[12rem] text-white z-10 font-light"
+          style={{ fontFamily: 'Salina-Book, sans-serif' }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: currentTitle === data.title ? 1 : 0 }}
+          exit={{ opacity: 0 }}
+          key={currentTitle}
+        >
+          {currentTitle}
+        </motion.div>
+      </motion.div>
+    </div>
+  );
+};

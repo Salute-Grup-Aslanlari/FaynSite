@@ -32,15 +32,39 @@ export const projects = [
     },
     {
       title: "QUALITY",
-      src: "/assets/style.webp",
+      src: "/assets/quality.webp",
     },
     {
       title: "STYLE",
-      src: "/assets/quality.webp",
+      src: "/assets/style.webp",
     }
   ];
 
  
+
+  export const images = [
+    {
+      title: "Fayn'99 Beach",
+      description: "Alaçatı Mh. 18000/1 Sokak No: 4/29 ÇEŞME/İZMİR",
+      src: "/assets/beachbranches.webp",
+    },
+    {
+      title: "Fayn Bostanlı",
+      description: "Bostanlı, Cemal Gürsel Cd. NO: 534/D NO: 534/C, 35590 Karşıyaka/İzmir.",
+      src: "/assets/bostanlibranches.webp",
+    },
+    {
+      title: "Fayn Alaçatı",
+      description: "Alaçatı, 12015 SK NO: 1, 35450 Çeşme/İzmir",
+      src: "/assets/beachbranches.webp",
+    },
+    {
+      title: "FLayn Alsancak",
+      description: "Alsancak, Kültür Mahallesi, Meksika sokağı 11/B 35220 İzmir",
+      src: "/assets/bostanlibranches.webp",
+    },
+  ];
+  
 
   export const LINKS = [
     {
