@@ -1,0 +1,27 @@
+{
+  "home": "ANA SAYFA",
+  "about": "HAKKIMIZDA",
+  "locations": "LOKASYONLAR",
+  "products": "ÜRÜNLER",
+  "exploreMenu": "Menüyü Keşfet",
+  "eatFine": "İYİ YİYİN",
+  "drinkFine": "İYİ İÇİN",
+  "feelFayn": "HİSSET FAYN",
+  "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi expedita voluptatibus earum dolorem temporibus, eaque, pariatur voluptatum odit est ipsam recusandae maiores illum.",
+  "whoweareTitle": "BİZ KİMİZ",
+  "whoweareDescription": "FAYN, KONUKLARIN KOKTEYL, MUTFAK, CANLI MÜZİK VE HARİKA BİR ŞİRKETLE EĞLENEBİLECEĞİ CANLI BİR BULUŞMA YERİDİR.",
+  "weAreFayn": "Biz Fayn'ız.",
+  "weAreFaynDescription": "Her detayın bağlantıyı ve keyfi ilham almak için tasarlandığı bir destinasyon. Burada, olağanüstü kokteyller, dünya çapında mutfak ve canlı müzik, şehrin kendisi kadar canlı bir atmosfer yaratmak için bir araya gelir. İster kutlamak, ister dinlenmek, ister yeni tatlar keşfetmek için burada olun.",
+  "quality": {
+    "flavor": "TAT",
+    "style": "STİL",
+    "quality": "KALİTE"
+  },
+  "branches": {
+  "title": "ŞUBELER",
+  "noImagesAvailable": "Görüntülenebilir resim yok"
+}
+
+  
+  
+}

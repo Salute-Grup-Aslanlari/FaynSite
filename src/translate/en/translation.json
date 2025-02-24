@@ -1,0 +1,24 @@
+{
+  "home": "HOME",
+  "about": "ABOUT",
+  "locations": "LOCATIONS",
+  "products": "PRODUCTS",
+  "exploreMenu": "Explore the Menu",
+  "eatFine": "EAT FINE",
+  "drinkFine": "DRINK FINE",
+  "feelFayn": "FEEL FAYN",
+  "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi expedita voluptatibus earum dolorem temporibus, eaque, pariatur voluptatum odit est ipsam recusandae maiores illum.",
+  "whoweareTitle": "WHO ARE WE",
+  "whoweareDescription": "FAYN, IS A VIBRANT GATHERING PLACE WHERE GUESTS (bar) (will) CAN ENJOY COCKTAILS, CUISINE, LIVE MUSIC, AND GREAT COMPANY.",
+  "weAreFayn": "We Are Fayn.",
+  "weAreFaynDescription": "A destination where every detail is designed to inspire connection and enjoyment. Here, exceptional cocktails, world-class cuisine, and live music come together to create an atmosphere that’s as vibrant as the city itself. Whether you're here to celebrate, unwind, or explore new flavors.",
+  "quality": {
+    "flavor": "FLAVOR",
+    "style": "STYLE",
+    "quality": "QUALITY"
+  },
+  "branches": {
+    "title": "BRANCHES",
+    "noImagesAvailable": "No images available"
+  }
+}

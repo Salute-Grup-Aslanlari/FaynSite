@@ -1,6 +1,6 @@
 'use client'
 import { useRef, useEffect, useState } from 'react';
-import styles from './page.module.css';
+import styles from './page.module.scss';
 
 export default function Home() {
   const container = useRef(null);
@@ -13,7 +13,6 @@ export default function Home() {
   const [easedScrollProgress, setEasedScrollProgress] = useState(0);
 
   useEffect(() => {
-    // Animasyonu başlatmadan önce, referansların mevcut olduğundan emin olalım
     if (stickyMask.current && container.current) {
       const animate = () => {
         const maskSizeProgress = targetMaskSize * getScrollProgress();
@@ -23,7 +22,7 @@ export default function Home() {
 
       requestAnimationFrame(animate);
     }
-  }, []); // Bu effect yalnızca bir kez, bileşen ilk render olduğunda çalışacak
+  }, []);
 
   const getScrollProgress = () => {
     if (stickyMask.current && container.current) {
@@ -35,7 +34,7 @@ export default function Home() {
       setEasedScrollProgress(newEasedProgress);
       return newEasedProgress;
     }
-    return easedScrollProgress; // Fallback, referanslar mevcut değilse
+    return easedScrollProgress;
   };
 
   return (

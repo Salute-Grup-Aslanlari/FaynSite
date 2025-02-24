@@ -1,6 +1,5 @@
 'use client';
 import { useState } from 'react';
-import Zoom from '../../components/Zoom';
 
 const branches = [
   {
@@ -62,8 +61,7 @@ export default function LocationsPage() {
 <div>
   <h1 className="text-2xl text-white text-center mt-20 mb-24">OUR LOCATIONS</h1>
   <div className="absolute top-[10px] sm:top-[10px] md:top-[2px] lg:top-[230px] left-1/2 transform -translate-x-1/2 w-[1px] h-20 sm:h-16 md:h-20 bg-white"></div>
-  <Zoom />
-  <div className="flex flex-col md:flex-row mt-10 h-auto md:h-screen text-white">
+  <div className="flex flex-col md:flex-row mt-10 h-auto md:h-[70vh] text-white">
 
       <div className="w-full md:w-1/3 p-4 md:p-10 border-b md:border-b-0 md:border-r">
         <ul>

@@ -2,12 +2,20 @@
 
 import { useState } from 'react';
 import { FaBars, FaTimes } from 'react-icons/fa';
+import Link from 'next/link';
+import { useTranslation } from 'next-i18next';
+import i18n from '../translate/i18n';
 
 const Navbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const { t } = useTranslation();
 
   const toggleMobileMenu = () => {
     setMobileMenuOpen(!mobileMenuOpen);
+  };
+
+  const changeLanguage = (lng) => {
+    i18n.changeLanguage(lng);
   };
 
   return (
@@ -18,16 +26,16 @@ const Navbar = () => {
         </div>
 
         <ul className="hidden lg:flex space-x-8 mx-auto mr-20">
-          <li><a href="/" className="hover:text-gray-300 text-lg mr-10">HOME</a></li>
-          <li><a href="/About" className="hover:text-gray-300 text-lg mr-10">ABOUT US</a></li>
-          <li><a href="/Locations" className="hover:text-gray-300 text-lg mr-10">LOCATIONS</a></li>
-          <li><a href="/Products" className="hover:text-gray-300 text-lg mr-10">PRODUCTS</a></li>
+          <li><Link href="/" className="hover:text-gray-300 text-lg mr-10">{t('home')}</Link></li>
+          <li><Link href="/About" className="hover:text-gray-300 text-lg mr-10">{t('about')}</Link></li>
+          <li><Link href="/Locations" className="hover:text-gray-300 text-lg mr-10">{t('locations')}</Link></li>
+          <li><Link href="/Products" className="hover:text-gray-300 text-lg mr-10">{t('products')}</Link></li>
         </ul>
 
         <div className="hidden lg:flex space-x-4 ml-auto">
-          <button className="hover:text-gray-300 text-lg">TR</button>
+          <button onClick={() => changeLanguage('tr')} className="hover:text-gray-300 text-lg">TR</button>
           <span>/</span>
-          <button className="hover:text-gray-300 text-lg">EN</button>
+          <button onClick={() => changeLanguage('en')} className="hover:text-gray-300 text-lg">EN</button>
         </div>
 
         <div className="lg:hidden">
@@ -40,15 +48,15 @@ const Navbar = () => {
       {mobileMenuOpen && (
         <div className="lg:hidden bg-black text-white py-4 px-6">
           <ul>
-            <li className="py-2"><a href="/" className="hover:text-gray-300">HOME</a></li>
-            <li className="py-2"><a href="/About" className="hover:text-gray-300">ABOUT</a></li>
-            <li className="py-2"><a href="/Locations" className="hover:text-gray-300">LOCATIONS</a></li>
-            <li className="py-2"><a href="/Products" className="hover:text-gray-300">PRODUCTS</a></li>
+            <li className="py-2"><Link href="/" className="hover:text-gray-300">{t('home')}</Link></li>
+            <li className="py-2"><Link href="/About" className="hover:text-gray-300">{t('about')}</Link></li>
+            <li className="py-2"><Link href="/Locations" className="hover:text-gray-300">{t('locations')}</Link></li>
+            <li className="py-2"><Link href="/Products" className="hover:text-gray-300">{t('products')}</Link></li>
           </ul>
 
           <div className="mt-4 space-x-4 flex justify-center pr-4">
-            <button className="hover:text-gray-300 text-sm">TR</button>
-            <button className="hover:text-gray-300 text-sm">EN</button>
+            <button onClick={() => changeLanguage('tr')} className="hover:text-gray-300 text-sm">TR</button>
+            <button onClick={() => changeLanguage('en')} className="hover:text-gray-300 text-sm">EN</button>
           </div>
         </div>
       )}
