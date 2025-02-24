@@ -7,6 +7,17 @@ export default {
   ],
   theme: {
     extend: {
+      extend: {
+        maskImage: {
+          'mask-pattern': "url('/medias/mask.svg')",
+        },
+        maskSize: {
+          '80': '80%',
+        },
+        maskPosition: {
+          'center': 'center',
+        },
+      },
       animation: {
         'spin-slow': 'spin 2s linear infinite', // 10 saniyede tam tur
       },

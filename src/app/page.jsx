@@ -1,6 +1,7 @@
 'use client';
 import styles from './page.module.scss';
 import { projects } from '../data';
+import { branches } from '../data';
 import { quality } from '../data';
 import Card from '../components/Card';
 import { useScroll } from 'framer-motion';
@@ -8,8 +9,9 @@ import { useEffect, useRef } from 'react';
 import Lenis from '@studio-freight/lenis';
 import Header from '../components/Header';
 import Branches from '../components/Branches';
+import Character from '../components/Character/page';
 import Whoweare from '../components/Whoweare';
-import Quality from '../components/Quality';
+import { Quality } from '../components/Quality';
 import CardWrapper from '../components/Card/CardWrapper/cardwrapper';
 import Link from 'next/link';
 import Flavor from '../components/Flavor/page';
@@ -36,11 +38,11 @@ export default function HomePage() {
     <div>
       <Header />
       <main ref={container} className={styles.main}>
-        {quality.map((q, i) => {
+      {quality.slice(0, 1).map((q, i) => {
           const targetScale = 1 - (q.length - i) * 0.05;
           return (
             <Quality
-            key={`p_${i}`}
+              key={`p_${i}`}
               i={i}
               {...q}
               progress={scrollYProgress}
@@ -51,7 +53,8 @@ export default function HomePage() {
         })}
       </main>
       <Whoweare />
-      <Branches />
+      <Character />
+      <Branches images={branches} />
       <CardWrapper />
       <main ref={container} className={styles.main}>
         {projects.map((project, i) => {

@@ -27,15 +27,15 @@ export const projects = [
 
   export const quality = [
     {
-      title: "Matthias Leidinger",
+      title: "FLAVOR",
       src: "/assets/flavor.jpg",
     },
     {
-      title: "Clément Chapillon",
+      title: "STYLE",
       src: "/assets/style.webp",
     },
     {
-      title: "Zissou",
+      title: "QUALITY",
       src: "/assets/quality.webp",
     }
   ];
@@ -60,6 +60,28 @@ export const projects = [
         { name: "Terms & Condition", url: "/terms-and-conditions" },
       ],
     },
+  ];
+  export const branches = [
+    {
+      title: "Fayn Bostanlı",
+      description: "Bostanlı, Cemal Gürsel Cd. NO: 534/D NO: 534/C, 35590 Karşıyaka/İzmir",
+      src: "/assets/bostanlibranches.webp",
+    },
+    {
+      title: "Fayn Beach'99",
+      description: "Alaçatı, 18000/1 Sokak No: 4/29, 35450 Çeşme/İzmir",
+      src: "/assets/beachbranches.webp",
+    },
+    {
+      title: "Fayn Alsancak",
+      description: "Kültür Mahallesi, Alsancak, Meksika sokağı No:11/B, 35220 İzmir",
+      src: "/assets/faynalsancak1.webp",
+    },
+    {
+      title: "Fayn Doha",
+      description: "St. Regis, Doha, Katar",
+      src: "/assets/bostanlibranches.webp",
+    }
   ];
   
 

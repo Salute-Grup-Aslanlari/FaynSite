@@ -1,5 +1,6 @@
+'use client';
+
 import Image from 'next/image';
-import styles from './style.module.scss';
 import { useTransform, motion, useScroll } from 'framer-motion';
 import { useRef } from 'react';
 import Link from 'next/link';
@@ -16,18 +17,19 @@ const Card = ({ i, title, description, src, link, color, progress, range, target
   const scale = useTransform(progress, range, [1, targetScale]);
 
   return (
-    <div ref={container} className={styles.cardContainer}>
+    <div ref={container} className="h-[90vh] flex items-center justify-center sticky top-0">
       <motion.div
         style={{ backgroundColor: color, scale, top: `calc(-5vh + ${i * 5}px)` }}
-        className={styles.card}
+        className="relative flex flex-col h-[600px] w-[1000px] rounded-3xl p-8 transform-origin-top"
       >
-        <h2 style={{ fontFamily: 'Salina-BookItalic, sans-serif', fontStyle: 'italic', lineHeight: '1.5' }}>{title}</h2>
-        <div className={styles.body}>
-          <div className={styles.description}>
-            <p>{description}</p>
-
-            <span className="mt-5">
-              <Link href={link}>
+        <h2 className="text-center text-4xl italic font-serif">{title}</h2>
+        <div className="flex h-full mt-12 gap-12">
+          <div className="w-2/5 relative top-10">
+            <p className="text-xl leading-7 first-letter:text-2xl first-letter:font-bold">
+              {description}
+            </p>
+            <span className="mt-5 flex items-center gap-2">
+              <Link href={link} className="text-sm underline cursor-pointer">
                 See more
               </Link>
               <svg
@@ -44,13 +46,13 @@ const Card = ({ i, title, description, src, link, color, progress, range, target
               </svg>
             </span>
           </div>
-
-          <div className={styles.imageContainer}>
-            <motion.div className={styles.inner} style={{ scale: imageScale }}>
+          <div className="w-3/5 h-[90%] rounded-3xl overflow-hidden flex justify-center items-center relative">
+            <motion.div className="w-full h-full relative" style={{ scale: imageScale }}>
               <Image
                 fill
                 src={src ? src : '/assets/flavor.jpg'}
                 alt="image"
+                className="object-cover w-full h-full"
               />
             </motion.div>
           </div>
