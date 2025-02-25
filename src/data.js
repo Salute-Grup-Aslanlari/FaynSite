@@ -23,6 +23,14 @@ export const projects = [
       link: "/Projects/cocktail-masterclass",
       color: "#CA1B00"
     },
+    {
+      title: "FAYN PRESENTS: LOVE FEST",
+      description: "Fayn proudly hosted Love Fest, an unforgettable evening where style, flavor, and connection came together in perfect harmony.",
+      src: "/assets/kapaklovefest.webp",
+      date: "January 24, 2025",
+      link: "/Projects/love-fest",
+      color: "#d67294"
+    }
   ];
 
   export const quality = [
@@ -65,22 +73,22 @@ export const projects = [
     {
       title: "Fayn Bostanlı",
       description: "Bostanlı, Cemal Gürsel Cd. NO: 534/D NO: 534/C, 35590 Karşıyaka/İzmir",
-      src: "/assets/bostanlibranches.webp",
+      src: "/assets/BRANCHESBOSTANLI.webp",
     },
     {
       title: "Fayn Beach'99",
       description: "Alaçatı, 18000/1 Sokak No: 4/29, 35450 Çeşme/İzmir",
-      src: "/assets/beachbranches.webp",
+      src: "/assets/BRANCHESBEACH.webp",
     },
     {
       title: "Fayn Alsancak",
       description: "Kültür Mahallesi, Alsancak, Meksika sokağı No:11/B, 35220 İzmir",
-      src: "/assets/faynalsancak1.webp",
+      src: "/assets/BRANCHESALSANCAK.webp",
     },
     {
       title: "Fayn Doha",
       description: "St. Regis, Doha, Katar",
-      src: "/assets/bostanlibranches.webp",
+      src: "/assets/branchesdoha.webp",
     }
   ];
   

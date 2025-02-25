@@ -1,85 +1,59 @@
-"use client";
+'use client';
+import { useEffect, useRef } from 'react';
+import gsap from 'gsap';
 
-import { useState } from "react";
-import { motion } from "framer-motion";
+export default function CocktailAnimation() {
+  const liquidRef = useRef(null);
+  const garnishRef = useRef(null);
 
-const cocktails = [
-  { 
-    id: 1, 
-    name: "Margarita", 
-    image1: "assets/cocktails/BERGAMOTFIZZ.webp", 
-    image2: "assets/cocktails/CLEARTOUCH.webp", 
-    recipe: "Lime suyu, tekila ve portakal likörü ile hazırlanır.", 
-    ingredients: ["Tekila", "Lime", "Portakal Likörü", "Tuz"]
-  },
-  { 
-    id: 2, 
-    name: "Mojito", 
-    image1: "/mojito1.jpg", 
-    image2: "/mojito2.jpg", 
-    recipe: "Beyaz rom, taze nane, lime ve soda ile hazırlanır.", 
-    ingredients: ["Beyaz Rom", "Nane", "Lime", "Soda", "Şeker"]
-  }
-];
+  useEffect(() => {
+    gsap.fromTo(liquidRef.current, 
+      { y: "100%" },
+      { 
+        y: "0%",
+        duration: 3,
+        ease: "power1.inOut"
+      }
+    );
 
-export default function CocktailGallery() {
-  const [selectedCocktail, setSelectedCocktail] = useState(null);
+    gsap.to(garnishRef.current, {
+      y: -10,
+      duration: 2,
+      repeat: -1,
+      yoyo: true,
+      ease: "power1.inOut"
+    });
+
+  }, []);
 
   return (
-    <div className="flex flex-col items-center gap-6">
-      <div className="grid grid-cols-2 gap-4">
-        {cocktails.map((cocktail) => (
-          <motion.div 
-            key={cocktail.id} 
-            whileHover={{ scale: 1.1 }} 
-            className="cursor-pointer"
-            onClick={() => setSelectedCocktail(cocktail)}
-          >
-            <img src={cocktail.image1} alt={cocktail.name} className="w-40 h-40 rounded-lg" />
-          </motion.div>
-        ))}
+    <div className="flex items-center justify-center w-11/12 h-screen">
+      <div className="relative w-[90vh] h-[90vh] overflow-hidden">
+        <div 
+          className="cocktail-glass w-full h-full absolute bottom-0"
+          style={{ backgroundImage: 'url(/assets/katman/katman1.webp)', backgroundSize: 'cover' }}
+        ></div>
+
+        <div 
+          ref={liquidRef} 
+          className="cocktail-liquid w-full h-full absolute bottom-0"
+          style={{ backgroundImage: 'url(/assets/katman/katman2.webp)', backgroundSize: 'cover' }}
+        ></div>
+
+        <div 
+          ref={garnishRef} 
+          className="cocktail-garnish absolute top-[2%] w-full h-[200vh]"
+          style={{ backgroundImage: 'url(/assets/katman/katman2.webp)', backgroundSize: 'cover' }}
+        ></div>
       </div>
 
-      {selectedCocktail && (
-        <motion.div 
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          className="relative flex justify-center items-center mt-8"
-        >
-          <motion.img 
-            src={selectedCocktail.image1} 
-            alt="İlk Görsel"
-            initial={{ x: -200, opacity: 0 }}
-            animate={{ x: 0, opacity: 1 }}
-            transition={{ type: "spring", stiffness: 100 }}
-            className="w-48 h-48 rounded-lg shadow-lg"
-          />
-          <motion.img 
-            src={selectedCocktail.image2} 
-            alt="İkinci Görsel"
-            initial={{ x: 200, opacity: 0 }}
-            animate={{ x: 0, opacity: 1 }}
-            transition={{ type: "spring", stiffness: 100, delay: 0.2 }}
-            className="w-48 h-48 rounded-lg shadow-lg ml-4"
-          />
-          
-          <motion.div 
-            initial={{ scale: 0, opacity: 0 }}
-            animate={{ scale: 1, opacity: 1 }}
-            transition={{ delay: 0.5 }}
-            className="absolute top-full mt-4 bg-white p-4 rounded-lg shadow-lg w-96"
-          >
-            <h2 className="text-lg font-bold">{selectedCocktail.name}</h2>
-            <p className="mt-2 text-sm">{selectedCocktail.recipe}</p>
-            <ul className="mt-2 text-sm list-disc list-inside">
-              {selectedCocktail.ingredients.map((ing, index) => (
-                <li key={index}>{ing}</li>
-              ))}
-            </ul>
-          </motion.div>
-        </motion.div>
-      )}
+      <div className="ml-10 w-1/2">
+        <h1 className="text-4xl font-bold text-gray-800">Lezzetli Kokteyl</h1>
+        <p className="mt-4 text-lg text-gray-600">
+          Bu eşsiz içecekle ferahlayın! Özel tarifimizle hazırlanan bu kokteyl, 
+          damaklarınıza eşsiz bir tat sunacak.
+        </p>
+      </div>
     </div>
   );
 }

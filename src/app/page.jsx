@@ -23,6 +23,7 @@ export default function HomePage() {
     offset: ['start start', 'end end'],
   });
 
+
   useEffect(() => {
     const lenis = new Lenis();
 
