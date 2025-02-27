@@ -25,7 +25,7 @@ const Card = ({ i, title, description, src, link, color, progress, range, target
         <h2 className="text-center text-4xl italic font-serif">{title}</h2>
         <div className="flex h-full mt-12 gap-12">
           <div className="w-2/5 relative top-10">
-            <p className="text-xl leading-7 first-letter:text-2xl first-letter:font-bold">
+            <p className="text-2xl leading-7 first-letter:text-2xl first-letter:font-bold">
               {description}
             </p>
             <span className="mt-5 flex items-center gap-2">

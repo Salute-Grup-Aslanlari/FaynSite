@@ -8,45 +8,30 @@ const Whoweare = () => {
   const { t } = useTranslation();
 
   return (
-    <div className="relative mb-40 top-[350px] flex flex-col items-center overflow-hidden">
+    <div className="relative flex flex-col items-center overflow-hidden">
+      <div className="w-[2px] h-12 sm:h-16 md:h-20 bg-white my-4"></div>
+      <h1 className="text-white text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-4">
+        {t('whoweareTitle')}
+      </h1>
+      <div className="text-white text-center px-6 sm:px-12 lg:px-20 max-w-[80%] sm:max-w-[60%] md:max-w-[50%] mt-10 sm:mt-16 z-10">
+        <p className="text-base sm:text-8xl md:text-xl lg:text-6xl" style={{ lineHeight: '1.5', fontFamily: 'Salina-Book, sans-serif' }}>
+          {t('whoweareDescription')}
+        </p>
+      </div>
       <Image 
         src="/assets/whowearee.webp" 
         alt={t('whoweareTitle')}
         width={5000} 
         height={4000}
-        className="object-cover mb-16 w-[80%] sm:w-[60%] md:w-[40%] lg:w-[33%] h-auto transform scale-110 mt-[50%]"
+        className="object-cover w-[90%] sm:w-[60%] md:w-[40%] lg:w-[33%] h-auto transform scale-110"
       />
-
-      <div className="absolute top-[-80px] sm:top-[10px] md:top-[60px] lg:top-[400px] left-1/2 transform -translate-x-1/2 text-white text-2xl sm:text-2xl md:text-xl">
-        {t('whoweareTitle')}
-      </div>
-
-      <div className="absolute top-[10px] sm:top-[10px] md:top-[2px] lg:top-[450px] left-1/2 transform -translate-x-1/2 w-[1px] h-20 sm:h-16 md:h-20 bg-white"></div>
-
-      <div className="absolute top-[80px] sm:top-[30px] md:top-[200px] lg:top-[500px] left-1/2 transform -translate-x-1/2 text-white text-center px-16 sm:px-4 lg:px-8 py-28 rounded-md"
-        style={{
-            fontFamily: 'Salina-Book, sans-serif',
-            fontSize: '0.1rem',
-            whiteSpace: 'normal',
-            overflow: 'visible',
-            width: '40%',
-            letterSpacing: '0.1em',
-        }}
-      >
-        <p className="text-sm sm:text-xl md:text-sm lg:text-sm xl:text-5xl" style={{ lineHeight: '1.2' }}>
-          {t('whoweareDescription')}
-        </p>
-      </div>
-
-      <div className="flex flex-col items-center mt-2">
-        <div className="w-[1px] h-[100px] sm:h-[150px] md:h-[80px] bg-white mb-2"></div>
-        <h2 
-            className="text-white text-lg sm:text-3xl md:text-4xl lg:text-7xl text-center mb-4" 
-            style={{ fontFamily: 'Salina-BookItalic, sans-serif', fontStyle: 'italic' }}
-        >
-            {t('weAreFayn')}
+      <div className="flex flex-col items-center mt-10">
+        <div className="w-[2px] h-[80px] sm:h-[100px] md:h-[120px] bg-white mb-4"></div>
+        <h2 className="text-white text-xl sm:text-3xl md:text-5xl lg:text-6xl text-center italic" style={{ fontFamily: 'Salina-BookItalic, sans-serif' }}>
+          {t('weAreFayn')}
         </h2>
       </div>
+
     </div>
   );
 };

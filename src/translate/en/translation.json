@@ -20,5 +20,13 @@
   "branches": {
     "title": "BRANCHES",
     "noImagesAvailable": "No images available"
+  },
+  "location": {
+    "title": "OUR LOCATIONS",
+    "reservation": "Reservation"
+  },
+  "newsletter": {
+    "title": "NEWSLETTER",
+    "description": "Stay in the loop with the latest news, events, and exclusive updates from Fayn Cocktails & More. Discover what’s happening behind the bar and beyond as we continue to craft unforgettable experiences for our guests."
   }
 }

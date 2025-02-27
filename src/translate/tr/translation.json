@@ -20,8 +20,11 @@
   "branches": {
   "title": "ŞUBELER",
   "noImagesAvailable": "Görüntülenebilir resim yok"
+},
+"newsletter": {
+  "title": "HABER BÜLTENİ",
+  "description": "Fayn Cocktails & More dünyasındaki en güncel haberler, etkinlikler ve özel duyurularla hep bir adım önde olun. Barın arkasında ve ötesinde neler olup bittiğini keşfedin; misafirlerimiz için unutulmaz deneyimler yaratmaya devam ediyoruz."
 }
-
   
   
 }

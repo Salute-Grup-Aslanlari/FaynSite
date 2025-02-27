@@ -1,59 +1,132 @@
-'use client';
-import { useEffect, useRef } from 'react';
-import gsap from 'gsap';
+"use client";
 
-export default function CocktailAnimation() {
-  const liquidRef = useRef(null);
-  const garnishRef = useRef(null);
+import { motion, useScroll, useTransform } from "framer-motion";
+import { useEffect, useRef, useState } from "react";
+
+const items = [
+  {
+    title: "Image 1",
+    src: "./assets/cocktails/BERGAMOTFIZZ.webp",
+  },
+  {
+    title: "Image 2",
+    src: "",
+  },
+  {
+    title: "Image 3",
+    src: "/images/my-image3.jpg",
+  },
+];
+
+const data = [
+  {
+    title: "Image 1",
+    src: "./assets/katman/layer1.png",
+  },
+  {
+    title: "Image 2",
+    src: "./assets/katman/layer2.png",
+  },
+  {
+    title: "Image 3",
+    src: "./assets/katman/layer3.png",
+  },
+  {
+    title: "Image 4",
+    src: "./assets/katman/layer4.png",
+  },
+  {
+    title: "Image 4",
+    src: "./assets/katman/layer5.png",
+  },
+  {
+    title: "Image 4",
+    src: "./assets/katman/layer6.png",
+  },
+  {
+    title: "Image 4",
+    src: "./assets/katman/layer7.png",
+  },
+  {
+    title: "Image 4",
+    src: "./assets/katman/layer8.png",
+  },
+];
+
+const StackedImages = () => {
+  const [currentTitle, setCurrentTitle] = useState("Image 1");
+  const [activeIndex, setActiveIndex] = useState(0);
+  const containerRef = useRef(null);
 
   useEffect(() => {
-    gsap.fromTo(liquidRef.current, 
-      { y: "100%" },
-      { 
-        y: "0%",
-        duration: 3,
-        ease: "power1.inOut"
-      }
-    );
-
-    gsap.to(garnishRef.current, {
-      y: -10,
-      duration: 2,
-      repeat: -1,
-      yoyo: true,
-      ease: "power1.inOut"
-    });
-
-  }, []);
+    setCurrentTitle(data[activeIndex].title);
+  }, [activeIndex]);
 
   return (
-    <div className="flex items-center justify-center w-11/12 h-screen">
-      <div className="relative w-[90vh] h-[90vh] overflow-hidden">
-        <div 
-          className="cocktail-glass w-full h-full absolute bottom-0"
-          style={{ backgroundImage: 'url(/assets/katman/katman1.webp)', backgroundSize: 'cover' }}
-        ></div>
-
-        <div 
-          ref={liquidRef} 
-          className="cocktail-liquid w-full h-full absolute bottom-0"
-          style={{ backgroundImage: 'url(/assets/katman/katman2.webp)', backgroundSize: 'cover' }}
-        ></div>
-
-        <div 
-          ref={garnishRef} 
-          className="cocktail-garnish absolute top-[2%] w-full h-[200vh]"
-          style={{ backgroundImage: 'url(/assets/katman/katman2.webp)', backgroundSize: 'cover' }}
-        ></div>
-      </div>
-
-      <div className="ml-10 w-1/2">
-        <h1 className="text-4xl font-bold text-gray-800">Lezzetli Kokteyl</h1>
-        <p className="mt-4 text-lg text-gray-600">
-          Bu eşsiz içecekle ferahlayın! Özel tarifimizle hazırlanan bu kokteyl, 
-          damaklarınıza eşsiz bir tat sunacak.
-        </p>
-      </div>
+    <div className="relative w-full" ref={containerRef}>
+      {data.map((item, index) => (
+        <ImageSection
+          key={index}
+          data={item}
+          index={index}
+          setActiveIndex={setActiveIndex}
+          currentTitle={currentTitle}
+        />
+      ))}
     </div>
   );
-}
+};
+
+const ImageSection = ({ data, index, setActiveIndex, currentTitle }) => {
+  const sectionRef = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: sectionRef,
+    offset: ["start center", "center center"],
+  });
+
+  const y = useTransform(scrollYProgress, [0, 1], [100, 0]);
+  const opacity = useTransform(scrollYProgress, [0, 1], [0, 1]);
+
+  useEffect(() => {
+    let prevScroll = 0;
+    const unsubscribe = scrollYProgress.on("change", (latest) => {
+      if (latest > prevScroll && latest > 0.1) {
+        setActiveIndex(index);
+      } else if (latest < prevScroll && latest < 0.1) {
+        if (index > 0) {
+          setActiveIndex(index - 1);
+        }
+      }
+      prevScroll = latest;
+    });
+    return () => unsubscribe();
+  }, [scrollYProgress, index, setActiveIndex]);
+
+  const initial = index === 0 ? { y: 100, opacity: 0 } : false;
+
+  return (
+    <div ref={sectionRef} className="h-screen flex items-center justify-center sticky top-0">
+      <motion.div
+        className="w-full max-w-4xl mx-auto px-5 relative"
+        style={{
+          y,
+          opacity,
+        }}
+        initial={initial}
+      >
+        <img src={data.src} alt={data.title} className="w-full rounded-lg shadow-lg block" />
+        <motion.div
+          className="absolute bottom-[-20px] left-1/2 transform -translate-x-1/2 text-2xl font-bold text-white z-10"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          key={currentTitle}
+        >
+          {currentTitle}
+        </motion.div>
+      </motion.div>
+    </div>
+  );
+};
+
+export default StackedImages;
