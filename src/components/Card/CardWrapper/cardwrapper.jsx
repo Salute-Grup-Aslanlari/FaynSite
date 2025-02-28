@@ -1,5 +1,6 @@
 'use client';
 
+import React from "react";
 import Card from '../index';
 import { useTranslation } from 'react-i18next';
 

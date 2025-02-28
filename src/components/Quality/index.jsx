@@ -1,3 +1,4 @@
+import React from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 import { quality } from "../../data";

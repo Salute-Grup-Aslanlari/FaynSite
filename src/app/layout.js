@@ -1,3 +1,4 @@
+import React from 'react';
 import { Geist, Geist_Mono } from "next/font/google";
 import { Source_Sans_3 } from "next/font/google";
 import '../styles/globals.css';

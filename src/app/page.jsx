@@ -1,4 +1,5 @@
 'use client';
+import React from 'react';
 import styles from './page.module.scss';
 import { projects } from '../data';
 import { branches } from '../data';
