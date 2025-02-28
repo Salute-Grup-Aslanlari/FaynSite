@@ -20,13 +20,13 @@ const AboutUs = () => {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      if (countries < 3) setCountries(countries + 1);
-      if (branches < 6) setBranches(branches + 1);
-      if (customers < 1500) setCustomers(customers + 50);
+      setCountries(prevCountries => prevCountries < 3 ? prevCountries + 1 : prevCountries);
+      setBranches(prevBranches => prevBranches < 6 ? prevBranches + 1 : prevBranches);
+      setCustomers(prevCustomers => prevCustomers < 1500 ? prevCustomers + 50 : prevCustomers);
     }, 60);
 
     return () => clearInterval(interval);
-  }, [countries, branches, customers]);
+  }, []);
 
   return (
     <div className="mb-96">
@@ -224,16 +224,15 @@ const AboutUs = () => {
               animate={{ opacity: 1 }}
               transition={{ duration: 3 }}
             >
-              AT FAYN, WE TAKE FAYN PRIDE IN CRAFTING EXCELLENCE FROM THE GROUND UP.
+              AT FAYN, WE TAKE FAYN PRIDE IN CRAFTING THE BEST.
             </motion.h2>
             <Image
               src="/assets/aboutus/aboutus3.webp"
-              alt="Our Story"
+              alt="Factory Production"
               layout="intrinsic"
-              width={1600}
-              height={800}
+              width={900}
+              height={600}
               objectFit="cover"
-              objectPosition="center"
               className="rounded-xl"
             />
           </div>

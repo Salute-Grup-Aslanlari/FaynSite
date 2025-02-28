@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState } from "react";
+import Image from 'next/image';
 
 const Portfolio = () => {
   const [showCard, setShowCard] = useState("all");
@@ -251,7 +252,14 @@ const PortfolioCard = ({ ImageHref, category, title, description, button, showCa
         className={`w-full md:w-1/2 xl:w-1/4 px-0 mx-0 ${showCard === "all" || showCard === category.toLowerCase() ? "block" : "hidden"}`}
       >
         <div className="card" onClick={handleOpenPopup}>
-          <img src={ImageHref} alt={title} className="w-full h-full object-cover portfolio" />
+        <Image 
+          src={ImageHref} 
+          alt={title} 
+          layout="responsive" 
+          width={500} 
+          height={500} 
+          className="w-full h-full object-cover portfolio" 
+        />
           <div className="absolute top-0 left-0 p-4 text-white z-10">
             <p className="text-opacity-10" style={{ fontSize: "8px", fontFamily: 'Source Sans 3, sans-serif', fontWeight: 100 }}>
               {description}
@@ -272,7 +280,7 @@ const PortfolioCard = ({ ImageHref, category, title, description, button, showCa
         )}
       </div>
    
-      <style jsx>{`
+      <style>{`
       .cards-container {
         display: flex;
         flex-wrap: wrap;

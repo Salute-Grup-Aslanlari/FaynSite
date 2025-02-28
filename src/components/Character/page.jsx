@@ -1,4 +1,6 @@
 'use client';
+
+import React from "react";
 import { useRef, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -31,7 +33,7 @@ export default function Home() {
 
   const splitWords = (phrase) => {
     return phrase.split(" ").map((word, i) => (
-      <span key={word + "_" + i} className="mr-6">
+      <span key={word + "_" + i} className="mr-4 sm:mr-6">
         {splitLetters(word)}
       </span>
     ));
@@ -54,9 +56,9 @@ export default function Home() {
   return (
     <main
       ref={container}
-      className="flex items-center justify-center h-[900px] mt-[10vh] text-gray-300"
+      className="flex items-center justify-center h-[500px] sm:h-[700px] lg:h-[900px] mt-[5vh] sm:mt-[8vh] lg:mt-[10vh] text-gray-300 px-4"
     >
-      <div className="w-4/5 flex flex-wrap justify-center text-6xl text-center">
+      <div className="w-full sm:max-w-[80%] lg:max-w-[70%] flex flex-wrap justify-center text-3xl sm:text-5xl md:text-6xl lg:text-7xl text-center leading-snug sm:leading-normal">
         {splitWords(phrase)}
       </div>
     </main>

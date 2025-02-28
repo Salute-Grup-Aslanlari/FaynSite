@@ -4,9 +4,9 @@
   "locations": "LOKASYONLAR",
   "products": "ÜRÜNLER",
   "exploreMenu": "Menüyü Keşfet",
-  "eatFine": "İYİ YİYİN",
-  "drinkFine": "İYİ İÇİN",
-  "feelFayn": "HİSSET FAYN",
+  "eatFine": "EAT FINE",
+  "drinkFine": "DRINK FINE",
+  "feelFayn": "FEEL FAYN",
   "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi expedita voluptatibus earum dolorem temporibus, eaque, pariatur voluptatum odit est ipsam recusandae maiores illum.",
   "whoweareTitle": "BİZ KİMİZ",
   "whoweareDescription": "FAYN, KONUKLARIN KOKTEYL, MUTFAK, CANLI MÜZİK VE HARİKA BİR ŞİRKETLE EĞLENEBİLECEĞİ CANLI BİR BULUŞMA YERİDİR.",
@@ -20,8 +20,11 @@
   "branches": {
   "title": "ŞUBELER",
   "noImagesAvailable": "Görüntülenebilir resim yok"
+},
+"newsletter": {
+  "title": "HABER BÜLTENİ",
+  "description": "Fayn Cocktails & More dünyasındaki en güncel haberler, etkinlikler ve özel duyurularla hep bir adım önde olun. Barın arkasında ve ötesinde neler olup bittiğini keşfedin; misafirlerimiz için unutulmaz deneyimler yaratmaya devam ediyoruz."
 }
-
   
   
 }

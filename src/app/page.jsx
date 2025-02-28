@@ -1,4 +1,5 @@
 'use client';
+import React from 'react';
 import styles from './page.module.scss';
 import { projects } from '../data';
 import { branches } from '../data';
@@ -22,6 +23,7 @@ export default function HomePage() {
     target: container,
     offset: ['start start', 'end end'],
   });
+
 
   useEffect(() => {
     const lenis = new Lenis();

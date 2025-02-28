@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import React, { useState } from 'react';  // React importunu ekleyin
 import { FaBars, FaTimes } from 'react-icons/fa';
 import Link from 'next/link';
 import { useTranslation } from 'next-i18next';

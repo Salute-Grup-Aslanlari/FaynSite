@@ -1,10 +1,11 @@
+import React from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 import { quality } from "../../data";
 import { useTranslation } from "react-i18next";
 
 export const Quality = () => {
-  const { t } = useTranslation(); // i18n çeviri fonksiyonu
+  const { t } = useTranslation();
   const [currentTitle, setCurrentTitle] = useState(quality[0].title);
   const [activeIndex, setActiveIndex] = useState(0);
   const containerRef = useRef(null);
@@ -22,7 +23,7 @@ export const Quality = () => {
           index={index}
           setActiveIndex={setActiveIndex}
           currentTitle={currentTitle}
-          titleTranslation={t(`quality.${item.title.toLowerCase()}`)} // Çeviriyi buradan alıyoruz
+          titleTranslation={t(`quality.${item.title.toLowerCase()}`)}
         />
       ))}
     </div>
@@ -80,7 +81,7 @@ const ImageSection = ({ data, index, setActiveIndex, currentTitle, titleTranslat
           exit={{ opacity: 0 }}
           key={currentTitle}
         >
-          {titleTranslation} {/* Çevrilmiş başlık burada */}
+          {titleTranslation}
         </motion.div>
       </motion.div>
     </div>
