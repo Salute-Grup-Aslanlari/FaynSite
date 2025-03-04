@@ -61,7 +61,7 @@ const MissMrmodel = () => {
       </motion.div>
 
       {/* İkinci Görsel ve Metin */}
-      <div className="flex justify-between w-full mt-8 xl:pl-72 lg:pl-64">
+      <div className="flex justify-between w-full mt-8 xl:pl-80 lg:pl-56">
         {/* Soldaki Görsel */}
         <motion.div
           className="w-3/4"

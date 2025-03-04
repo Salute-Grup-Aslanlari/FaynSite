@@ -3,7 +3,7 @@ export const projects = [
       title: "IZMIR FASHION WEEK 2024",
       description: "Fayn Cocktails & More proudly sponsored İzmir Fashion Week 2024, celebrating creativity and style celebrating creativity and style.",
       src: "/assets/newsletter2.webp",
-      date: "August 30th 2024",
+      date: "August 30, 2024",
       link: "/Projects/izmire-fashion-week-2024",
       color: "#CBB5B9"
     },

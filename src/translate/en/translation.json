@@ -28,5 +28,19 @@
   "newsletter": {
     "title": "NEWSLETTER",
     "description": "Stay in the loop with the latest news, events, and exclusive updates from Fayn Cocktails & More. Discover what’s happening behind the bar and beyond as we continue to craft unforgettable experiences for our guests."
-  }
+  },
+ "coctailmasterclass": {
+  "title": "Fayn Cocktails & More recently hosted a series of exciting cocktail workshops",
+  "date": "August 30th 2024",
+  "description": "Fayn Cocktails & More recently hosted a series of exciting cocktail workshops, led by the acclaimed bartender Çağatay Ercan.",
+  "descriptiontwo": "During these engaging sessions participants had the opportunity to learn the fine art of cocktail making from selecting premium ingredients to mastering the perfect mix.\nÇağatay’s expert guidance helped attendees refine their skills and craft their own signature drinks.\nThe workshops were a great success providing a fun and educational experience for cocktail enthusiasts of all levels.\nFayn continues to offer unique opportunities like these, blending creativity with expert knowledge to elevate the cocktail experience."
+},
+"izmirfashionweek": {
+ "title": "  FAYN & IZMIR FASHION WEEK 2024, CELEBRATİNG FASHION AND FUN.",
+ "date": "August 30th 2024",
+ "description": "Fayn Cocktails & More proudly sponsored İzmir Fashion Week 2024, celebrating creativity and style.",
+ "descriptiontwo": "The event concluded with an unforgettable after-party at Fayn, where guests enjoyed signature cocktails, lively conversations, and captured memories in our vibrant atmosphere. It was a night filled with fun, fashion, and flair, perfectly reflecting the spirit of Fayn. Guests danced the night away, surrounded by a stunning blend of fashion and expertly crafted drinks. The event marked just the beginning of Fayn’s continued commitment to bringing people together through unforgettable experiences. Stay tuned for more events where we continue to mix creativity with community!"
+}
+
+  
 }

@@ -25,15 +25,13 @@ const CardWrapper = ({ cards = [] }) => {
          {t('newsletter.description')}
         </p>
       </div>
-      {cards.length > 0 ? (
+      {cards.length > 0 && 
         cards.map((card, index) => (
           <div key={index} className="mb-2 last:mb-0">
             <Card {...card} i={index} />
           </div>
         ))
-      ) : (
-        <p className="text-white">No cards available</p>
-      )}
+      }
     </div>
   );
 };
