@@ -59,8 +59,8 @@ const AboutUs = () => {
             ABOUT US
           </motion.h1>
           <motion.p
-            className="justify-end sm:text-pretty sm:p-6 text-xl lg:text-2xl leading-relaxed font-light lg:w-3/4 sm:w-full lg:text-right"
-            style={{ lineHeight: '1.4' }}
+            className="justify-end sm:text-pretty sm:p-6 text-xl lg:text-3xl leading-relaxed font-light lg:w-3/4 sm:w-full lg:text-right"
+            style={{ lineHeight: '1.6' }}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1.5 }}
@@ -110,28 +110,32 @@ const AboutUs = () => {
       <div className="flex flex-col lg:flex-row mt-4 px-4 sm:px-0 lg:mt-24">
         <div className="w-full lg:w-1/2 flex flex-col items-center sm:items-start lg:pl-20">
           <motion.div
-            className="text-white text-center sm:text-left mt-16 sm:mt-48 lg:mt-9"
+            className="text-white text-center sm:text-left mt-16 sm:mt-48"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1.5 }}
           >
             <p 
-            className="text-2xl sm:text-4xl lg:text-2xl leading-relaxed"
+            className="text-2xl sm:text-4xl lg:text-3xl leading-relaxed"
+            style={{ lineHeight: '1.6' }}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1 }}
             >
+              
+              Fayn is the perfect venue for both business gatherings and celebratory events.
+              Its carefully curated menu showcases a fusion of global flavors,
+              complemented by signature cocktails crafted with precision and dishes prepared using premium, fresh ingredients.
+              <br></br>
               Fayn enhances the guest experience with dynamic live DJ performances,
               providing an engaging atmosphere that complements its premium offerings.
               Committed to excellence, Fayn strives daily to exceed expectations,
               ensuring every visit leaves a lasting impression and fosters memorable experiences.
-              Fayn is the perfect venue for both business gatherings and celebratory events.
-              Its carefully curated menu showcases a fusion of global flavors,
-              complemented by signature cocktails crafted with precision and dishes prepared using premium, fresh ingredients.
+              
             </p>
           </motion.div>
 
-          <div className="relative w-full mt-16 sm:mt-28">
+          <div className="relative w-full mt-36">
             <div className="absolute top-[-50px] left-0 text-left z-10">
               <motion.h2
                 className="text-white text-sm sm:text-4xl"
@@ -156,7 +160,7 @@ const AboutUs = () => {
                     alt={`Logo ${index + 1}`}
                     width={1200}
                     height={600}
-                    className="w-20 h-16 lg:w-95 lg:h-20 mt-10"
+                    className="w-20 h-16 lg:w-95 lg:h-20 mt-10 mb-20"
                   />
                 ))}
               </motion.div>
@@ -164,8 +168,8 @@ const AboutUs = () => {
           </div>
         </div>
 
-        <div className="w-full lg:w-1/2 flex justify-center sm:justify-end pl-0 sm:pl-36">
-          <div className="relative w-full h-[300px] sm:h-[400px] lg:h-[500px] -top-15">
+        <div className="w-full lg:w-full flex justify-center sm:justify-end pl-0 sm:pl-36">
+          <div className="relative w-full h-[300px] sm:h-[400px] lg:h-[800px] -top-30">
             <Image
               src="/assets/aboutus/aboutus2.webp"
               alt="Our Mission"
@@ -174,7 +178,7 @@ const AboutUs = () => {
               height={300}
               objectFit="cover"
               objectPosition="center"
-              className="rounded-xl sm:mt-16 lg:mt-0"
+              className="rounded-xl sm:mt-32 lg:mt-20"
             />
           </div>
         </div>
@@ -199,8 +203,8 @@ const AboutUs = () => {
               </motion.div>
             </div>
             <motion.p
-              className="text-xl sm:text-2xl w-[95%] max-w-4xl lg:text-3xl xl:text-2xl leading-loose font-light mt-32 lg:mt-80"
-              style={{ fontFamily: 'Source Sans 3, sans-serif', fontWeight: 100 }}
+              className="sm:text-2xl w-[95%] max-w-4xl lg:text-3xl font-light mt-32 lg:mt-80 leading-relaxed"
+              style={{ fontFamily: 'Source Sans 3, sans-serif', fontWeight: 100, lineHeight: '1.6'}}
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 2 }}

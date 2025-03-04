@@ -6,7 +6,7 @@ import { useTransform, motion, useScroll } from 'framer-motion';
 import { useRef } from 'react';
 import Link from 'next/link';
 
-const Card = ({ i, title, description, src, link, color, progress, range, targetScale }) => {
+const Card = ({ i, title, description, src, link, color, progress, range, targetScale, date }) => {
   const container = useRef(null);
 
   const { scrollYProgress } = useScroll({
@@ -29,22 +29,11 @@ const Card = ({ i, title, description, src, link, color, progress, range, target
             <p className="text-2xl leading-7 first-letter:text-2xl first-letter:font-bold">
               {description}
             </p>
-            <span className="mt-5 flex items-center gap-2">
-              <Link href={link} className="text-sm underline cursor-pointer">
+            <span className="mt-5 flex flex-col items-start gap-2">
+              <Link href={link} className="text-xl underline cursor-pointer">
                 See more
               </Link>
-              <svg
-                width="22"
-                height="12"
-                viewBox="0 0 22 12"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M21.5303 6.53033C21.8232 6.23744 21.8232 5.76256 21.5303 5.46967L16.7574 0.696699C16.4645 0.403806 15.9896 0.403806 15.6967 0.696699C15.4038 0.989592 15.4038 1.46447 15.6967 1.75736L19.9393 6L15.6967 10.2426C15.4038 10.5355 15.4038 11.0104 15.6967 11.3033C15.9896 11.5962 16.4645 11.5962 16.7574 11.3033L21.5303 6.53033ZM0 6.75L21 6.75V5.25L0 5.25L0 6.75Z"
-                  fill="black"
-                />
-              </svg>
+              <p className="text-lg text-black text-center italic font-serif">{new Date(date).toLocaleDateString()}</p>
             </span>
           </div>
           <div className="w-3/5 h-[90%] rounded-3xl overflow-hidden flex justify-center items-center relative">

@@ -9,8 +9,8 @@ export default function Home() {
   const stickyMask = useRef(null);
 
   const initialMaskSize = 0.8;
-  const targetMaskSize = 70;
-  const easing = 0.15;
+  const targetMaskSize = 350;
+  const easing = 0.20;
 
   const [easedScrollProgress, setEasedScrollProgress] = useState(0);
 

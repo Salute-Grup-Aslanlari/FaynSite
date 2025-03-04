@@ -49,11 +49,11 @@ export default function LocationsPage() {
                   key={animationKey}
                >
                   <Image
-                     src={selectedBranch.image}  // Görsel kaynağını buraya ekliyoruz
-                     alt={selectedBranch.name}    // Alternatif metni buraya ekliyoruz
+                     src={selectedBranch.image}
+                     alt={selectedBranch.name}
                      className="w-full h-auto md:h-[700px] object-cover rounded-2xl animate-slide-in"
-                     width={700}  // Görselin genişliğini belirtmelisiniz
-                     height={700} // Görselin yüksekliğini belirtmelisiniz
+                     width={700}
+                     height={700}
                   />
                </div>
                <div className="w-3/4 md:w-1/2 flex flex-col mb-8 animate-slide-in">

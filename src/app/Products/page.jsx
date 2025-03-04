@@ -16,8 +16,8 @@ const Portfolio = () => {
         <div className="container mx-auto px-0 max-w-full">
           <div className="flex flex-wrap">
             <div className="w-full px-4">
-            <h1 className="text-2xl text-black text-center mt-2 mb-28">OUR PRODUCT</h1>
-            <div className="absolute top-[10px] sm:top-[10px] md:top-[2px] lg:top-[220px] left-1/2 transform -translate-x-1/2 w-[1px] h-20 sm:h-16 md:h-20 bg-black"></div>
+            <h1 className="text-2xl text-black text-center mt-4 mb-28">OUR PRODUCT</h1>
+            <div className="absolute top-[210px] md:top-[90x] lg:top-[220px] left-1/2 transform -translate-x-1/2 w-[1px] h-20 sm:h-2 md:h-20 bg-black"></div>
               <div className="mx-auto mb-[10px] max-w-[510px] text-center">
                 <span className="text-primary mb-6 block text-5xl mt-4 text-black" style={{ fontFamily: 'Salina-TrialLight, sans-serif' }}>
                   OUR <span className="text-black mt-4" style={{ fontFamily: 'Salina-BookItalic, sans-serif' }}>(finest)</span> DRINKS & DISHES FROM THE MENU
@@ -66,17 +66,19 @@ const Portfolio = () => {
               </ul>
             </div>
           </div>
-
           <div className="flex flex-wrap gap-0">
-            <PortfolioCard
-              ImageHref="/assets/cocktails/BERGAMOTFIZZ.webp"
-              category="cocktails"
-              title="Bergamot Fizz"
-              description="SIGNATURE COCKTAILS"
-              button="View Details"
-              buttonHref="#"
-              showCard={showCard}
-            />
+          <PortfolioCard
+            ImageHref="/assets/cocktails/BERGAMOTFIZZ.webp"
+            category="cocktails"
+            title="Bergamot Fizz"
+            description="SIGNATURE COCKTAILS"
+            button="View Details"
+            buttonHref="#"
+            showCard={showCard}
+            leftImage="/assets/popups/reyhankart1.webp"
+            rightImage="/assets/popups/reyhankart2.webp"
+          />
+
             <PortfolioCard
               ImageHref="/assets/cocktails/CHOCOLATENEGRONI.webp"
               category="Cocktails"
@@ -85,6 +87,8 @@ const Portfolio = () => {
               button="View Details"
               buttonHref="#"
               showCard={showCard}
+              leftImage="/assets/popups/negronikart1.webp"
+              rightImage="/assets/popups/negronikart2.webp"
             />
             <PortfolioCard
               ImageHref="/assets/cocktails/CLEARTOUCH.webp"
@@ -94,6 +98,8 @@ const Portfolio = () => {
               button="View Details"
               buttonHref="#"
               showCard={showCard}
+              leftImage="/assets/popups/cleartouchkart1.webp"
+              rightImage="/assets/popups/cleartouchkart2.webp"
             />
             <PortfolioCard
               ImageHref="/assets/cocktails/FAYNTHANKSANDYOU.webp"
@@ -103,6 +109,8 @@ const Portfolio = () => {
               button="View Details"
               buttonHref="#"
               showCard={showCard}
+              leftImage="/assets/popups/faynthankskart1.webp"
+              rightImage="/assets/popups/faynthankskart2.webp"
             />
             <PortfolioCard
               ImageHref="/assets/cocktails/FLORALZING.webp"
@@ -112,6 +120,8 @@ const Portfolio = () => {
               button="View Details"
               buttonHref="#"
               showCard={showCard}
+              leftImage="/assets/popups/floralzingkart1.webp"
+              rightImage="/assets/popups/floralzingkart2.webp"
             />
             <PortfolioCard
               ImageHref="/assets/cocktails/FUGUWILLBEFAYN.webp"
@@ -121,6 +131,8 @@ const Portfolio = () => {
               button="View Details"
               buttonHref="#"
               showCard={showCard}
+              leftImage="/assets/popups/fugukart1.webp"
+              rightImage="/assets/popups/fugukart2.webp"
             />
             <PortfolioCard
               ImageHref="/assets/cocktails/KALIPSO.webp"
@@ -130,6 +142,8 @@ const Portfolio = () => {
               button="View Details"
               buttonHref="#"
               showCard={showCard}
+              leftImage="/assets/popups/kalipsokart1.webp"
+              rightImage="/assets/popups/kalipsokart2.webp"
             />
             <PortfolioCard
               ImageHref="/assets/cocktails/LIBIDO.webp"
@@ -139,6 +153,8 @@ const Portfolio = () => {
               button="View Details"
               buttonHref="#"
               showCard={showCard}
+              leftImage="/assets/popups/libidokart1.webp"
+              rightImage="/assets/popups/libidokart2.webp"
             />
             <PortfolioCard
               ImageHref="/assets/cocktails/MANGOBLOSSOM.webp"
@@ -148,6 +164,8 @@ const Portfolio = () => {
               button="View Details"
               buttonHref="#"
               showCard={showCard}
+              leftImage="/assets/popups/mangoblossomkart1.webp"
+              rightImage="/assets/popups/mangoblossomkart2.webp"
             />
             <PortfolioCard
               ImageHref="/assets/cocktails/PRETTYINGREEN.webp"
@@ -157,6 +175,8 @@ const Portfolio = () => {
               button="View Details"
               buttonHref="#"
               showCard={showCard}
+              leftImage="/assets/popups/prettyingreenKART1.webp"
+              rightImage="/assets/popups/prettyingreenKART2.webp"
             />
             <PortfolioCard
               ImageHref="/assets/foods/ARTICHOKESEABASS.webp"
@@ -166,6 +186,8 @@ const Portfolio = () => {
               button="View Details"
               buttonHref="#"
               showCard={showCard}
+              leftImage="/assets/tarif1.webp"
+              rightImage="/assets/tarif2.webp"
             />
             <PortfolioCard
               ImageHref="/assets/foods/BEEFKATSUVEGGIERICE.webp"
@@ -175,6 +197,8 @@ const Portfolio = () => {
               button="View Details"
               buttonHref="#"
               showCard={showCard}
+              leftImage="/assets/tarif1.webp"
+              rightImage="/assets/tarif2.webp"
             />
             <PortfolioCard
               ImageHref="/assets/foods/CALIFORNIAROLL.webp"
@@ -184,6 +208,8 @@ const Portfolio = () => {
               button="View Details"
               buttonHref="#"
               showCard={showCard}
+              leftImage="/assets/tarif1.webp"
+              rightImage="/assets/tarif2.webp"
             />
             <PortfolioCard
               ImageHref="/assets/foods/FARFROMHOME.webp"
@@ -193,6 +219,8 @@ const Portfolio = () => {
               button="View Details"
               buttonHref="#"
               showCard={showCard}
+              leftImage="/assets/tarif1.webp"
+              rightImage="/assets/tarif2.webp"
             />
             <PortfolioCard
               ImageHref="/assets/foods/OCTOPUSCORN.webp"
@@ -202,6 +230,8 @@ const Portfolio = () => {
               button="View Details"
               buttonHref="#"
               showCard={showCard}
+              leftImage="/assets/tarif1.webp"
+              rightImage="/assets/tarif2.webp"
             />
              <PortfolioCard
               ImageHref="/assets/foods/CALIFORNIAROLL.webp"
@@ -211,6 +241,8 @@ const Portfolio = () => {
               button="View Details"
               buttonHref="#"
               showCard={showCard}
+              leftImage="/assets/tarif1.webp"
+              rightImage="/assets/tarif2.webp"
             />
             <PortfolioCard
               ImageHref="/assets/foods/FARFROMHOME.webp"
@@ -220,6 +252,8 @@ const Portfolio = () => {
               button="View Details"
               buttonHref="#"
               showCard={showCard}
+              leftImage="/assets/tarif1.webp"
+              rightImage="/assets/tarif2.webp"
             />
             <PortfolioCard
               ImageHref="/assets/foods/OCTOPUSCORN.webp"
@@ -229,6 +263,8 @@ const Portfolio = () => {
               button="View Details"
               buttonHref="#"
               showCard={showCard}
+              leftImage="/assets/tarif1.webp"
+              rightImage="/assets/tarif2.webp"
             />
           </div>
         </div>
@@ -240,7 +276,7 @@ const Portfolio = () => {
 export default Portfolio;
 
 
-const PortfolioCard = ({ ImageHref, category, title, description, button, showCard }) => {
+const PortfolioCard = ({ ImageHref, category, title, description, button, showCard, leftImage, rightImage }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const handleOpenPopup = () => setIsOpen(true);
@@ -252,14 +288,14 @@ const PortfolioCard = ({ ImageHref, category, title, description, button, showCa
         className={`w-full md:w-1/2 xl:w-1/4 px-0 mx-0 ${showCard === "all" || showCard === category.toLowerCase() ? "block" : "hidden"}`}
       >
         <div className="card" onClick={handleOpenPopup}>
-        <Image 
-          src={ImageHref} 
-          alt={title} 
-          layout="responsive" 
-          width={500} 
-          height={500} 
-          className="w-full h-full object-cover portfolio" 
-        />
+          <Image 
+            src={ImageHref} 
+            alt={title} 
+            layout="responsive" 
+            width={500} 
+            height={500} 
+            className="w-full h-full object-cover portfolio" 
+          />
           <div className="absolute top-0 left-0 p-4 text-white z-10">
             <p className="text-opacity-10" style={{ fontSize: "8px", fontFamily: 'Source Sans 3, sans-serif', fontWeight: 100 }}>
               {description}
@@ -273,13 +309,23 @@ const PortfolioCard = ({ ImageHref, category, title, description, button, showCa
         {isOpen && (
           <div className="popup-overlay" onClick={handleClosePopup}>
             <div className="popup-content">
-              <img src="/assets/tarif1.webp" className="popup-image left" />
-              <img src="/assets/tarif2.webp" className="popup-image right" />
+              <img 
+                src={leftImage} 
+                width={800} 
+                height={500} 
+                className="popup-image left" 
+              />
+              <img 
+                src={rightImage} 
+                width={800} 
+                height={500} 
+                className="popup-image right" 
+              />
             </div>
           </div>
         )}
       </div>
-   
+
       <style>{`
       .cards-container {
         display: flex;
@@ -327,7 +373,7 @@ const PortfolioCard = ({ ImageHref, category, title, description, button, showCa
       align-items: center;
       justify-content: center;
       position: relative;
-      width: 80%;
+      width: 85%;
       height: 400px;
       transform: scale(0.9);
       animation: popup-slide 0.5s forwards;
@@ -335,24 +381,24 @@ const PortfolioCard = ({ ImageHref, category, title, description, button, showCa
 
     .left {
       width: 60%;
-      transform: translateX(-100%) rotate(-10deg);
+      transform: translateX(-100%) rotate(-20deg);
       animation: slide-left 0.9s forwards;
-      z-index: 1; /* Keep the left image below */
+      z-index: -1;
     }
 
     .right {
       width: 30%;
-      transform: translateX(100%) rotate(10deg);
+      transform: translateX(100%) rotate(-10deg);
       animation: slide-right 0.9s forwards;
-      z-index: 2; /* Make the right image appear on top */
+      z-index: 2;
     }
 
     @keyframes slide-left {
       0% {
-        transform: translateX(-100%) rotate(-10deg);
+        transform: translateX(-130%) rotate(-10deg);
       }
       100% {
-        transform: translateX(0) rotate(0deg);
+        transform: translateX(10%) rotate(0deg);
       }
     }
 
@@ -361,7 +407,7 @@ const PortfolioCard = ({ ImageHref, category, title, description, button, showCa
         transform: translateX(100%) rotate(10deg);
       }
       100% {
-        transform: translateX(0) rotate(0deg);
+        transform: translateX(-10%) rotate(0deg);
       }
     }
 
@@ -373,12 +419,55 @@ const PortfolioCard = ({ ImageHref, category, title, description, button, showCa
         transform: scale(1);
       }
     }
-`}</style>
 
+  @media (max-width: 768px) {
+    .popup-content {
+      display: flex;
+      flex-direction: column;
+      height: auto;
+    }
+
+    .left {
+       width: 120%; /* Daha büyük bir değer ile dene */
+    min-width: 127%; /* Genişliği gar anti altına al */
+    margin-left: -60px; /* Sola kaydır */
+      width: 180%; /* Sol popup'ı daha da büyüttük */
+      transform: translateX(60px) rotate(15deg); /* Daha iyi hizalama için sola kaydırdık ve açıyı düzenledik */
+      z-index: -1;
+    }
+
+    .right {
+      width: 75%;
+      transform: translateX(0) rotate(0deg);
+      z-index: 1;
+      margin-top: -70px;
+    }
+        @keyframes slide-left {
+        0% {
+          transform: translateX(-130%) rotate(0deg);
+        }
+        100% {
+          transform: translateX(10%) rotate(0deg);
+        }
+      }
+
+      @keyframes slide-right {
+        0% {
+          transform: translateX(100%) rotate(10deg);
+        }
+        100% {
+          transform: translateX(25%) rotate(-0deg);
+        }
+      }
+  }
+
+
+`}</style>
 
     </>
   );
 };
+
 
 
 
