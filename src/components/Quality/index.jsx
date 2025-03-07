@@ -59,7 +59,7 @@ const ImageSection = ({ data, index, setActiveIndex, currentTitle, titleTranslat
   const initial = index === 0 ? { y: 100, opacity: 0 } : false;
 
   return (
-    <div ref={sectionRef} className="h-screen flex items-center justify-center sticky top-5 mb-20">
+    <div ref={sectionRef} className="flex items-center justify-center sticky top-5 mb-20">
       <motion.div
         className="w-full max-w-full sm:max-w-[500px] mx-auto px-4 py-10 relative"
         style={{

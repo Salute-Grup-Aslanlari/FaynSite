@@ -72,9 +72,9 @@ const Branches = ({ images = [] }) => {
       {...swipeHandlers}
       className="flex flex-col items-center justify-center gap-6 sm:gap-12 mb-96 py-20 px-4 min-h-[350px] sm:min-h-[800px] md:min-h-[600px] bg-[#E4E0D8]"
     >
-      <div className="flex flex-col items-center top-40 mt-4 md:mb-2 sm:mt-16">
+      <div className="flex flex-col items-center top-5 mt-2 md:mb-2 sm:mt-16">
         <h2
-          className="text-black text-3xl sm:text-5xl md:text-6xl lg:text-7xl mb-32"
+          className="text-black text-3xl sm:text-5xl md:text-6xl lg:text-7xl mb-16"
           style={{ fontFamily: "Salina-Book, sans-serif", fontStyle: "italic" }}
         >
           {t("branches.title")}
@@ -91,32 +91,33 @@ const Branches = ({ images = [] }) => {
         <div className="relative w-full min-h-[300px] sm:min-h-[100px] md:min-h-[400px] flex justify-center items-center overflow-visible mb-20">
           <div className="w-1/2 h-full relative flex justify-center items-center transform-style-preserve-3d perspective-[1800px]">
             {visibleImages.map(({ src, position, key }) => (
-              <motion.div
-                key={key}
-                className="absolute sm:max-w-full overflow-hidden flex items-center justify-center 
-                          w-[100vw] sm:w-[50vw] md:w-[50vw] lg:w-[100vw] max-w-[1200px] 
-                          h-[350px] sm:h-[350px] md:h-[400px] lg:h-[450px] 
-                          will-change-transform transform-style-preserve-3d 
-                          transform-origin-center-center backface-hidden"
-                initial={false}
-                animate={{
-                  x: position.x,
-                  y: position.y,
-                  scale: position.scale,
-                  opacity: position.opacity,
-                  zIndex: position.zIndex,
-                  rotate: position.rotate,
-                }}
-                transition={{ duration: 0.2, ease: "easeInOut" }}
-              >
-               <Image
-                  src={src}
-                  alt={`Slide ${key}`}
-                  width={800} // Gerekli genişlik ve yükseklik belirleyin
-                  height={600}
-                  className="w-full h-full object-contain rounded-lg shadow-lg pointer-events-none"
-                />
-              </motion.div>
+         <motion.div
+         key={key}
+         className="absolute sm:max-w-full overflow-hidden flex items-center justify-center 
+                   w-[60vw] sm:w-[35vw] md:w-[40vw] lg:w-[60vw] max-w-[600px] 
+                   h-[400px] sm:h-[380px] md:h-[300px] lg:h-[350px] 
+                   will-change-transform transform-style-preserve-3d 
+                   transform-origin-center-center backface-hidden"
+         initial={false}
+         animate={{
+           x: position.x,
+           y: position.y,
+           scale: position.scale,
+           opacity: position.opacity,
+           zIndex: position.zIndex,
+           rotate: position.rotate,
+         }}
+         transition={{ duration: 0.2, ease: "easeInOut" }}
+       >
+         <Image
+           src={src}
+           alt={`Slide ${key}`}
+           width={500}
+           height={350}
+           className="w-full h-full object-cover rounded-lg shadow-lg pointer-events-none sm:max-w-[60vw] md:max-w-[70vw] lg:max-w-[20vw]"
+         />
+       </motion.div>
+       
             ))}
           </div>
         </div>

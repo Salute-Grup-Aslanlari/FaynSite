@@ -1,5 +1,9 @@
-.main{
+.main {
+  margin-top: 10vh;
+}
 
-  margin-top: -5vh;
-
+@media (max-width: 768px) {
+  .main {
+    margin-top: -20vh;
+  }
 }

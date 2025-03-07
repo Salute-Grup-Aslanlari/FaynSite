@@ -1,9 +1,11 @@
 'use client';
 
 import React, { useState } from "react";
+import { useTranslation } from 'react-i18next';
 import Image from 'next/image';
 
 const Portfolio = () => {
+  const { t } = useTranslation();
   const [showCard, setShowCard] = useState("all");
 
   const handleProject = (category) => {
@@ -16,15 +18,14 @@ const Portfolio = () => {
         <div className="container mx-auto px-0 max-w-full">
           <div className="flex flex-wrap">
             <div className="w-full px-4">
-            <h1 className="text-2xl text-black text-center mt-4 mb-28">OUR PRODUCT</h1>
+            <h1 className="text-lg text-black text-center mt-4 mb-28">{t('product.title')}</h1>
             <div className="absolute top-[210px] md:top-[90x] lg:top-[220px] left-1/2 transform -translate-x-1/2 w-[1px] h-20 sm:h-2 md:h-20 bg-black"></div>
               <div className="mx-auto mb-[10px] max-w-[510px] text-center">
                 <span className="text-primary mb-6 block text-5xl mt-4 text-black" style={{ fontFamily: 'Salina-TrialLight, sans-serif' }}>
-                  OUR <span className="text-black mt-4" style={{ fontFamily: 'Salina-BookItalic, sans-serif' }}>(finest)</span> DRINKS & DISHES FROM THE MENU
+                {t('product.our')} <span className="text-black mt-4" style={{ fontFamily: 'Salina-BookItalic, sans-serif' }}>({t('product.finest')})</span> {t('product.drinks')}
                 </span>
-                <p className="text-black text-body-color mt-6 dark:text-dark-6 text-3xl font-light">
-                  There are many variations of passages of Lorem Ipsum available
-                  but the majority have suffered alteration in some form.
+                <p className="text-black text-body-color mt-6 dark:text-dark-6 text-xl font-light">
+                {t('product.description')}
                 </p>
               </div>
             </div>
@@ -40,7 +41,7 @@ const Portfolio = () => {
                       showCard === "all" ? "activeClasses bg-primary text-white" : "inactiveClasses text-body-color dark:text-dark-6 hover:bg-primary hover:text-white"
                     }`}
                   >
-                    <p style={{ fontSize: "14px", fontFamily: "Source Sans 3, sans-serif", fontWeight: 100 }}>ALL</p>
+                    <p style={{ fontSize: "14px", fontFamily: "Source Sans 3, sans-serif", fontWeight: 100 }}>{t('product.all')}</p>
                   </button>
                 </li>
                 <li className="mb-1">
@@ -50,7 +51,7 @@ const Portfolio = () => {
                       showCard === "foods" ? "activeClasses bg-primary text-white" : "inactiveClasses text-body-color dark:text-dark-6 hover:bg-primary hover:text-white"
                     }`}
                   >
-                    <p style={{ fontSize: "14px", fontFamily: "Source Sans 3, sans-serif", fontWeight: 100 }}>DISHES</p>
+                    <p style={{ fontSize: "14px", fontFamily: "Source Sans 3, sans-serif", fontWeight: 100 }}>{t('product.dishes')}</p>
                   </button>
                 </li>
                 <li className="mb-1">
@@ -60,13 +61,13 @@ const Portfolio = () => {
                       showCard === "cocktails" ? "activeClasses bg-primary text-white" : "inactiveClasses text-body-color dark:text-dark-6 hover:bg-primary text-white hover:text-white"
                     }`}
                   >
-                    <p style={{ fontSize: "14px", fontFamily: "Source Sans 3, sans-serif", fontWeight: 100 }}>COCKTAILS</p>
+                    <p style={{ fontSize: "14px", fontFamily: "Source Sans 3, sans-serif", fontWeight: 100 }}>{t('product.cocktail')}</p>
                   </button>
                 </li>
               </ul>
             </div>
           </div>
-          <div className="flex flex-wrap gap-0">
+          <div className="flex flex-wrap gap-0 sm:grid-cols-2">
           <PortfolioCard
             ImageHref="/assets/cocktails/BERGAMOTFIZZ.webp"
             category="cocktails"
@@ -77,6 +78,7 @@ const Portfolio = () => {
             showCard={showCard}
             leftImage="/assets/popups/reyhankart1.webp"
             rightImage="/assets/popups/reyhankart2.webp"
+            loading="lazy"
           />
 
             <PortfolioCard
@@ -89,6 +91,7 @@ const Portfolio = () => {
               showCard={showCard}
               leftImage="/assets/popups/negronikart1.webp"
               rightImage="/assets/popups/negronikart2.webp"
+              loading="lazy"
             />
             <PortfolioCard
               ImageHref="/assets/cocktails/CLEARTOUCH.webp"
@@ -100,6 +103,7 @@ const Portfolio = () => {
               showCard={showCard}
               leftImage="/assets/popups/cleartouchkart1.webp"
               rightImage="/assets/popups/cleartouchkart2.webp"
+              loading="lazy"
             />
             <PortfolioCard
               ImageHref="/assets/cocktails/FAYNTHANKSANDYOU.webp"
@@ -111,6 +115,7 @@ const Portfolio = () => {
               showCard={showCard}
               leftImage="/assets/popups/faynthankskart1.webp"
               rightImage="/assets/popups/faynthankskart2.webp"
+              loading="lazy"
             />
             <PortfolioCard
               ImageHref="/assets/cocktails/FLORALZING.webp"
@@ -122,6 +127,7 @@ const Portfolio = () => {
               showCard={showCard}
               leftImage="/assets/popups/floralzingkart1.webp"
               rightImage="/assets/popups/floralzingkart2.webp"
+              loading="lazy"
             />
             <PortfolioCard
               ImageHref="/assets/cocktails/FUGUWILLBEFAYN.webp"
@@ -133,6 +139,7 @@ const Portfolio = () => {
               showCard={showCard}
               leftImage="/assets/popups/fugukart1.webp"
               rightImage="/assets/popups/fugukart2.webp"
+              loading="lazy"
             />
             <PortfolioCard
               ImageHref="/assets/cocktails/KALIPSO.webp"
@@ -144,6 +151,7 @@ const Portfolio = () => {
               showCard={showCard}
               leftImage="/assets/popups/kalipsokart1.webp"
               rightImage="/assets/popups/kalipsokart2.webp"
+              loading="lazy"
             />
             <PortfolioCard
               ImageHref="/assets/cocktails/LIBIDO.webp"
@@ -155,6 +163,7 @@ const Portfolio = () => {
               showCard={showCard}
               leftImage="/assets/popups/libidokart1.webp"
               rightImage="/assets/popups/libidokart2.webp"
+              loading="lazy"
             />
             <PortfolioCard
               ImageHref="/assets/cocktails/MANGOBLOSSOM.webp"
@@ -166,6 +175,7 @@ const Portfolio = () => {
               showCard={showCard}
               leftImage="/assets/popups/mangoblossomkart1.webp"
               rightImage="/assets/popups/mangoblossomkart2.webp"
+              loading="lazy"
             />
             <PortfolioCard
               ImageHref="/assets/cocktails/PRETTYINGREEN.webp"
@@ -177,6 +187,7 @@ const Portfolio = () => {
               showCard={showCard}
               leftImage="/assets/popups/prettyingreenKART1.webp"
               rightImage="/assets/popups/prettyingreenKART2.webp"
+              loading="lazy"
             />
             <PortfolioCard
               ImageHref="/assets/foods/ARTICHOKESEABASS.webp"
@@ -188,6 +199,7 @@ const Portfolio = () => {
               showCard={showCard}
               leftImage="/assets/tarif1.webp"
               rightImage="/assets/tarif2.webp"
+              loading="lazy"
             />
             <PortfolioCard
               ImageHref="/assets/foods/BEEFKATSUVEGGIERICE.webp"
@@ -197,8 +209,8 @@ const Portfolio = () => {
               button="View Details"
               buttonHref="#"
               showCard={showCard}
-              leftImage="/assets/tarif1.webp"
-              rightImage="/assets/tarif2.webp"
+              leftImage="/assets/foods/beefkatsukart1.webp"
+              rightImage="/assets/foods/beefkatsukart2.webp"
             />
             <PortfolioCard
               ImageHref="/assets/foods/CALIFORNIAROLL.webp"
@@ -210,6 +222,7 @@ const Portfolio = () => {
               showCard={showCard}
               leftImage="/assets/tarif1.webp"
               rightImage="/assets/tarif2.webp"
+              loading="lazy"
             />
             <PortfolioCard
               ImageHref="/assets/foods/FARFROMHOME.webp"
@@ -221,6 +234,7 @@ const Portfolio = () => {
               showCard={showCard}
               leftImage="/assets/tarif1.webp"
               rightImage="/assets/tarif2.webp"
+              loading="lazy"
             />
             <PortfolioCard
               ImageHref="/assets/foods/OCTOPUSCORN.webp"
@@ -232,6 +246,7 @@ const Portfolio = () => {
               showCard={showCard}
               leftImage="/assets/tarif1.webp"
               rightImage="/assets/tarif2.webp"
+              loading="lazy"
             />
              <PortfolioCard
               ImageHref="/assets/foods/CALIFORNIAROLL.webp"
@@ -243,6 +258,7 @@ const Portfolio = () => {
               showCard={showCard}
               leftImage="/assets/tarif1.webp"
               rightImage="/assets/tarif2.webp"
+              loading="lazy"
             />
             <PortfolioCard
               ImageHref="/assets/foods/FARFROMHOME.webp"
@@ -254,6 +270,7 @@ const Portfolio = () => {
               showCard={showCard}
               leftImage="/assets/tarif1.webp"
               rightImage="/assets/tarif2.webp"
+              loading="lazy"
             />
             <PortfolioCard
               ImageHref="/assets/foods/OCTOPUSCORN.webp"
@@ -265,6 +282,7 @@ const Portfolio = () => {
               showCard={showCard}
               leftImage="/assets/tarif1.webp"
               rightImage="/assets/tarif2.webp"
+              loading="lazy"
             />
           </div>
         </div>
@@ -295,6 +313,7 @@ const PortfolioCard = ({ ImageHref, category, title, description, button, showCa
             width={500} 
             height={500} 
             className="w-full h-full object-cover portfolio" 
+            loading="lazy"
           />
           <div className="absolute top-0 left-0 p-4 text-white z-10">
             <p className="text-opacity-10" style={{ fontSize: "8px", fontFamily: 'Source Sans 3, sans-serif', fontWeight: 100 }}>
@@ -307,22 +326,26 @@ const PortfolioCard = ({ ImageHref, category, title, description, button, showCa
         </div>
 
         {isOpen && (
-          <div className="popup-overlay" onClick={handleClosePopup}>
-            <div className="popup-content">
-              <img 
-                src={leftImage} 
-                width={800} 
-                height={500} 
-                className="popup-image left" 
-              />
-              <img 
-                src={rightImage} 
-                width={800} 
-                height={500} 
-                className="popup-image right" 
-              />
-            </div>
-          </div>
+         <div className="popup-overlay" onClick={handleClosePopup}>
+         <div className="popup-content">
+           <Image 
+             src={leftImage} 
+             width={800} 
+             height={500} 
+             className="popup-image left" 
+             alt="Left Image"
+             loading="lazy"
+           />
+           <Image 
+             src={rightImage} 
+             width={800} 
+             height={500} 
+             className="popup-image right" 
+             alt="Right Image"
+             loading="lazy"
+           />
+         </div>
+       </div>
         )}
       </div>
 
@@ -332,7 +355,7 @@ const PortfolioCard = ({ ImageHref, category, title, description, button, showCa
         flex-wrap: wrap;
         justify-content: space-between;
       }
-          .card {
+        .card {
         width: full;
         height: full;
         padding: 30px;
@@ -348,7 +371,7 @@ const PortfolioCard = ({ ImageHref, category, title, description, button, showCa
       .popup-overlay {
       position: fixed;
       gap: 80px;
-      top: 0;
+      top: 40px;
       left: 0;
       width: 100%;
       height: 100%;
@@ -360,7 +383,7 @@ const PortfolioCard = ({ ImageHref, category, title, description, button, showCa
       .card {
           width: full;
           height: full;
-          padding: 30px;
+          padding: 10px;
           cursor: pointer;
           text-align: center;
           padding: 0px;
@@ -387,7 +410,7 @@ const PortfolioCard = ({ ImageHref, category, title, description, button, showCa
     }
 
     .right {
-      width: 30%;
+      width: 35%;
       transform: translateX(100%) rotate(-10deg);
       animation: slide-right 0.9s forwards;
       z-index: 2;
@@ -431,8 +454,8 @@ const PortfolioCard = ({ ImageHref, category, title, description, button, showCa
        width: 120%; /* Daha büyük bir değer ile dene */
     min-width: 127%; /* Genişliği gar anti altına al */
     margin-left: -60px; /* Sola kaydır */
-      width: 180%; /* Sol popup'ı daha da büyüttük */
-      transform: translateX(60px) rotate(15deg); /* Daha iyi hizalama için sola kaydırdık ve açıyı düzenledik */
+      width: 150%; /* Sol popup'ı daha da büyüttük */
+      transform: translateX(80px) rotate(50deg); /* Daha iyi hizalama için sola kaydırdık ve açıyı düzenledik */
       z-index: -1;
     }
 
@@ -440,7 +463,7 @@ const PortfolioCard = ({ ImageHref, category, title, description, button, showCa
       width: 75%;
       transform: translateX(0) rotate(0deg);
       z-index: 1;
-      margin-top: -70px;
+      margin-top: -25px;
     }
         @keyframes slide-left {
         0% {
@@ -453,10 +476,10 @@ const PortfolioCard = ({ ImageHref, category, title, description, button, showCa
 
       @keyframes slide-right {
         0% {
-          transform: translateX(100%) rotate(10deg);
+          transform: translateX(120%) rotate(50deg);
         }
         100% {
-          transform: translateX(25%) rotate(-0deg);
+          transform: translateX(2%) rotate(-5deg);
         }
       }
   }

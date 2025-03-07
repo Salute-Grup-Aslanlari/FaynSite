@@ -39,7 +39,7 @@ const CoctailMasterclass = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
       >
-        August 30th 2024
+        {t('coctailmasterclass.date')}
       </motion.p>
 
       <motion.div

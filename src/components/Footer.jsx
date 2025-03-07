@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import Image from 'next/image';
 import emailjs from 'emailjs-com';
 import { LINKS } from '../data';
 import { toast } from 'react-toastify';
@@ -17,12 +18,10 @@ const sendEmail = (e) => {
     e.target,
     '0oS1q33k3QF2Ubm7Y'
   ).then(
-    (result) => {
-      console.log('Email gönderildi:', result.text);
+    () => {
       toast.success('Mesajınız başarıyla gönderildi!');
     },
-    (error) => {
-      console.log('Email gönderilemedi:', error.text);
+    () => {
       toast.error('Mesaj gönderilirken hata oluştu.');
     }
   );
@@ -32,11 +31,17 @@ const sendEmail = (e) => {
 
 export default function Footer() {
   return (
-    <footer className="w-full bg-black text-white py-20">
+    <footer className="w-full bg-black text-white py-16 sm:py-20">
       <div className="container mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <div className="flex flex-col items-start">
-            <img src="/assets/FAYNLOGOBEYAZ.png" alt="Şirket Logosu" className="w-60 h-auto" />
+            <Image 
+              src="/assets/FAYNLOGOBEYAZ.png" 
+              alt="Şirket Logosu" 
+              width={240} 
+              height={100} 
+              className="w-36 h-auto lg:w-60"
+            />
             <div className="mt-4 text-white text-4xl text-left" style={{ fontFamily: 'Salina-TrialLight, sans-serif', fontWeight: 400 }}>
               <span className="block">Eat Fine</span>
               <span className="block">Drink Fine</span>
@@ -95,7 +100,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-8 pt-6 flex flex-col md:flex-row justify-between items-center">
+        <div className="mt-2 mb-2 pt-6 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-400 text-sm">&copy; {currentYear} Fayn. Tüm Hakları Saklıdır.</p>
         </div>
       </div>

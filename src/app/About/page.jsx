@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useEffect, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import Image from 'next/image';
 import { motion } from "framer-motion";
 
@@ -14,6 +15,7 @@ const logos = [
 ];
 
 const AboutUs = () => {
+  const { t } = useTranslation();
   const [countries, setCountries] = useState(0);
   const [branches, setBranches] = useState(0);
   const [customers, setCustomers] = useState(0);
@@ -29,10 +31,10 @@ const AboutUs = () => {
   }, []);
 
   return (
-    <div className="mb-96">
-      <div className="flex flex-col lg:flex-row justify-start w-full mt-0">
+    <div className="mb-36">
+      <div className="flex flex-col lg:flex-row justify-center w-full">
         <div className="w-full lg:w-full">
-          <div className="relative w-full lg:h-[900px] sm:h-[100px]">
+          <div className="relative w-full lg:h-[900px] sm:h-[100px] mb-2">
             <Image
               src="/assets/aboutus/aboutus1.webp"
               alt="About Us"
@@ -45,9 +47,9 @@ const AboutUs = () => {
             />
           </div>
         </div>
-        <div className="text-white w-full lg:text-pretty mt-8 lg:mt-12 lg:ml-48 sm:ml-8 px-4 sm:px-8 lg:text-right">
+        <div className="text-white mb-2 w-full lg:text-pretty mt-2 lg:mt-12 lg:ml-48 sm:ml-8 pl-4 sm:px-8 md:text-center lg:text-center md:pr-14">
           <motion.h1
-            className="flex justify-center mb-4 text-2xl lg:text-4xl xl:text-8xl lg:pr-48 lg:mt-4 sm:mt-32 sm:w-full"
+            className="flex justify-center mb-4 text-7xl lg:text-4xl xl:text-8xl lg:pr-48 lg:mt-4 sm:mt-32 sm:w-full"
             style={{
               fontFamily: 'Salina-TrialLight, sans-serif',
               lineHeight: '1.4'
@@ -56,95 +58,90 @@ const AboutUs = () => {
             animate={{ opacity: 1 }}
             transition={{ duration: 1 }}
           >
-            ABOUT US
+           {t('aboutus.title')}
           </motion.h1>
           <motion.p
-            className="justify-end sm:text-pretty sm:p-6 text-xl lg:text-3xl leading-relaxed font-light lg:w-3/4 sm:w-full lg:text-right"
+            className="justify-end w-[95%] sm:text-pretty text-center sm:p-8 text-2xl lg:text-3xl leading-relaxed font-light lg:w-4/5 lg:text-center"
             style={{ lineHeight: '1.6' }}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1.5 }}
           >
-            Fayn, located in the heart of the city, is a vibrant gathering place where guests can enjoy cocktails, cuisine,
-            live music, and great company. With its chic decor, inviting ambiance, and attentive staff, Fayn is the ideal choice for both casual meetings and special celebrations.
+            {t('aboutus.description')}
           </motion.p>
 
-          <div className="flex flex-wrap justify-center space-x-5 mt-12 px-4 sm:pl-20 lg:pr-60 text-center">
-            <div>
+          <div className="flex justify-start items-center gap-20 mt-12 sm:px-20 lg:px-50">
+            <div className="flex flex-col items-center">
               <motion.span
-                className="text-4xl lg:text-6xl"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
+                className="text-5xl lg:text-7xl font-bold"
+                initial={{ scale: 0.8, opacity: 0 }}
+                animate={{ scale: 1, opacity: 1 }}
                 transition={{ duration: 2 }}
               >
                 {countries < 10 ? `0${countries}` : countries}
               </motion.span>
-              <div className="text-sm lg:text-3xl">COUNTRIES</div>
+              <div className="text-sm lg:text-xl font-light mt-4">{t('aboutus.countries')}</div>
             </div>
-            <div>
+
+            <div className="flex flex-col items-center">
               <motion.span
-                className="text-4xl lg:text-6xl"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
+                className="text-5xl lg:text-7xl font-bold"
+                initial={{ scale: 0.8, opacity: 0 }}
+                animate={{ scale: 1, opacity: 1 }}
                 transition={{ duration: 2.5 }}
               >
                 {branches < 10 ? `0${branches}` : branches}
               </motion.span>
-              <div className="text-sm lg:text-3xl">BRANCHES</div>
+              <div className="text-sm lg:text-xl font-light mt-2">{t('aboutus.branches')}</div>
             </div>
-            <div>
+
+            <div className="flex flex-col items-center">
               <motion.span
-                className="text-4xl lg:text-6xl"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
+                className="text-5xl lg:text-7xl font-bold"
+                initial={{ scale: 0.8, opacity: 0 }}
+                animate={{ scale: 1, opacity: 1 }}
                 transition={{ duration: 3 }}
               >
                 {customers.toLocaleString()}
               </motion.span>
-              <div className="text-sm lg:text-3xl">CUSTOMERS</div>
+              <div className="text-sm lg:text-xl font-light mt-2">{t('aboutus.customers')}</div>
             </div>
           </div>
         </div>
       </div>
 
-      <div className="flex flex-col lg:flex-row mt-4 px-4 sm:px-0 lg:mt-24">
+      <div className="flex flex-col-reverse lg:flex-row mt-4 px-4 sm:px-0 lg:mt-24">
         <div className="w-full lg:w-1/2 flex flex-col items-center sm:items-start lg:pl-20">
           <motion.div
-            className="text-white text-center sm:text-left mt-16 sm:mt-48"
+            className="text-white text-center sm:text-left mt-2 sm:mt-48"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1.5 }}
           >
             <p 
             className="text-2xl sm:text-4xl lg:text-3xl leading-relaxed"
-            style={{ lineHeight: '1.6' }}
+            style={{ lineHeight: '1.4' }}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1 }}
             >
-              
-              Fayn is the perfect venue for both business gatherings and celebratory events.
-              Its carefully curated menu showcases a fusion of global flavors,
-              complemented by signature cocktails crafted with precision and dishes prepared using premium, fresh ingredients.
+              {t('aboutus.descriptionone')}
               <br></br>
-              Fayn enhances the guest experience with dynamic live DJ performances,
-              providing an engaging atmosphere that complements its premium offerings.
-              Committed to excellence, Fayn strives daily to exceed expectations,
-              ensuring every visit leaves a lasting impression and fosters memorable experiences.
+              {t('aboutus.descriptiontwo')}
               
             </p>
           </motion.div>
 
-          <div className="relative w-full mt-36">
-            <div className="absolute top-[-50px] left-0 text-left z-10">
+          <div className="relative w-full mt-40">
+            <div className="absolute top-[-90px] lg:left-48 text-center z-10">
               <motion.h2
-                className="text-white text-sm sm:text-4xl"
+                className="text-white text-lg sm:text-4xl font-bold"
                 style={{ fontSize: "28px", fontFamily: 'Salina-TrialLight, sans-serif' }}
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 1.8 }}
               >
-                Our Collaborations
+               {t('aboutus.titleone')}
               </motion.h2>
             </div>
             <div className="overflow-hidden w-full">
@@ -160,7 +157,7 @@ const AboutUs = () => {
                     alt={`Logo ${index + 1}`}
                     width={1200}
                     height={600}
-                    className="w-20 h-16 lg:w-95 lg:h-20 mt-10 mb-20"
+                    className="w-45 h-20 lg:w-95 lg:h-20 mt-10 mb-20"
                   />
                 ))}
               </motion.div>
@@ -174,8 +171,8 @@ const AboutUs = () => {
               src="/assets/aboutus/aboutus2.webp"
               alt="Our Mission"
               layout="intrinsic"
-              width={600}
-              height={300}
+              width={700}
+              height={350}
               objectFit="cover"
               objectPosition="center"
               className="rounded-xl sm:mt-32 lg:mt-20"
@@ -184,9 +181,9 @@ const AboutUs = () => {
         </div>
       </div>
 
-      <div className="flex flex-col lg:flex-row mt-56 lg:mt-32 sm:mt-72 xl:mt-60 px-4 sm:px-8 lg:px-0">
+      <div className="flex flex-col-reverse lg:flex-row mt-2 lg:mt-32 sm:mt-72 xl:mt-60 px-4 sm:px-8 lg:px-0">
         <div className="w-full lg:w-1/2 flex items-center lg:pr-20 justify-center lg:justify-end pl-4 lg:pl-36 relative">
-          <div className="text-white text-center lg:text-left mb-20 lg:mb-60 relative z-10 top-8 lg:top-16">
+          <div className="text-white text-center lg:text-left mb-10 lg:mb-60 relative z-10 top-40 sm:top-36 lg:top-16">
             <div className="absolute top-[-30px] left-1/2 transform -translate-x-1/2 w-32 h-32 sm:w-50 sm:h-60 lg:w-40 lg:h-40">
               <motion.div
                 animate={{ rotate: [0, 360] }}
@@ -209,11 +206,7 @@ const AboutUs = () => {
               animate={{ opacity: 1 }}
               transition={{ duration: 2 }}
             >
-              Our dedicated factory serves as the heart of our operation,
-              where we produce the premium ingredients that define the food and cocktails served across all our branches.
-              By creating our own ingredients, we ensure unmatched quality, consistency, and flavor in every dish and drink.
-              This commitment to in-house production allows us to deliver a seamless and exceptional experience,
-              uniting all our locations with the same standard of taste and excellence.
+             {t('aboutus.descriptionthree')}
             </motion.p>
           </div>
         </div>
@@ -228,7 +221,7 @@ const AboutUs = () => {
               animate={{ opacity: 1 }}
               transition={{ duration: 3 }}
             >
-              AT FAYN, WE TAKE FAYN PRIDE IN CRAFTING THE BEST.
+             {t('aboutus.titletwo')}
             </motion.h2>
             <Image
               src="/assets/aboutus/aboutus3.webp"
