@@ -15,16 +15,22 @@ export default function Home() {
   const [easedScrollProgress, setEasedScrollProgress] = useState(0);
 
   useEffect(() => {
-    if (stickyMask.current && container.current) {
-      const animate = () => {
-        const maskSizeProgress = targetMaskSize * getScrollProgress();
-        stickyMask.current.style.webkitMaskSize = `${(initialMaskSize + maskSizeProgress) * 100}%`;
+    const timeout = setTimeout(() => {
+      if (stickyMask.current && container.current) {
+        const animate = () => {
+          if (!stickyMask.current) return;
+          const maskSizeProgress = targetMaskSize * getScrollProgress();
+          stickyMask.current.style.webkitMaskSize = `${(initialMaskSize + maskSizeProgress) * 100}%`;
+          requestAnimationFrame(animate);
+        };
+  
         requestAnimationFrame(animate);
-      };
-
-      requestAnimationFrame(animate);
-    }
+      }
+    }, 100);
+  
+    return () => clearTimeout(timeout);
   }, []);
+  
 
   const getScrollProgress = () => {
     if (stickyMask.current && container.current) {

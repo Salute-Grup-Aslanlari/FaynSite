@@ -1,13 +1,14 @@
-"use client"; // Next.js'de animasyon için ekleyelim
+"use client";
 
 import React from "react";
+import { useTranslation } from 'react-i18next';
 import Image from "next/image";
 import { motion } from "framer-motion";
 
 const MissMrmodel = () => {
+    const { t } = useTranslation();
   return (
     <div className="mb-36">
-      {/* Küçük Başlık */}
       <motion.p
         className="text-white text-center mb-12 mt-10 text-sm"
         initial={{ opacity: 0, y: -20 }}
@@ -16,8 +17,6 @@ const MissMrmodel = () => {
       >
         002
       </motion.p>
-
-      {/* Büyük Başlık */}
       <motion.div
         className="flex justify-center"
         initial={{ opacity: 0, y: 50 }}
@@ -31,21 +30,17 @@ const MissMrmodel = () => {
             fontFamily: "Salina-TrialLight, sans-serif",
           }}
         >
-          PROVIDING A GLAMOROUS SETTING FOR A NIGHT FULL OF STYLE.
+         {t('missandmrmodel.title')}
         </h1>
       </motion.div>
-
-      {/* Tarih */}
       <motion.p
         className="text-white text-center mb-4 mt-5 text-sm"
         initial={{ opacity: 0, x: -50 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 1.2 }}
       >
-        August 30th 2024
+        {t('missandmrmodel.date')}
       </motion.p>
-
-      {/* İlk Görsel */}
       <motion.div
         className="relative w-2/3 h-[400px] mx-auto mb-16 rounded-xl overflow-hidden"
         initial={{ opacity: 0, scale: 0.9 }}
@@ -59,10 +54,7 @@ const MissMrmodel = () => {
           objectFit="cover"
         />
       </motion.div>
-
-      {/* İkinci Görsel ve Metin */}
       <div className="flex justify-between w-full mt-8 xl:pl-80 lg:pl-56">
-        {/* Soldaki Görsel */}
         <motion.div
           className="w-3/4"
           initial={{ opacity: 0, x: -50 }}
@@ -79,8 +71,6 @@ const MissMrmodel = () => {
             />
           </div>
         </motion.div>
-
-        {/* Sağdaki Metin */}
         <motion.div
           className="text-white w-full text-left mr-72"
           initial={{ opacity: 0, x: 50 }}
@@ -94,23 +84,14 @@ const MissMrmodel = () => {
               lineHeight: "1.4",
             }}
           >
-            Last summer, Fayn’99 Beach hosted the highly anticipated Miss & Mr.
-            Model selection and the after-party, providing a glamorous setting
-            for a night full of style and excitement.
+           {t('missandmrmodel.description')}
           </h1>
 
           <p
             className="text-xl leading-relaxed font-light w-full"
             style={{ lineHeight: "1.4" }}
           >
-            The event brought together models from all over, who competed for
-            the prestigious title, while guests enjoyed a vibrant atmosphere
-            with live entertainment, delicious cocktails, and unforgettable
-            memories. The after-party at Fayn’99 Beach was the perfect
-            conclusion to the evening, offering a dynamic mix of fashion, fun,
-            and flair. With expert-crafted cocktails, lively conversations, and
-            a lively crowd, Fayn’99 Beach once again proved to be the ultimate
-            destination for unforgettable events.
+         {t('missandmrmodel.descriptiontwo')}
           </p>
         </motion.div>
       </div>

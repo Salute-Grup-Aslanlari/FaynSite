@@ -7,7 +7,7 @@
   "eatFine": "EAT FINE",
   "drinkFine": "DRINK FINE",
   "feelFayn": "FEEL FAYN",
-  "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi expedita voluptatibus earum dolorem temporibus, eaque, pariatur voluptatum odit est ipsam recusandae maiores illum.",
+  "description": "Olağanüstü lezzetlerin unutulmaz deneyimlerle buluştuğu yere, Fayn’a hoş geldiniz.",
   "whoweareTitle": "BİZ KİMİZ",
   "whoweareDescription": "FAYN, KONUKLARIN KOKTEYL, MUTFAK, CANLI MÜZİK VE HARİKA BİR ŞİRKETLE EĞLENEBİLECEĞİ CANLI BİR BULUŞMA YERİDİR.",
   "weAreFayn": "Biz Fayn'ız.",
@@ -16,6 +16,11 @@
     "flavor": "TAT",
     "style": "STİL",
     "quality": "KALİTE"
+  },
+  "location": {
+    "title": "ŞUBELERİMİZ",
+    "reservation": "Rezervasyon",
+    "select_branch": "ŞUBE SEÇİNİZ"
   },
   "branches": {
   "title": "ŞUBELER",
@@ -31,12 +36,38 @@
  "description": "Fayn Cocktails & More, ünlü bartender Çağatay Ercan’ın liderliğinde heyecan verici bir kokteyl atölye serisine ev sahipliği yaptı.",
  "descriptiontwo": " Bu interaktif oturumlarda katılımcılar, premium malzemeler seçerek ve mükemmel karışımı yaratarak kokteyl yapımının inceliklerini öğrenme fırsatı buldu. Çağatay Ercan’ın uzman rehberliği sayesinde, katılımcılar becerilerini geliştirerek kendi imza kokteyllerini hazırladılar.  Büyük ilgi gören bu atölyeler, her seviyeden kokteyl tutkunları için hem eğlenceli hem de öğretici bir deneyim sundu. Fayn, kokteyl deneyimini bir üst seviyeye taşımak için yaratıcılığı uzmanlıkla buluşturan benzersiz etkinlikler düzenlemeye devam ediyor."
 },
+"missandmrmodel": {
+ "title": "STİL DOLU BİR GECE İÇİN GÖZ ALICI BİR ORTAM SUNUYORUZ.",
+ "date": "30 Ağustos 2024",
+ "description": "Geçtiğimiz yaz, Fayn’99 Beach, büyük bir heyecanla beklenen Miss & Mr. Model seçim etkinliği ve after-party’ine ev sahipliği yaptı.",
+ "descriptiontwo": "Şıklık ve heyecan ile dolu bir gece için göz alıcı bir atmosfer sunan etkinlik, dünyanın dört bir yanından gelen modelleri prestijli unvan için yarışırken, misafirler canlı eğlenceler, lezzetli kokteyller ve unutulmaz anılarla dolu bir gece yaşadı. Fayn’99 Beach'teki after-party, akşamın mükemmel bir finali oldu. Moda, eğlence ve zarafetin dinamik bir karışımını sunarak, uzmanlıkla hazırlanmış kokteyller ve enerjik bir kalabalık eşliğinde unutulmaz bir geceye imza attı. Fayn’99 Beach, bir kez daha unutulmaz etkinlikler için en mükemmel destinasyon olduğunu kanıtladı."
+},
 "izmirfashionweek": {
   "title": "Fayn Cocktails & More yakın zamanda bir dizi heyecan verici kokteyl atölyesine ev sahipliği yaptı",
-  "date": "August 30th 2024",
+  "date": "30 Ağustos 2024",
   "description": "Fayn Cocktails & More, yaratıcılığı ve modayı kutlayarak İzmir Fashion Week 2024'ün gururlu sponsoru oldu.",
   "descriptiontwo": "Etkinlik, Fayn’de düzenlenen unutulmaz bir after-party ile sona erdi.\nMisafirler, imza kokteyllerimizin eşliğinde keyifli sohbetler edip canlı atmosferimizde unutulmaz anlar yaşadı.\nModa, eğlence ve zarafetin bir araya geldiği bu gece, Fayn ruhunu mükemmel şekilde yansıttı.\nKonuklar, ustalıkla hazırlanan içecekler ve büyüleyici moda dokunuşları eşliğinde gece boyunca dans etti.\nBu etkinlik, Fayn’in insanları unutulmaz deneyimlerle bir araya getirme konusundaki kararlılığının sadece bir başlangıcıydı.\nYaratıcılığı ve topluluğu birleştiren yeni etkinliklerimiz için bizi takipte kalın!"
+},
+"aboutus": {
+ "title": "HAKKIMIZDA",
+ "description": "Şehrin kalbinde yer alan Fayn, kokteylleri, lezzetleri, canlı müziği ve keyifli sohbetleri bir araya getiren hareketli bir buluşma noktasıdır. Şık dekorasyonu, sıcak atmosferi ve özenli hizmetiyle Fayn, hem samimi buluşmalar hem de özel kutlamalar için ideal bir tercihtir.",
+ "descriptionone": "İş toplantılarından özel kutlamalara kadar her etkinlik için mükemmel bir mekân olan Fayn, özenle hazırlanan menüsünde dünya mutfaklarını buluşturuyor. Özgün kokteylleri ustalıkla hazırlanırken, yemekleri ise taptaze ve kaliteli malzemelerle sunuluyor.",
+ "descriptiontwo": "Fayn, enerjik DJ performanslarıyla misafirlerine dinamik bir atmosfer sunarak seçkin lezzetlerini unutulmaz bir deneyime dönüştürüyor. Mükemmelliğe olan bağlılığıyla her gün beklentilerin üzerine çıkmayı hedefleyen Fayn, her ziyareti kalıcı bir iz bırakacak şekilde tasarlamakta.",
+ "countries": "ÜLKELER",
+ "branches": "ŞUBELER",
+ "customers": "KULLANICILAR",
+ "titleone": "İŞBİRLİKLERİMİZ",
+ "descriptionthree": "Tüm operasyonumuzun kalbi olan özel fabrikamızda, şubelerimizde sunulan yemek ve kokteylleri benzersiz kılan premium malzemeleri üretiyoruz. Kendi malzemelerimizi üretmemiz, her yemek-içecekte eşsiz kalite, tutarlılık ve lezzet sunmamızı sağlıyor. Bu özel üretim yaklaşımımız sayesinde, tüm şubelerimizde aynı yüksek standartları koruyarak misafirlerimize kusursuz ve ayrıcalıklı bir deneyim sunuyoruz.",
+ "titletwo": "FAYN OLARAK, MÜKEMMELLİYETİ ORTAYA KOYMAKTAN MUTLULUK DUYUYORUZ.  "
+},
+"product": {
+  "title": "ÜRÜNLERİMİZ",
+  "our": "",
+  "finest": "EN İYİ",
+  "drinks": "KOKTEYLLERİMİZ VE YİYECEKLERİMİZ",
+  "description":"Özenle seçilmiş en özel içecek ve lezzetlerimizi keşfedin. İmza kokteyllerden, dünya mutfağından ilham alan yemeklere kadar menümüzdeki her ürün, kaliteye ve yaratıcılığa olan tutkumuzu yansıtıyor. Her anı daha özel kılan bu lezzet yolculuğuna siz de bizimle çıkın.",
+  "all":"Hepsi",
+  "dishes":"Yiyecekler",
+  "cocktail":"Kokteyller"
 }
-
-  
 }

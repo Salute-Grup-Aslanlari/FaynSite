@@ -7,7 +7,7 @@
   "eatFine": "EAT FINE",
   "drinkFine": "DRINK FINE",
   "feelFayn": "FEEL FAYN",
-  "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi expedita voluptatibus earum dolorem temporibus, eaque, pariatur voluptatum odit est ipsam recusandae maiores illum.",
+  "description": "Welcome to Fayn, where exceptional flavors meet unforgettable experiences.",
   "whoweareTitle": "WHO ARE WE",
   "whoweareDescription": "FAYN, IS A VIBRANT GATHERING PLACE WHERE GUESTS (bar) (will) CAN ENJOY COCKTAILS, CUISINE, LIVE MUSIC, AND GREAT COMPANY.",
   "weAreFayn": "We Are Fayn.",
@@ -23,7 +23,8 @@
   },
   "location": {
     "title": "OUR LOCATIONS",
-    "reservation": "Reservation"
+    "reservation": "Reservation",
+    "select_branch": "SELECT BRANCH"
   },
   "newsletter": {
     "title": "NEWSLETTER",
@@ -35,12 +36,38 @@
   "description": "Fayn Cocktails & More recently hosted a series of exciting cocktail workshops, led by the acclaimed bartender Çağatay Ercan.",
   "descriptiontwo": "During these engaging sessions participants had the opportunity to learn the fine art of cocktail making from selecting premium ingredients to mastering the perfect mix.\nÇağatay’s expert guidance helped attendees refine their skills and craft their own signature drinks.\nThe workshops were a great success providing a fun and educational experience for cocktail enthusiasts of all levels.\nFayn continues to offer unique opportunities like these, blending creativity with expert knowledge to elevate the cocktail experience."
 },
+ "missandmrmodel": {
+  "title": "PROVIDING A GLAMOROUS SETTING FOR A NIGHT FULL OF STYLE.",
+  "date": "August 30th 2024",
+  "description": "Last summer, Fayn’99 Beach hosted the highly anticipated Miss & Mr. Model selection and the after-party, providing a glamorous setting for a night full of style and excitement.",
+  "descriptiontwo": "The event brought together models from all over, who competed for the prestigious title, while guests enjoyed a vibrant atmosphere with live entertainment, delicious cocktails, and unforgettable memories. The after-party at Fayn’99 Beach was the perfect conclusion to the evening, offering a dynamic mix of fashion, fun, and flair. With expert-crafted cocktails, lively conversations, and a lively crowd, Fayn’99 Beach once again proved to be the ultimate destination for unforgettable events."
+},
 "izmirfashionweek": {
- "title": "  FAYN & IZMIR FASHION WEEK 2024, CELEBRATİNG FASHION AND FUN.",
+ "title": "FAYN & IZMIR FASHION WEEK 2024, CELEBRATİNG FASHION AND FUN.",
  "date": "August 30th 2024",
  "description": "Fayn Cocktails & More proudly sponsored İzmir Fashion Week 2024, celebrating creativity and style.",
  "descriptiontwo": "The event concluded with an unforgettable after-party at Fayn, where guests enjoyed signature cocktails, lively conversations, and captured memories in our vibrant atmosphere. It was a night filled with fun, fashion, and flair, perfectly reflecting the spirit of Fayn. Guests danced the night away, surrounded by a stunning blend of fashion and expertly crafted drinks. The event marked just the beginning of Fayn’s continued commitment to bringing people together through unforgettable experiences. Stay tuned for more events where we continue to mix creativity with community!"
+},
+"aboutus": {
+ "title": "ABOUT US",
+ "description": "Fayn, located in the heart of the city, is a vibrant gathering place where guests can enjoy cocktails, cuisine, live music, and great company. With its chic decor, inviting ambiance, and attentive staff, Fayn is the ideal choice for both casual meetings and special celebrations.",
+ "descriptionone": "Fayn is the perfect venue for both business gatherings and celebratory events.Its carefully curated menu showcases a fusion of global flavors,complemented by signature cocktails crafted with precision and dishes prepared using premium, fresh ingredients.",
+ "descriptiontwo": "Fayn enhances the guest experience with dynamic live DJ performances, providing an engaging atmosphere that complements its premium offerings. Committed to excellence, Fayn strives daily to exceed expectations,ensuring every visit leaves a lasting impression and fosters memorable experiences.",
+ "countries": "COUNTRIES",
+ "branches": "BRANCHES",
+ "customers": "CUSTOMERS",
+ "titleone": "OUR COLLABORATIONS",
+ "descriptionthree": " Our dedicated factory serves as the heart of our operation, where we produce the premium ingredients that define the food and cocktails served across all our branches. By creating our own ingredients, we ensure unmatched quality, consistency, and flavor in every dish and drink. This commitment to in-house production allows us to deliver a seamless and exceptional experience, uniting all our locations with the same standard of taste and excellence.",
+ "titletwo": " AT FAYN, WE TAKE FAYN PRIDE IN CRAFTING THE BEST."
+},
+"product": {
+  "title": "OUR PRODUCTS",
+  "our": "OUR",
+  "finest": "finest",
+  "drinks": "DRINKS & DISHES FROM THE MENU",
+  "description":"Discover a curated selection of our finest drinks and dishes, thoughtfully crafted to delight your senses. From signature cocktails to globally inspired cuisine, each item on our menu reflects our passion for quality and creativity. Indulge in flavors that elevate every moment.",
+  "all":"All",
+  "dishes":"Dishes",
+  "cocktail":"Cocktails"
 }
-
-  
 }

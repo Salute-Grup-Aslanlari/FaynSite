@@ -30,6 +30,22 @@ export const projects = [
       date: "January 24, 2025",
       link: "/Projects/love-fest",
       color: "#d67294"
+    },
+    {
+      title: "EXCITING EXPANSION: FAYN COMING SOON TO DUBAI",
+      description: "We are thrilled to announce that our beloved brands, Fayn, will soon be opening their Dubai branch at W Hotel The Palm. ",
+      src: "/assets/dubainews.webp",
+      date: "January 24, 2025",
+      link: "/Projects/dubai",
+      color: "#07a7f2"
+    },
+    {
+      title: "MEET ERCAN - FAYN'S BELOVED RESIDENT CAT",
+      description: "She’s not just our cat; she’s everyone’s cat. A true favorite among our customers, Ercan has a special way of making people feel at home.",
+      src: "/assets/ercan1.jpg",
+      date: "January 24, 2025",
+      link: "/Projects/ercan",
+      color: "#ff7f07"
     }
   ];
  export const locations = [
@@ -113,34 +129,34 @@ export const projects = [
         
       ],
     },
-    {
-      title: "LINKS",
-      items: [
-        { name: "Privacy Policy", url: "/privacy-policy" },
-        { name: "Terms & Condition", url: "/terms-and-conditions" },
-      ],
-    },
+    // {
+    //   title: "LINKS",
+    //   items: [
+    //     { name: "Privacy Policy", url: "/privacy-policy" },
+    //     { name: "Terms & Condition", url: "/terms-and-conditions" },
+    //   ],
+    // },
   ];
   export const branches = [
     {
       title: "Fayn Bostanlı",
       description: "Bostanlı, Cemal Gürsel Cd. NO: 534/D NO: 534/C, 35590 Karşıyaka/İzmir",
-      src: "/assets/BRANCHESBOSTANLI.webp",
+      src: "/assets/branches/bostanlibranch.jpg",
     },
     {
       title: "Fayn Beach'99",
       description: "Alaçatı, 18000/1 Sokak No: 4/29, 35450 Çeşme/İzmir",
-      src: "/assets/BRANCHESBEACH.webp",
+      src: "/assets/branches/beachbranch.jpg",
     },
     {
       title: "Fayn Alsancak",
       description: "Kültür Mahallesi, Alsancak, Meksika sokağı No:11/B, 35220 İzmir",
-      src: "/assets/BRANCHESALSANCAK.webp",
+      src: "/assets/branches/alsancakbranch.jpg",
     },
     {
       title: "Fayn Doha",
       description: "St. Regis, Doha, Katar",
-      src: "/assets/branchesdoha.webp",
+      src: "/assets/branches/dohabranch.jpg",
     }
   ];
   

@@ -25,13 +25,14 @@ const CardWrapper = ({ cards = [] }) => {
          {t('newsletter.description')}
         </p>
       </div>
-      {cards.length > 0 && 
-        cards.map((card, index) => (
-          <div key={index} className="mb-2 last:mb-0">
-            <Card {...card} i={index} />
-          </div>
-        ))
-      }
+    {cards.length > 0 && 
+  cards.map((card, index) => (
+    <div key={index} className="mb-6 last:mb-0"> {/* Burada mb-6 veya mb-8 kullanabilirsin */}
+      <Card {...card} i={index} />
+    </div>
+  ))
+}
+
     </div>
   );
 };
