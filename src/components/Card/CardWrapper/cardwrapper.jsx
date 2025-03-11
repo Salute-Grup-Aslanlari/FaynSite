@@ -8,7 +8,7 @@ const CardWrapper = ({ cards = [] }) => {
    const { t } = useTranslation();
   return (
     <div className="relative top-[-20px] flex flex-col items-center">
-      <div className="flex flex-col items-center mt-2">
+      <div className="flex flex-col items-center mt-4">
         <div className="absolute top-[-100px] sm:top-[-50px] md:top-[10px] lg:top-[-20px] left-1/2 transform -translate-x-1/2 text-white text-2xl sm:text-2xl md:text-xl">
           STAY IN THE LOOP
         </div>
@@ -20,14 +20,15 @@ const CardWrapper = ({ cards = [] }) => {
           {t('newsletter.title')}
         </h2>
         <p
-          className="text-white text-lg sm:text-xl md:text-2xl lg:text-4xl text-center px-8 mt-10 max-w-[1500px] leading-[1.5]"
+          className="text-white text-base sm:text-lg md:text-xl lg:text-2xl text-center px-8 mt-10 max-w-[1500px] leading-[1.2] font-thin"
+          style={{ fontFamily: 'Source Sans 3, sans-serif', fontWeight: 100, lineHeight: '1.4'}}
         >
          {t('newsletter.description')}
         </p>
       </div>
     {cards.length > 0 && 
   cards.map((card, index) => (
-    <div key={index} className="mb-6 last:mb-0"> {/* Burada mb-6 veya mb-8 kullanabilirsin */}
+    <div key={index} className="mb-6 last:mb-0">
       <Card {...card} i={index} />
     </div>
   ))

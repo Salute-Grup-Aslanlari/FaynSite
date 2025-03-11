@@ -10,7 +10,7 @@ const Whoweare = () => {
   return (
     <div className="relative flex flex-col items-center overflow-hidden">
       <div className="w-[2px] h-12 sm:h-16 md:h-20 bg-white my-2"></div>
-      <h1 className="text-white text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-4">
+      <h1 className="text-white text-xl sm:text-2xl md:text-3xl lg:text-xl mb-4" style={{ fontFamily: 'Source Sans 3, sans-serif', fontWeight: 100, lineHeight: '1.4'}}>
         {t('whoweareTitle')}
       </h1>
       <div className="text-white text-center px-6 sm:px-10 lg:px-20 max-w-[90%] sm:max-w-[90%] md:max-w-[50%] mt-10 sm:mt-16 z-10">

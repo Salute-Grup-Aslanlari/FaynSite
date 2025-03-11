@@ -68,6 +68,18 @@ const Portfolio = () => {
             </div>
           </div>
           <div className="flex flex-wrap gap-0 sm:grid-cols-2">
+            
+          <PortfolioCard
+              ImageHref="/assets/cocktails/FLORALZING.webp"
+              category="Cocktails"
+              title="Floral Zing"
+              description="SIGNATURE COCKTAILS"
+              button="View Details"
+              buttonHref="#"
+              showCard={showCard}
+              leftImage="/assets/popupnew/floralzingkart1.webp"
+              rightImage="/assets/popupnew/floralzingkart2.webp"
+            />
           <PortfolioCard
             ImageHref="/assets/cocktails/BERGAMOTFIZZ.webp"
             category="cocktails"
@@ -76,8 +88,8 @@ const Portfolio = () => {
             button="View Details"
             buttonHref="#"
             showCard={showCard}
-            leftImage="/assets/popups/reyhankart1.webp"
-            rightImage="/assets/popups/reyhankart2.webp"
+            leftImage="/assets/popupnew/reyhankart1.webp"
+            rightImage="/assets/popupnew/reyhankart2.webp"
             loading="lazy"
           />
 
@@ -89,8 +101,8 @@ const Portfolio = () => {
               button="View Details"
               buttonHref="#"
               showCard={showCard}
-              leftImage="/assets/popups/negronikart1.webp"
-              rightImage="/assets/popups/negronikart2.webp"
+              leftImage="/assets/popupnew/negronikart1.webp"
+              rightImage="/assets/popupnew/negronikart2.webp"
               loading="lazy"
             />
             <PortfolioCard
@@ -101,32 +113,20 @@ const Portfolio = () => {
               button="View Details"
               buttonHref="#"
               showCard={showCard}
-              leftImage="/assets/popups/cleartouchkart1.webp"
-              rightImage="/assets/popups/cleartouchkart2.webp"
+              leftImage="/assets/popupnew/cleartouchkart1.webp"
+              rightImage="/assets/popupnew/cleartouchkart2.webp"
               loading="lazy"
             />
             <PortfolioCard
-              ImageHref="/assets/cocktails/FAYNTHANKSANDYOU.webp"
+              ImageHref="/assets/cocktails/faynthankss.webp"
               category="Cocktails"
               title="Fayn Thanks And You"
               description="SIGNATURE COCKTAILS"
               button="View Details"
               buttonHref="#"
               showCard={showCard}
-              leftImage="/assets/popups/faynthankskart1.webp"
-              rightImage="/assets/popups/faynthankskart2.webp"
-              loading="lazy"
-            />
-            <PortfolioCard
-              ImageHref="/assets/cocktails/FLORALZING.webp"
-              category="Cocktails"
-              title="Floral Zing"
-              description="SIGNATURE COCKTAILS"
-              button="View Details"
-              buttonHref="#"
-              showCard={showCard}
-              leftImage="/assets/popups/floralzingkart1.webp"
-              rightImage="/assets/popups/floralzingkart2.webp"
+              leftImage="/assets/popupnew/faynthankskart1.webp"
+              rightImage="/assets/popupnew/faynthankskart2.webp"
               loading="lazy"
             />
             <PortfolioCard
@@ -137,8 +137,8 @@ const Portfolio = () => {
               button="View Details"
               buttonHref="#"
               showCard={showCard}
-              leftImage="/assets/popups/fugukart1.webp"
-              rightImage="/assets/popups/fugukart2.webp"
+              leftImage="/assets/popupnew/fugukart1.webp"
+              rightImage="/assets/popupnew/fugukart2.webp"
               loading="lazy"
             />
             <PortfolioCard
@@ -149,20 +149,20 @@ const Portfolio = () => {
               button="View Details"
               buttonHref="#"
               showCard={showCard}
-              leftImage="/assets/popups/kalipsokart1.webp"
-              rightImage="/assets/popups/kalipsokart2.webp"
+              leftImage="/assets/popupnew/kalipsokart1.webp"
+              rightImage="/assets/popupnew/kalipsokart2.webp"
               loading="lazy"
             />
             <PortfolioCard
-              ImageHref="/assets/cocktails/LIBIDO.webp"
+              ImageHref="/assets/cocktails/libidoss.webp"
               category="Cocktails"
               title="Libido"
               description="SIGNATURE COCKTAILS"
               button="View Details"
               buttonHref="#"
               showCard={showCard}
-              leftImage="/assets/popups/libidokart1.webp"
-              rightImage="/assets/popups/libidokart2.webp"
+              leftImage="/assets/popupnew/libidokart1.webp"
+              rightImage="/assets/popupnew/libidokart2.webp"
               loading="lazy"
             />
             <PortfolioCard
@@ -173,8 +173,8 @@ const Portfolio = () => {
               button="View Details"
               buttonHref="#"
               showCard={showCard}
-              leftImage="/assets/popups/mangoblossomkart1.webp"
-              rightImage="/assets/popups/mangoblossomkart2.webp"
+              leftImage="/assets/popupnew/mangoblossomkart1.webp"
+              rightImage="/assets/popupnew/mangoblossomkart2.webp"
               loading="lazy"
             />
             <PortfolioCard
@@ -185,8 +185,8 @@ const Portfolio = () => {
               button="View Details"
               buttonHref="#"
               showCard={showCard}
-              leftImage="/assets/popups/prettyingreenKART1.webp"
-              rightImage="/assets/popups/prettyingreenKART2.webp"
+              leftImage="/assets/popupnew/prettyingreenkart2.webp"
+              rightImage="/assets/popupnew/prettyingreenkart2_1.webp"
               loading="lazy"
             />
             <PortfolioCard
@@ -197,8 +197,8 @@ const Portfolio = () => {
               button="View Details"
               buttonHref="#"
               showCard={showCard}
-              leftImage="/assets/tarif1.webp"
-              rightImage="/assets/tarif2.webp"
+              leftImage="/assets/popupnew.webp"
+              rightImage="/assets/popupnew.webp"
               loading="lazy"
             />
             <PortfolioCard
@@ -326,26 +326,29 @@ const PortfolioCard = ({ ImageHref, category, title, description, button, showCa
         </div>
 
         {isOpen && (
-         <div className="popup-overlay" onClick={handleClosePopup}>
-         <div className="popup-content">
-           <Image 
-             src={leftImage} 
-             width={800} 
-             height={500} 
-             className="popup-image left" 
-             alt="Left Image"
-             loading="lazy"
-           />
-           <Image 
-             src={rightImage} 
-             width={800} 
-             height={500} 
-             className="popup-image right" 
-             alt="Right Image"
-             loading="lazy"
-           />
-         </div>
-       </div>
+   <div className="popup-overlay" onClick={handleClosePopup}>
+   <div className="popup-content">
+     <Image 
+       src={leftImage} 
+       width={1800} 
+       height={1000} 
+       className="popup-image left" 
+       alt="Left Image"
+       loading="lazy"
+       quality={100}
+     />
+     <Image 
+       src={rightImage} 
+       width={700} 
+       height={400} 
+       className="popup-image right" 
+       alt="Right Image"
+       loading="lazy"
+       quality={100}
+     />
+   </div>
+ </div>
+ 
         )}
       </div>
 

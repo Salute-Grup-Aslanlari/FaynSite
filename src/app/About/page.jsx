@@ -110,17 +110,17 @@ const AboutUs = () => {
         </div>
       </div>
 
-      <div className="flex flex-col-reverse lg:flex-row mt-4 px-4 sm:px-0 lg:mt-24">
-        <div className="w-full lg:w-1/2 flex flex-col items-center sm:items-start lg:pl-20">
+      <div className="flex flex-col-reverse lg:flex-row mt-4 px-8 sm:px-0 lg:mt-24">
+        <div className="w-full lg:w-1/2 flex flex-col items-center sm:items-start lg:pl-20 mt-24">
           <motion.div
-            className="text-white text-center sm:text-left mt-2 sm:mt-48"
+            className="text-white text-center sm:text-left mt-10 sm:mt-32"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1.5 }}
           >
             <p 
             className="text-2xl sm:text-4xl lg:text-3xl leading-relaxed"
-            style={{ lineHeight: '1.4' }}
+            style={{ lineHeight: '1.2' }}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1 }}
