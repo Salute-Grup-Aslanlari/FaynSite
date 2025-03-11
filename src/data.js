@@ -2,7 +2,7 @@ export const projects = [
     {
       title: "IZMIR FASHION WEEK 2024",
       description: "Fayn Cocktails & More proudly sponsored İzmir Fashion Week 2024, celebrating creativity and style celebrating creativity and style.",
-      src: "/assets/newsletter2.webp",
+      src: "/assets/fashion1.webp",
       date: "August 30, 2024",
       link: "/Projects/izmire-fashion-week-2024",
       color: "#CBB5B9"
@@ -10,7 +10,7 @@ export const projects = [
     {
       title: "MISS & MR. MODEL 2024",
       description: "Last summer, Fayn’99 Beach hosted the highly anticipated Miss & Mr. Model selection and the after-party, providing a glamorous setting for a night full of style and excitement.",
-      src: "/assets/newsletter3.webp",
+      src: "/assets/model1.webp",
       date: "January 24, 2025",
       link: "/Projects/miss-mr-model-2024",
       color: "#AFAF3C"
@@ -18,7 +18,7 @@ export const projects = [
     {
       title: "COCKTAIL MASTERCLASS",
       description: "Fayn Cocktails & More recently hosted a series of exciting cocktail workshops, led by the acclaimed bartender Çağatay Ercan. exciting cocktail workshops, led by the acclaimed",
-      src: "/assets/newsletter4.webp",
+      src: "/assets/cagatay4.webp",
       date: "January 24, 2025",
       link: "/Projects/cocktail-masterclass",
       color: "#CA1B00"
@@ -26,15 +26,15 @@ export const projects = [
     {
       title: "FAYN PRESENTS: LOVE FEST",
       description: "Fayn proudly hosted Love Fest, an unforgettable evening where style, flavor, and connection came together in perfect harmony.",
-      src: "/assets/kapaklovefest.webp",
+      src: "/assets/lovefest1.webp",
       date: "January 24, 2025",
       link: "/Projects/love-fest",
       color: "#d67294"
     },
     {
       title: "EXCITING EXPANSION: FAYN COMING SOON TO DUBAI",
-      description: "We are thrilled to announce that our beloved brands, Fayn, will soon be opening their Dubai branch at W Hotel The Palm. ",
-      src: "/assets/dubainews.webp",
+      description: "We are thrilled to announce that our beloved brands, Fayn, will soon be opening their Dubai branch at W Hotel The Palm.",
+      src: "/assets/dubai1.webp",
       date: "January 24, 2025",
       link: "/Projects/dubai",
       color: "#07a7f2"
@@ -42,7 +42,7 @@ export const projects = [
     {
       title: "MEET ERCAN - FAYN'S BELOVED RESIDENT CAT",
       description: "She’s not just our cat; she’s everyone’s cat. A true favorite among our customers, Ercan has a special way of making people feel at home.",
-      src: "/assets/ercan1.jpg",
+      src: "/assets/ercankedi1.jpg",
       date: "January 24, 2025",
       link: "/Projects/ercan",
       color: "#ff7f07"
@@ -141,22 +141,22 @@ export const projects = [
     {
       title: "Fayn Bostanlı",
       description: "Bostanlı, Cemal Gürsel Cd. NO: 534/D NO: 534/C, 35590 Karşıyaka/İzmir",
-      src: "/assets/branches/bostanlibranch.jpg",
+      src: "/assets/branches/faynbost.webp",
     },
     {
       title: "Fayn Beach'99",
       description: "Alaçatı, 18000/1 Sokak No: 4/29, 35450 Çeşme/İzmir",
-      src: "/assets/branches/beachbranch.jpg",
+      src: "/assets/branches/faynbeach.webp",
     },
     {
       title: "Fayn Alsancak",
       description: "Kültür Mahallesi, Alsancak, Meksika sokağı No:11/B, 35220 İzmir",
-      src: "/assets/branches/alsancakbranch.jpg",
+      src: "/assets/branches/faynals.webp",
     },
     {
       title: "Fayn Doha",
       description: "St. Regis, Doha, Katar",
-      src: "/assets/branches/dohabranch.jpg",
+      src: "/assets/branches/fayndoha.webp",
     }
   ];
   
