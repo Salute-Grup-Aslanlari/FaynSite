@@ -76,7 +76,7 @@ export const projects = [
     reservation: '0501 152 60 15',
     instagram: "https://www.instagram.com/faynalacati/",
     image: '/assets/locations/faynalacati.jpg',
-    description: 'Experience the vibrant atmosphere of our Alaçatı branch.',
+    description: 'Experience the vibrant atmosphere of our Alaçatı branch..',
     mapUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3112.133564289737!2d26.3720333!3d38.2821877!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14bb79c3a9f8f27f%3A0x387d559611810001!2sFayn%20Ala%C3%A7at%C4%B1!5e0!3m2!1str!2str!4v1706790456789!5m2!1str!2str',
   },  
   {
