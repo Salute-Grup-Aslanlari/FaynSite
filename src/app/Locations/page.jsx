@@ -3,6 +3,8 @@ import React, { useState, useEffect } from 'react';
 import { locations } from "../../data";
 import { useTranslation } from 'react-i18next';
 import Image from 'next/image';
+import { Instagram } from 'lucide-react';
+import Link from 'next/link';
 
 export default function LocationsPage() {
    const { t } = useTranslation();
@@ -103,7 +105,18 @@ export default function LocationsPage() {
                      <p className="text-md md:text-xl font-extralight mb-2 opacity-0 animate-fade-in">
                         <span className="font-bold">{t('location.reservation')}:</span> {selectedBranch.reservation}
                      </p>
-                     <p className="text-md md:text-xl font-extralight opacity-0 animate-fade-in">{selectedBranch.web}</p>
+                     {selectedBranch.instagram && (
+                        <Link
+                           href={selectedBranch.instagram}
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           className="inline-flex items-center gap-2 text-md md:text-xl font-extralight opacity-0 animate-fade-in"
+                           aria-label={`Instagram - ${selectedBranch.name}`}
+                           title="Instagram"
+                        >
+                           <Instagram size={24} />
+                        </Link>
+                     )}
                   </div>
                   <div className="lg:w-2/3 mt-8">
                      <iframe

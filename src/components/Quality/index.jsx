@@ -3,6 +3,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 import { quality } from "../../data";
 import { useTranslation } from "react-i18next";
+import Image from 'next/image';
 
 export const Quality = () => {
   const { t } = useTranslation();
@@ -68,9 +69,11 @@ const ImageSection = ({ data, index, setActiveIndex, currentTitle, titleTranslat
         }}
         initial={initial}
       >
-        <img
+        <Image
           src={data.src}
           alt={data.title}
+          width={1200}
+          height={800}
           className="w-full rounded-lg shadow-lg block top-10 mb-20"
         />
         <motion.div

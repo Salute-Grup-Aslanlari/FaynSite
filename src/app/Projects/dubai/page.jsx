@@ -5,7 +5,7 @@ import { useTranslation } from 'react-i18next';
 import Image from "next/image";
 import { motion } from "framer-motion";
 
-const dubai = () => {
+const Dubai = () => {
   const { t } = useTranslation();
   return (
     <motion.div 
@@ -88,4 +88,4 @@ const dubai = () => {
   );
 };
 
-export default dubai;
+export default Dubai;

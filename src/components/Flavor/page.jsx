@@ -15,6 +15,19 @@ export default function Home() {
   const [easedScrollProgress, setEasedScrollProgress] = useState(0);
 
   useEffect(() => {
+    const getScrollProgress = () => {
+      if (stickyMask.current && container.current) {
+        const scrollProgress =
+          stickyMask.current.offsetTop /
+          (container.current.getBoundingClientRect().height - window.innerHeight);
+        const delta = scrollProgress - easedScrollProgress;
+        const newEasedProgress = easedScrollProgress + delta * easing;
+        setEasedScrollProgress(newEasedProgress);
+        return newEasedProgress;
+      }
+      return easedScrollProgress;
+    };
+
     const timeout = setTimeout(() => {
       if (stickyMask.current && container.current) {
         const animate = () => {
@@ -23,27 +36,13 @@ export default function Home() {
           stickyMask.current.style.webkitMaskSize = `${(initialMaskSize + maskSizeProgress) * 100}%`;
           requestAnimationFrame(animate);
         };
-  
+
         requestAnimationFrame(animate);
       }
     }, 100);
-  
-    return () => clearTimeout(timeout);
-  }, []);
-  
 
-  const getScrollProgress = () => {
-    if (stickyMask.current && container.current) {
-      const scrollProgress =
-        stickyMask.current.offsetTop /
-        (container.current.getBoundingClientRect().height - window.innerHeight);
-      const delta = scrollProgress - easedScrollProgress;
-      const newEasedProgress = easedScrollProgress + delta * easing;
-      setEasedScrollProgress(newEasedProgress);
-      return newEasedProgress;
-    }
-    return easedScrollProgress;
-  };
+    return () => clearTimeout(timeout);
+  }, [container, stickyMask, targetMaskSize, initialMaskSize, easing, easedScrollProgress]);
 
   return (
     <main className={styles.main}>
