@@ -16,14 +16,6 @@ export const projects = [
       color: "#AFAF3C"
     },
     {
-      title: "COCKTAIL MASTERCLASS",
-      description: "Fayn Cocktails & More recently hosted a series of exciting cocktail workshops, led by the acclaimed bartender Çağatay Ercan. exciting cocktail workshops, led by the acclaimed",
-      src: "/assets/cagatay4.webp",
-      date: "January 24, 2025",
-      link: "/Projects/cocktail-masterclass",
-      color: "#CA1B00"
-    },
-    {
       title: "FAYN PRESENTS: LOVE FEST",
       description: "Fayn proudly hosted Love Fest, an unforgettable evening where style, flavor, and connection came together in perfect harmony.",
       src: "/assets/lovefest1.webp",
