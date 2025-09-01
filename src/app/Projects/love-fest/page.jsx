@@ -1,10 +1,12 @@
 "use client";
 
 import React from "react";
+import { useTranslation } from "react-i18next";
 import Image from "next/image";
 import { motion } from "framer-motion";
 
-const MissMrmodel = () => {
+const LoveFest = () => {
+  const { t } = useTranslation();
   return (
     <div className="mb-36">
       <motion.p
@@ -29,7 +31,7 @@ const MissMrmodel = () => {
             fontFamily: "Salina-TrialLight, sans-serif",
           }}
         >
-        Fayn Presents: Love Fest; A Night of Cocktails, Fashion, and Celebration 
+        {t('lovefest.title')}
         </h1>
       </motion.div>
 
@@ -40,7 +42,7 @@ const MissMrmodel = () => {
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 1.2 }}
       >
-        August 30th 2024
+        {t('lovefest.date')}
       </motion.p>
 
       {/* İlk Görsel */}
@@ -92,16 +94,14 @@ const MissMrmodel = () => {
               lineHeight: "1.4",
             }}
           >
-            Fayn proudly hosted Love Fest, an unforgettable evening where style, flavor, and connection came together in perfect harmony. 
+            {t('lovefest.description')}
           </h1>
 
           <p
             className="text-xl leading-relaxed font-light w-full"
             style={{ lineHeight: "1.4" }}
           >
-           The event brought together a vibrant crowd to celebrate love in all its forms, with an atmosphere filled with energy, creativity, and of course, exceptional cocktails.  Guests indulged in Fayn’s signature handcrafted cocktails, each sip delivering a unique blend of flavors designed to elevate the experience. As the night unfolded, a spectacular fashion show took center stage, showcasing stunning designs that embodied elegance and innovation.
-           With the support of Salute Group as our valued sponsor, Love Fest became more than just an event;it was a celebration of passion, artistry, and unforgettable moments.  
-           Stay tuned for more extraordinary experiences from Fayn where every event is crafted with taste, style, and a touch of magic.
+           {t('lovefest.descriptiontwo')}
           </p>
         </motion.div>
       </div>
@@ -109,4 +109,4 @@ const MissMrmodel = () => {
   );
 };
 
-export default MissMrmodel;
+export default LoveFest;

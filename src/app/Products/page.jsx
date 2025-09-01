@@ -4,6 +4,129 @@ import React, { useState } from "react";
 import { useTranslation } from 'react-i18next';
 import Image from 'next/image';
 
+const portfolioItems = [
+  {
+    ImageHref: "/assets/cocktails/FLORALZING.webp",
+    category: "Cocktails",
+    titleKey: "floral_zing",
+    descriptionKey: "signature_cocktails",
+    leftImage: "/assets/popupnew/floralzingkart1.webp",
+    rightImage: "/assets/popupnew/floralzingkart2.webp",
+  },
+  {
+    ImageHref: "/assets/cocktails/BERGAMOTFIZZ.webp",
+    category: "cocktails",
+    titleKey: "bergamot_fizz",
+    descriptionKey: "signature_cocktails",
+    leftImage: "/assets/popupnew/reyhankart1.webp",
+    rightImage: "/assets/popupnew/reyhankart2.webp",
+  },
+  {
+    ImageHref: "/assets/cocktails/CHOCOLATENEGRONI.webp",
+    category: "Cocktails",
+    titleKey: "chocolate_negroni",
+    descriptionKey: "signature_cocktails",
+    leftImage: "/assets/popupnew/negronikart1.webp",
+    rightImage: "/assets/popupnew/negronikart2.webp",
+  },
+  {
+    ImageHref: "/assets/cocktails/CLEARTOUCH.webp",
+    category: "Cocktails",
+    titleKey: "clear_touch",
+    descriptionKey: "signature_cocktails",
+    leftImage: "/assets/popupnew/cleartouchkart1.webp",
+    rightImage: "/assets/popupnew/cleartouchkart2.webp",
+  },
+  {
+    ImageHref: "/assets/cocktails/faynthankss.webp",
+    category: "Cocktails",
+    titleKey: "fayn_thanks_and_you",
+    descriptionKey: "signature_cocktails",
+    leftImage: "/assets/popupnew/faynthankskart1.webp",
+    rightImage: "/assets/popupnew/faynthankskart2.webp",
+  },
+  {
+    ImageHref: "/assets/cocktails/FUGUWILLBEFAYN.webp",
+    category: "Cocktails",
+    titleKey: "fugu_will_be_fayn",
+    descriptionKey: "signature_cocktails",
+    leftImage: "/assets/popupnew/fugukart1.webp",
+    rightImage: "/assets/popupnew/fugukart2.webp",
+  },
+  {
+    ImageHref: "/assets/cocktails/KALIPSO.webp",
+    category: "Cocktails",
+    titleKey: "kalipso",
+    descriptionKey: "signature_cocktails",
+    leftImage: "/assets/popupnew/kalipsokart1.webp",
+    rightImage: "/assets/popupnew/kalipsokart2.webp",
+  },
+  {
+    ImageHref: "/assets/cocktails/libidoss.webp",
+    category: "Cocktails",
+    titleKey: "libido",
+    descriptionKey: "signature_cocktails",
+    leftImage: "/assets/popupnew/libidokart1.webp",
+    rightImage: "/assets/popupnew/libidokart2.webp",
+  },
+  {
+    ImageHref: "/assets/cocktails/MANGOBLOSSOM.webp",
+    category: "Cocktails",
+    titleKey: "mango_blossom",
+    descriptionKey: "signature_cocktails",
+    leftImage: "/assets/popupnew/mangoblossomkart1.webp",
+    rightImage: "/assets/popupnew/mangoblossomkart2.webp",
+  },
+  {
+    ImageHref: "/assets/cocktails/PRETTYINGREEN.webp",
+    category: "Cocktails",
+    titleKey: "pretty_in_green",
+    descriptionKey: "signature_cocktails",
+    leftImage: "/assets/popupnew/prettyingreenkart2.webp",
+    rightImage: "/assets/popupnew/prettyingreenkart2_1.webp",
+  },
+  {
+    ImageHref: "/assets/foods/ARTICHOKESEABASS.webp",
+    category: "foods",
+    titleKey: "artichoke_seabass",
+    descriptionKey: "signature_dishes",
+    leftImage: "/assets/popupnew.webp",
+    rightImage: "/assets/popupnew.webp",
+  },
+  {
+    ImageHref: "/assets/foods/BEEFKATSUVEGGIERICE.webp",
+    category: "foods",
+    titleKey: "beef_katsu_veggie_rice",
+    descriptionKey: "signature_dishes",
+    leftImage: "/assets/foods/beefkatsukart1.webp",
+    rightImage: "/assets/foods/beefkatsukart2.webp",
+  },
+  {
+    ImageHref: "/assets/foods/CALIFORNIAROLL.webp",
+    category: "foods",
+    titleKey: "california_roll",
+    descriptionKey: "signature_dishes",
+    leftImage: "/assets/tarif1.webp",
+    rightImage: "/assets/tarif2.webp",
+  },
+  {
+    ImageHref: "/assets/foods/FARFROMHOME.webp",
+    category: "foods",
+    titleKey: "far_from_home",
+    descriptionKey: "signature_dishes",
+    leftImage: "/assets/tarif1.webp",
+    rightImage: "/assets/tarif2.webp",
+  },
+  {
+    ImageHref: "/assets/foods/OCTOPUSCORN.webp",
+    category: "foods",
+    titleKey: "octopus_corn",
+    descriptionKey: "signature_dishes",
+    leftImage: "/assets/tarif1.webp",
+    rightImage: "/assets/tarif2.webp",
+  },
+];
+
 const Portfolio = () => {
   const { t } = useTranslation();
   const [showCard, setShowCard] = useState("all");
@@ -68,222 +191,13 @@ const Portfolio = () => {
             </div>
           </div>
           <div className="flex flex-wrap gap-0 sm:grid-cols-2">
-            
-          <PortfolioCard
-              ImageHref="/assets/cocktails/FLORALZING.webp"
-              category="Cocktails"
-              title="Floral Zing"
-              description="SIGNATURE COCKTAILS"
-              button="View Details"
-              buttonHref="#"
-              showCard={showCard}
-              leftImage="/assets/popupnew/floralzingkart1.webp"
-              rightImage="/assets/popupnew/floralzingkart2.webp"
-            />
-          <PortfolioCard
-            ImageHref="/assets/cocktails/BERGAMOTFIZZ.webp"
-            category="cocktails"
-            title="Bergamot Fizz"
-            description="SIGNATURE COCKTAILS"
-            button="View Details"
-            buttonHref="#"
-            showCard={showCard}
-            leftImage="/assets/popupnew/reyhankart1.webp"
-            rightImage="/assets/popupnew/reyhankart2.webp"
-            loading="lazy"
-          />
-
-            <PortfolioCard
-              ImageHref="/assets/cocktails/CHOCOLATENEGRONI.webp"
-              category="Cocktails"
-              title="Chocolate Negroni"
-              description="SIGNATURE COCKTAILS"
-              button="View Details"
-              buttonHref="#"
-              showCard={showCard}
-              leftImage="/assets/popupnew/negronikart1.webp"
-              rightImage="/assets/popupnew/negronikart2.webp"
-              loading="lazy"
-            />
-            <PortfolioCard
-              ImageHref="/assets/cocktails/CLEARTOUCH.webp"
-              category="Cocktails"
-              title="Clear Touch"
-              description="SIGNATURE COCKTAILS"
-              button="View Details"
-              buttonHref="#"
-              showCard={showCard}
-              leftImage="/assets/popupnew/cleartouchkart1.webp"
-              rightImage="/assets/popupnew/cleartouchkart2.webp"
-              loading="lazy"
-            />
-            <PortfolioCard
-              ImageHref="/assets/cocktails/faynthankss.webp"
-              category="Cocktails"
-              title="Fayn Thanks And You"
-              description="SIGNATURE COCKTAILS"
-              button="View Details"
-              buttonHref="#"
-              showCard={showCard}
-              leftImage="/assets/popupnew/faynthankskart1.webp"
-              rightImage="/assets/popupnew/faynthankskart2.webp"
-              loading="lazy"
-            />
-            <PortfolioCard
-              ImageHref="/assets/cocktails/FUGUWILLBEFAYN.webp"
-              category="Cocktails"
-              title="Fugu Will Be Fayn"
-              description="SIGNATURE COCKTAILS"
-              button="View Details"
-              buttonHref="#"
-              showCard={showCard}
-              leftImage="/assets/popupnew/fugukart1.webp"
-              rightImage="/assets/popupnew/fugukart2.webp"
-              loading="lazy"
-            />
-            <PortfolioCard
-              ImageHref="/assets/cocktails/KALIPSO.webp"
-              category="Cocktails"
-              title="Kalipso"
-              description="SIGNATURE COCKTAILS"
-              button="View Details"
-              buttonHref="#"
-              showCard={showCard}
-              leftImage="/assets/popupnew/kalipsokart1.webp"
-              rightImage="/assets/popupnew/kalipsokart2.webp"
-              loading="lazy"
-            />
-            <PortfolioCard
-              ImageHref="/assets/cocktails/libidoss.webp"
-              category="Cocktails"
-              title="Libido"
-              description="SIGNATURE COCKTAILS"
-              button="View Details"
-              buttonHref="#"
-              showCard={showCard}
-              leftImage="/assets/popupnew/libidokart1.webp"
-              rightImage="/assets/popupnew/libidokart2.webp"
-              loading="lazy"
-            />
-            <PortfolioCard
-              ImageHref="/assets/cocktails/MANGOBLOSSOM.webp"
-              category="Cocktails"
-              title="Mango Blossom"
-              description="SIGNATURE COCKTAILS"
-              button="View Details"
-              buttonHref="#"
-              showCard={showCard}
-              leftImage="/assets/popupnew/mangoblossomkart1.webp"
-              rightImage="/assets/popupnew/mangoblossomkart2.webp"
-              loading="lazy"
-            />
-            <PortfolioCard
-              ImageHref="/assets/cocktails/PRETTYINGREEN.webp"
-              category="Cocktails"
-              title="Pretty In Green"
-              description="SIGNATURE COCKTAILS"
-              button="View Details"
-              buttonHref="#"
-              showCard={showCard}
-              leftImage="/assets/popupnew/prettyingreenkart2.webp"
-              rightImage="/assets/popupnew/prettyingreenkart2_1.webp"
-              loading="lazy"
-            />
-            <PortfolioCard
-              ImageHref="/assets/foods/ARTICHOKESEABASS.webp"
-              category="foods"
-              title="ARTICHOKESEABASS"
-              description="SIGNATURE DISHES"
-              button="View Details"
-              buttonHref="#"
-              showCard={showCard}
-              leftImage="/assets/popupnew.webp"
-              rightImage="/assets/popupnew.webp"
-              loading="lazy"
-            />
-            <PortfolioCard
-              ImageHref="/assets/foods/BEEFKATSUVEGGIERICE.webp"
-              category="foods"
-              title="BEEFKATSUVEGGIERICE"
-              description="SIGNATURE DISHES"
-              button="View Details"
-              buttonHref="#"
-              showCard={showCard}
-              leftImage="/assets/foods/beefkatsukart1.webp"
-              rightImage="/assets/foods/beefkatsukart2.webp"
-            />
-            <PortfolioCard
-              ImageHref="/assets/foods/CALIFORNIAROLL.webp"
-              category="foods"
-              title="CALIFORNIA ROLL"
-              description="SIGNATURE DISHES"
-              button="View Details"
-              buttonHref="#"
-              showCard={showCard}
-              leftImage="/assets/tarif1.webp"
-              rightImage="/assets/tarif2.webp"
-              loading="lazy"
-            />
-            <PortfolioCard
-              ImageHref="/assets/foods/FARFROMHOME.webp"
-              category="foods"
-              title="FAR FROM HOME"
-              description="SIGNATURE DISHES"
-              button="View Details"
-              buttonHref="#"
-              showCard={showCard}
-              leftImage="/assets/tarif1.webp"
-              rightImage="/assets/tarif2.webp"
-              loading="lazy"
-            />
-            <PortfolioCard
-              ImageHref="/assets/foods/OCTOPUSCORN.webp"
-              category="foods"
-              title="OCTOPUS CORN"
-              description="SIGNATURE DISHES"
-              button="View Details"
-              buttonHref="#"
-              showCard={showCard}
-              leftImage="/assets/tarif1.webp"
-              rightImage="/assets/tarif2.webp"
-              loading="lazy"
-            />
-             <PortfolioCard
-              ImageHref="/assets/foods/CALIFORNIAROLL.webp"
-              category="foods"
-              title="CALIFORNIA ROLL"
-              description="SIGNATURE DISHES"
-              button="View Details"
-              buttonHref="#"
-              showCard={showCard}
-              leftImage="/assets/tarif1.webp"
-              rightImage="/assets/tarif2.webp"
-              loading="lazy"
-            />
-            <PortfolioCard
-              ImageHref="/assets/foods/FARFROMHOME.webp"
-              category="foods"
-              title="FAR FROM HOME"
-              description="SIGNATURE DISHES"
-              button="View Details"
-              buttonHref="#"
-              showCard={showCard}
-              leftImage="/assets/tarif1.webp"
-              rightImage="/assets/tarif2.webp"
-              loading="lazy"
-            />
-            <PortfolioCard
-              ImageHref="/assets/foods/OCTOPUSCORN.webp"
-              category="foods"
-              title="OCTOPUS CORN"
-              description="SIGNATURE DISHES"
-              button="View Details"
-              buttonHref="#"
-              showCard={showCard}
-              leftImage="/assets/tarif1.webp"
-              rightImage="/assets/tarif2.webp"
-              loading="lazy"
-            />
+            {portfolioItems.map((item, index) => (
+              <PortfolioCard
+                key={index}
+                showCard={showCard}
+                {...item}
+              />
+            ))}
           </div>
         </div>
       </section>
@@ -294,11 +208,15 @@ const Portfolio = () => {
 export default Portfolio;
 
 
-const PortfolioCard = ({ ImageHref, category, title, description, button, showCard, leftImage, rightImage }) => {
+const PortfolioCard = ({ ImageHref, category, titleKey, descriptionKey, showCard, leftImage, rightImage }) => {
+  const { t } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
 
   const handleOpenPopup = () => setIsOpen(true);
   const handleClosePopup = () => setIsOpen(false);
+
+  const title = t(`product.items.${titleKey}`);
+  const description = t(`product.items.${descriptionKey}`);
 
   return (
     <>

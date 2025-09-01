@@ -10,7 +10,7 @@ const CardWrapper = ({ cards = [] }) => {
     <div className="relative top-[-20px] flex flex-col items-center">
       <div className="flex flex-col items-center mt-4">
         <div className="absolute top-[-100px] sm:top-[-50px] md:top-[10px] lg:top-[-20px] left-1/2 transform -translate-x-1/2 text-white text-2xl sm:text-2xl md:text-xl">
-          STAY IN THE LOOP
+          {t('newsletter.stayInTheLoop')}
         </div>
         <div className="w-[1px] h-[100px] sm:h-[150px] md:h-[100px] bg-white mb-4"></div>
         <h2

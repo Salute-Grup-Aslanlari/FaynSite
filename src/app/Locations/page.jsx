@@ -101,7 +101,7 @@ export default function LocationsPage() {
                      >
                         {selectedBranch.name}
                      </h2>
-                     <p className="text-md md:text-lg font-extralight mb-4 opacity-0 animate-fade-in">{selectedBranch.description}</p>
+                     <p className="text-md md:text-lg font-extralight mb-4 opacity-0 animate-fade-in">{t(selectedBranch.descriptionKey)}</p>
                      <p className="text-md md:text-xl font-extralight mb-2 opacity-0 animate-fade-in">
                         <span className="font-bold">{t('location.reservation')}:</span> {selectedBranch.reservation}
                      </p>

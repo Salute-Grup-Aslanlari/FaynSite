@@ -1,9 +1,28 @@
 {
-  "home": "ANA SAYFA",
+  "home": {
+    "welcome": "Fayn Kokteyl Bara Hoş Geldiniz",
+    "title": "ANA SAYFA"
+  },
   "about": "HAKKIMIZDA",
-  "locations": "LOKASYONLAR",
+  "locations": {
+    "title": "LOKASYONLAR",
+    "alsancak": {
+      "description": "Alsancak şubemizde imza kokteyllerimizin tadını çıkarın."
+    },
+    "bostanli": {
+      "description": "Bostanlı şubemizde imza kokteyllerimizin tadını çıkarın."
+    },
+    "alacati": {
+      "description": "Alaçatı şubemizin canlı atmosferini yaşayın.."
+    },
+    "marina": {
+      "description": "FAYN’99'un marinanın yanındaki eşsiz atmosferinin tadını çıkarın."
+    }
+  },
   "products": "ÜRÜNLER",
+  "menu": "MENÜ",
   "exploreMenu": "Menüyü Keşfet",
+  "seeMore": "DAHA FAZLA",
   "eatFine": "EAT FINE",
   "drinkFine": "DRINK FINE",
   "feelFayn": "FEEL FAYN",
@@ -28,7 +47,8 @@
 },
 "newsletter": {
   "title": "HABER BÜLTENİ",
-  "description": "Fayn Cocktails & More dünyasındaki en güncel haberler, etkinlikler ve özel duyurularla hep bir adım önde olun. Barın arkasında ve ötesinde neler olup bittiğini keşfedin; misafirlerimiz için unutulmaz deneyimler yaratmaya devam ediyoruz."
+  "description": "Fayn Cocktails & More dünyasındaki en güncel haberler, etkinlikler ve özel duyurularla hep bir adım önde olun. Barın arkasında ve ötesinde neler olup bittiğini keşfedin; misafirlerimiz için unutulmaz deneyimler yaratmaya devam ediyoruz.",
+  "stayInTheLoop": "DÖNGÜDE KALIN"
 },
 "coctailmasterclass": {
  "title": "Fayn Cocktails & More yakın zamanda bir dizi heyecan verici kokteyl atölyesine ev sahipliği yaptı",
@@ -68,6 +88,68 @@
   "description":"Özenle seçilmiş en özel içecek ve lezzetlerimizi keşfedin. İmza kokteyllerden, dünya mutfağından ilham alan yemeklere kadar menümüzdeki her ürün, kaliteye ve yaratıcılığa olan tutkumuzu yansıtıyor. Her anı daha özel kılan bu lezzet yolculuğuna siz de bizimle çıkın.",
   "all":"Hepsi",
   "dishes":"Yiyecekler",
-  "cocktail":"Kokteyller"
+  "cocktail":"Kokteyller",
+  "items": {
+    "floral_zing": "Floral Zing",
+    "bergamot_fizz": "Bergamot Fizz",
+    "chocolate_negroni": "Chocolate Negroni",
+    "clear_touch": "Clear Touch",
+    "fayn_thanks_and_you": "Fayn Thanks And You",
+    "fugu_will_be_fayn": "Fugu Will Be Fayn",
+    "kalipso": "Kalipso",
+    "libido": "Libido",
+    "mango_blossom": "Mango Blossom",
+    "pretty_in_green": "Pretty In Green",
+    "artichoke_seabass": "Enginarlı Levrek",
+    "beef_katsu_veggie_rice": "Beef Katsu Veggie Rice",
+    "california_roll": "California Roll",
+    "far_from_home": "Far From Home",
+    "octopus_corn": "Ahtapotlu Mısır",
+    "signature_cocktails": "İMZA KOKTEYLLERİ",
+    "signature_dishes": "İMZA YEMEKLERİ",
+    "view_details": "Detayları Görüntüle"
+  }
+},
+"lovefest": {
+  "title": "FAYN, UNUTULMAZ BİR AKŞAM OLAN LOVE FEST'E EV SAHİPLİĞİ YAPTI.",
+  "date": "30 Ağustos 2024",
+  "description": "Fayn, stil, lezzet ve bağın mükemmel bir uyum içinde bir araya geldiği unutulmaz bir akşam olan Love Fest'e gururla ev sahipliği yaptı.",
+  "descriptiontwo": "Etkinlik, enerjisi, yaratıcılığı ve tabii ki olağanüstü kokteylleriyle dolu bir atmosferde aşkı her haliyle kutlamak için canlı bir kalabalığı bir araya getirdi. Konuklar, her yudumda deneyimi yükseltmek için tasarlanmış benzersiz lezzet karışımları sunan Fayn'in özel el yapımı kokteyllerinin tadını çıkardılar. Gece ilerledikçe, zarafet ve yeniliği bünyesinde barındıran çarpıcı tasarımların sergilendiği muhteşem bir defile sahne aldı. Değerli sponsorumuz Salute Group'un desteğiyle Love Fest bir etkinlikten daha fazlası haline geldi; tutkunun, sanatın ve unutulmaz anların bir kutlaması oldu. Her etkinliğin zevkle, stille ve bir tutam sihirle hazırlandığı Fayn'den daha olağanüstü deneyimler için bizi izlemeye devam edin."
+},
+"footer": {
+  "logoAlt": "Şirket Logosu",
+  "contactUs": "Bize Ulaşın",
+  "yourName": "Adınız",
+  "email": "E-posta",
+  "yourMessage": "Mesajınız",
+  "send": "Gönder",
+  "successMessage": "Mesajınız başarıyla gönderildi!",
+  "errorMessage": "Mesaj gönderilirken hata oluştu.",
+  "copyright": "© {{year}} Fayn. Tüm Hakları Saklıdır.",
+  "links": {
+    "menu": "MENÜ"
+  }
+},
+"projects": {
+  "izmir_fashion_week_2024": {
+    "title": "İZMİR MODA HAFTASI 2024",
+    "description": "Fayn Cocktails & More, yaratıcılığı ve stili kutlayarak İzmir Moda Haftası 2024'e gururla sponsor oldu."
+  },
+  "miss_mr_model_2024": {
+    "title": "MISS & MR. MODEL 2024",
+    "description": "Geçen yaz, Fayn’99 Beach, merakla beklenen Miss & Mr. Model seçimlerine ve after party'ye ev sahipliği yaparak stil ve heyecan dolu bir gece için göz alıcı bir ortam sağladı."
+  },
+  "fayn_presents_love_fest": {
+    "title": "FAYN SUNAR: LOVE FEST",
+    "description": "Fayn, stil, lezzet ve bağın mükemmel bir uyum içinde bir araya geldiği unutulmaz bir akşam olan Love Fest'e gururla ev sahipliği yaptı."
+  },
+  "exciting_expansion_dubai": {
+    "title": "HEYECAN VERİCİ GENİŞLEME: FAYN YAKINDA DUBAİ'DE",
+    "description": "Sevgili markamız Fayn'ın yakında W Hotel The Palm'da Dubai şubesini açacağını duyurmaktan heyecan duyuyoruz."
+  },
+  "meet_ercan": {
+    "title": "FAYN'IN SEVİLEN SAKİNİ ERCAN'LA TANIŞIN",
+    "description": "O sadece bizim kedimiz değil; herkesin kedisi. Müşterilerimiz arasında gerçek bir favori olan Ercan'ın insanları evlerinde hissettiren özel bir yanı var."
+  }
 }
 }

@@ -16,9 +16,11 @@ import { Quality } from '../components/Quality';
 import CardWrapper from '../components/Card/CardWrapper/cardwrapper';
 import Link from 'next/link';
 import Flavor from '../components/Flavor/page';
+import { useTranslation } from 'react-i18next';
 
 export default function HomePage() {
   const container = useRef(null);
+  const { t } = useTranslation();
   const { scrollYProgress } = useScroll({
     target: container,
     offset: ['start start', 'end end'],
@@ -76,10 +78,10 @@ export default function HomePage() {
       <Flavor />
       
       <div className="navigation-links">
-        <Link href="/about">About</Link>
-        <Link href="/locations">Locations</Link>
-        <Link href="/Products">Products</Link>
-        <Link href="/Menu">Menu</Link>
+        <Link href="/about">{t('about')}</Link>
+        <Link href="/locations">{t('locations.title')}</Link>
+        <Link href="/Products">{t('products')}</Link>
+        <Link href="/Menu">{t('menu')}</Link>
       </div>
     </div>
   );

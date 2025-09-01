@@ -1,9 +1,28 @@
 {
-  "home": "HOME",
+  "home": {
+    "welcome": "Welcome to Fayn Cocktail Bar",
+    "title": "HOME"
+  },
   "about": "ABOUT",
-  "locations": "LOCATIONS",
+  "locations": {
+    "title": "LOCATIONS",
+    "alsancak": {
+      "description": "Enjoy our signature cocktails at our Alsancak branch."
+    },
+    "bostanli": {
+      "description": "Enjoy our signature cocktails at our Bostanlı branch."
+    },
+    "alacati": {
+      "description": "Experience the vibrant atmosphere of our Alaçatı branch.."
+    },
+    "marina": {
+      "description": "Enjoy the unique ambiance of FAYN’99 by the marina."
+    }
+  },
   "products": "PRODUCTS",
+  "menu": "MENU",
   "exploreMenu": "Explore the Menu",
+  "seeMore": "SEE MORE",
   "eatFine": "EAT FINE",
   "drinkFine": "DRINK FINE",
   "feelFayn": "FEEL FAYN",
@@ -28,7 +47,8 @@
   },
   "newsletter": {
     "title": "NEWSLETTER",
-    "description": "Stay in the loop with the latest news, events, and exclusive updates from Fayn Cocktails & More. Discover what’s happening behind the bar and beyond as we continue to craft unforgettable experiences for our guests."
+    "description": "Stay in the loop with the latest news, events, and exclusive updates from Fayn Cocktails & More. Discover what’s happening behind the bar and beyond as we continue to craft unforgettable experiences for our guests.",
+    "stayInTheLoop": "STAY IN THE LOOP"
   },
  "coctailmasterclass": {
   "title": "Fayn Cocktails & More recently hosted a series of exciting cocktail workshops",
@@ -68,6 +88,68 @@
   "description":"Discover a curated selection of our finest drinks and dishes, thoughtfully crafted to delight your senses. From signature cocktails to globally inspired cuisine, each item on our menu reflects our passion for quality and creativity. Indulge in flavors that elevate every moment.",
   "all":"All",
   "dishes":"Dishes",
-  "cocktail":"Cocktails"
+  "cocktail":"Cocktails",
+  "items": {
+    "floral_zing": "Floral Zing",
+    "bergamot_fizz": "Bergamot Fizz",
+    "chocolate_negroni": "Chocolate Negroni",
+    "clear_touch": "Clear Touch",
+    "fayn_thanks_and_you": "Fayn Thanks And You",
+    "fugu_will_be_fayn": "Fugu Will Be Fayn",
+    "kalipso": "Kalipso",
+    "libido": "Libido",
+    "mango_blossom": "Mango Blossom",
+    "pretty_in_green": "Pretty In Green",
+    "artichoke_seabass": "Artichoke Seabass",
+    "beef_katsu_veggie_rice": "Beef Katsu Veggie Rice",
+    "california_roll": "California Roll",
+    "far_from_home": "Far From Home",
+    "octopus_corn": "Octopus Corn",
+    "signature_cocktails": "SIGNATURE COCKTAILS",
+    "signature_dishes": "SIGNATURE DISHES",
+    "view_details": "View Details"
+  }
+},
+"lovefest": {
+  "title": "FAYN HOSTED LOVE FEST, AN UNFORGETTABLE EVENING.",
+  "date": "August 30th 2024",
+  "description": "Fayn proudly hosted Love Fest, an unforgettable evening where style, flavor, and connection came together in perfect harmony.",
+  "descriptiontwo": "The event brought together a vibrant crowd to celebrate love in all its forms, with an atmosphere filled with energy, creativity, and of course, exceptional cocktails. Guests indulged in Fayn’s signature handcrafted cocktails, each sip delivering a unique blend of flavors designed to elevate the experience. As the night unfolded, a spectacular fashion show took center stage, showcasing stunning designs that embodied elegance and innovation. With the support of Salute Group as our valued sponsor, Love Fest became more than just an event; it was a celebration of passion, artistry, and unforgettable moments. Stay tuned for more extraordinary experiences from Fayn where every event is crafted with taste, style, and a touch of magic."
+},
+"footer": {
+  "logoAlt": "Company Logo",
+  "contactUs": "Contact Us",
+  "yourName": "Your Name",
+  "email": "Email",
+  "yourMessage": "Your Message",
+  "send": "Send",
+  "successMessage": "Your message has been sent successfully!",
+  "errorMessage": "An error occurred while sending the message.",
+  "copyright": "© {{year}} Fayn. All Rights Reserved.",
+  "links": {
+    "menu": "MENU"
+  }
+},
+"projects": {
+  "izmir_fashion_week_2024": {
+    "title": "IZMIR FASHION WEEK 2024",
+    "description": "Fayn Cocktails & More proudly sponsored İzmir Fashion Week 2024, celebrating creativity and style celebrating creativity and style."
+  },
+  "miss_mr_model_2024": {
+    "title": "MISS & MR. MODEL 2024",
+    "description": "Last summer, Fayn’99 Beach hosted the highly anticipated Miss & Mr. Model selection and the after-party, providing a glamorous setting for a night full of style and excitement."
+  },
+  "fayn_presents_love_fest": {
+    "title": "FAYN PRESENTS: LOVE FEST",
+    "description": "Fayn proudly hosted Love Fest, an unforgettable evening where style, flavor, and connection came together in perfect harmony."
+  },
+  "exciting_expansion_dubai": {
+    "title": "EXCITING EXPANSION: FAYN COMING SOON TO DUBAI",
+    "description": "We are thrilled to announce that our beloved brands, Fayn, will soon be opening their Dubai branch at W Hotel The Palm."
+  },
+  "meet_ercan": {
+    "title": "MEET ERCAN - FAYN'S BELOVED RESIDENT CAT",
+    "description": "She’s not just our cat; she’s everyone’s cat. A true favorite among our customers, Ercan has a special way of making people feel at home."
+  }
 }
 }

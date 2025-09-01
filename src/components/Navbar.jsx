@@ -36,9 +36,9 @@ const Navbar = () => {
           <Image src="/assets/FAYNLOGOBEYAZ.png" alt="Logo" width={128} height={32} />
         </div>
         <ul className="hidden lg:flex space-x-8 mx-auto mr-20">
-          <li><Link href="/" className="hover:text-gray-300 text-lg mr-10">{t('home')}</Link></li>
+          <li><Link href="/" className="hover:text-gray-300 text-lg mr-10">{t('home.title')}</Link></li>
           <li><Link href="/About" className="hover:text-gray-300 text-lg mr-10">{t('about')}</Link></li>
-          <li><Link href="/Locations" className="hover:text-gray-300 text-lg mr-10">{t('locations')}</Link></li>
+          <li><Link href="/Locations" className="hover:text-gray-300 text-lg mr-10">{t('locations.title')}</Link></li>
           <li><Link href="/Products" className="hover:text-gray-300 text-lg mr-10">{t('products')}</Link></li>
         </ul>
 
@@ -69,7 +69,7 @@ const Navbar = () => {
               className="hover:bg-stone-950 px-6 py-3 rounded-lg transition-transform duration-300 transform hover:scale-110 text-2xl w-full text-center"
               onClick={handleMenuItemClick}
             >
-              {t('home')}
+              {t('home.title')}
             </Link>
           </li>
           <li>
@@ -87,7 +87,7 @@ const Navbar = () => {
               className="hover:bg-stone-950 px-6 py-3 rounded-lg transition-transform duration-300 transform hover:scale-110 text-2xl w-full text-center"
               onClick={handleMenuItemClick}
             >
-              {t('locations')}
+              {t('locations.title')}
             </Link>
           </li>
           <li>
