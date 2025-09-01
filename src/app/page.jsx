@@ -42,7 +42,7 @@ export default function HomePage() {
     <div>
       <Header />
       <main ref={container} className={styles.main}>
-      {quality.slice(0, 1).map((q, i) => {
+      {quality.map((q, i) => {
           const targetScale = 1 - (q.length - i) * 0.05;
           return (
             <Quality
