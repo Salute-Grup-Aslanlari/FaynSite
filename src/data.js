@@ -86,7 +86,7 @@ export const projects = [
   export const quality = [
     {
       title: "FLAVOR",
-      src: "/assets/flavor.jpg",
+      src: "/assets/DSC07906 2.jpg",
     },
     {
       title: "STYLE",
