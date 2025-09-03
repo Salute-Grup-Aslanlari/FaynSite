@@ -30,7 +30,7 @@ const Ercan = () => {
         transition={{ duration: 1 }}
       >
         <h1 className="text-white text-center mb-4 text-6xl" style={{ maxWidth: "1200px", fontFamily: "Salina-TrialLight, sans-serif" }}>
-        {t('izmirfashionweek.title')}
+        {t('ercan.title')}
         </h1>
       </motion.div>
 
@@ -40,7 +40,7 @@ const Ercan = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
       >
-        {t('izmirfashionweek.date')}
+        {t('ercan.date')}
       </motion.p>
 
       <motion.div
@@ -77,10 +77,10 @@ const Ercan = () => {
           transition={{ duration: 1 }}
         >
           <h1 className="mb-8 text-4xl lg:w-full xl:w-full" style={{ fontFamily: "Salina-TrialLight, sans-serif", lineHeight: "1.4" }}>
-          {t('izmirfashionweek.description')}
+          {t('ercan.description')}
           </h1>
           <p className="text-xl leading-relaxed font-light w-full" style={{ lineHeight: "1.4" }}>
-          {t('izmirfashionweek.descriptiontwo')}
+          {t('ercan.descriptiontwo')}
           </p>
         </motion.div>
       </div>

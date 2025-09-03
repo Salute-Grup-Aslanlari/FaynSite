@@ -30,7 +30,7 @@ const Dubai = () => {
         transition={{ duration: 1 }}
       >
         <h1 className="text-white text-center mb-4 text-6xl" style={{ maxWidth: "1200px", fontFamily: "Salina-TrialLight, sans-serif" }}>
-        {t('izmirfashionweek.title')}
+        {t('faynDubai.title')}
         </h1>
       </motion.div>
 
@@ -40,7 +40,7 @@ const Dubai = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
       >
-        {t('izmirfashionweek.date')}
+        {t('faynDubai.date')}
       </motion.p>
 
       <motion.div
@@ -61,7 +61,7 @@ const Dubai = () => {
         >
           <div className="relative w-5/6 h-[600px]">
             <Image 
-            src="/assets/fashiondetail2.webp"
+            src="/assets/fayn-dubai.jpeg"
             alt="Izmir Fashion Week"
             layout="fill"
             objectFit="cover"
@@ -77,10 +77,10 @@ const Dubai = () => {
           transition={{ duration: 1 }}
         >
           <h1 className="mb-8 text-4xl lg:w-full xl:w-full" style={{ fontFamily: "Salina-TrialLight, sans-serif", lineHeight: "1.4" }}>
-          {t('izmirfashionweek.description')}
+          {t('faynDubai.description')}
           </h1>
           <p className="text-xl leading-relaxed font-light w-full" style={{ lineHeight: "1.4" }}>
-          {t('izmirfashionweek.descriptiontwo')}
+          {t('faynDubai.descriptiontwo')}
           </p>
         </motion.div>
       </div>

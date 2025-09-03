@@ -65,8 +65,20 @@
 "izmirfashionweek": {
   "title": "Fayn Cocktails & More yakın zamanda bir dizi heyecan verici kokteyl atölyesine ev sahipliği yaptı",
   "date": "30 Ağustos 2024",
-  "description": "Fayn Cocktails & More, yaratıcılığı ve modayı kutlayarak İzmir Fashion Week 2024'ün gururlu sponsoru oldu.",
+  "description": "Fayn, yaratıcılığı ve modayı kutlayarak İzmir Fashion Week 2024'ün gururlu sponsoru oldu.",
   "descriptiontwo": "Etkinlik, Fayn’de düzenlenen unutulmaz bir after-party ile sona erdi.\nMisafirler, imza kokteyllerimizin eşliğinde keyifli sohbetler edip canlı atmosferimizde unutulmaz anlar yaşadı.\nModa, eğlence ve zarafetin bir araya geldiği bu gece, Fayn ruhunu mükemmel şekilde yansıttı.\nKonuklar, ustalıkla hazırlanan içecekler ve büyüleyici moda dokunuşları eşliğinde gece boyunca dans etti.\nBu etkinlik, Fayn’in insanları unutulmaz deneyimlerle bir araya getirme konusundaki kararlılığının sadece bir başlangıcıydı.\nYaratıcılığı ve topluluğu birleştiren yeni etkinliklerimiz için bizi takipte kalın!"
+},
+"faynDubai": {
+ "title": "Mixolojide Yeni Bir Sayfa: Fayn Dubai’de",
+ "date": "30 Ağustos 2024",
+ "description": "Fayn olarak, Dubai'deki ilk şubemizin W Hotel The Palm’da açılacağını duyurmaktan büyük heyecan duyuyoruz.",
+ "descriptiontwo": "Fayn, sadece bir kokteyl barı değil; aynı zamanda yaratıcılık, tat ve etkileşimin bir yolculuğudur. Dubai şubemizde, misafirlerimiz, uzman barmenlerimizle birlikte kendi içkilerini hazırlayarak, mixolojiyi eğlenceyle birleştiren aynı yenilikçi deneyimi yaşayacaklar. Büyük açılışımız için heyecanla hazırlıklarımızı sürdürüyoruz. Fayn Dubai, sadece içki kültürüne değil, aynı zamanda şehrin dinamik atmosferine de yeni bir soluk getirecek. Mükemmel kokteyller, özel içerikler ve eşsiz bir ortamla misafirlerimizi karşılayacağımız bu yeni mekan, Dubai’nin gece hayatına renk katacak."
+},
+"ercan": {
+ "title": "Fayn’in Dört Ayaklı Bekçisi – Her Zaman Bizi Gözetliyor",
+ "date": "30 Ağustos 2024",
+ "description": "O sadece Fayn'ın değil, herkesin kedisi. Müşterilerimizin gözdesi olan Ercan, insanlara kendilerini evlerinde hissettirme konusunda özel bir yeteneğe sahip.",
+ "descriptiontwo": "Ercan, Fayn’in bir parçası olalı çok uzun zaman oldu, hatta kapılarımızı herkese açmadan önce bile buradaydı. İnşaat aşamasında gelen Ercan, o günden beri Fayn’i evi olarak benimsedi. Her zaman sakin ve hep bizimle olan Ercan, müşterilerimizin favorisi haline gelerek mekanımıza sevgi katıyor. İster en sevdiği köşede dinleniyor olsun ister sessizce bize eşlik etsin, Fayn onsuz asla Fayn olmazdı!"
 },
 "aboutus": {
  "title": "HAKKIMIZDA",
@@ -144,7 +156,7 @@
     "description": "Fayn, stil, lezzet ve bağın mükemmel bir uyum içinde bir araya geldiği unutulmaz bir akşam olan Love Fest'e gururla ev sahipliği yaptı."
   },
   "exciting_expansion_dubai": {
-    "title": "HEYECAN VERİCİ GENİŞLEME: FAYN YAKINDA DUBAİ'DE",
+    "title": "FAYN BÜYÜYOR: FAYN YAKINDA DUBAİ'DE",
     "description": "Sevgili markamız Fayn'ın yakında W Hotel The Palm'da Dubai şubesini açacağını duyurmaktan heyecan duyuyoruz."
   },
   "meet_ercan": {

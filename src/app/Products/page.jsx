@@ -125,6 +125,7 @@ const portfolioItems = [
     leftImage: "/assets/tarif1.webp",
     rightImage: "/assets/tarif2.webp",
   },
+  
 ];
 
 const Portfolio = () => {
