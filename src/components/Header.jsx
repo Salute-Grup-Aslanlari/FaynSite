@@ -29,7 +29,7 @@ const Header = () => {
         <p className="text-md sm:text-base md:text-lg lg:text-2xl mb-7 lg:w-1/2 sm:w-1/2 mt-7 opacity-0 animate-slide-in animate-delay-2500" style={{ fontFamily: 'Source Sans 3, sans-serif', fontWeight: 100, lineHeight: '1.4'}}>
           {t('description')}
         </p>
-        <a href="/Menu" className="px-6 mt-5 py-2 bg-black border-[0.6px] border-white text-white hover:bg-black transition duration-300 opacity-0 animate-slide-in animate-delay-3000">
+        <a href="/Products" className="px-6 mt-5 py-2 bg-black border-[0.6px] border-white text-white hover:bg-black transition duration-300 opacity-0 animate-slide-in animate-delay-3000">
           {t('exploreMenu')}
         </a>
       </div>
