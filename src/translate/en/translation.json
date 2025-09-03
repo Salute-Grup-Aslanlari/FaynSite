@@ -23,9 +23,9 @@
   "menu": "MENU",
   "exploreMenu": "Explore the Menu",
   "seeMore": "SEE MORE",
-  "eatFine": "EAT FINE",
-  "drinkFine": "DRINK FINE",
-  "feelFayn": "FEEL FAYN",
+  "eatFine": "𝐄𝐚𝐭 𝐟𝐢𝐧𝐞,",
+  "drinkFine": "𝐃𝐫𝐢𝐧𝐤 𝐟𝐢𝐧𝐞;",
+  "feelFayn": "𝐅𝐄𝐄𝐋 𝐅𝐀𝐘𝐍.",
   "description": "Welcome to Fayn, where exceptional flavors meet unforgettable experiences. Step into a world where sophistication meets comfort, and let us elevate your dining and entertainment experience to new heights.",
   "whoweareTitle": "WHO ARE WE?",
   "whoweareDescription": "FAYN, IS A VIBRANT GATHERING PLACE WHERE GUESTS CAN ENJOY COCKTAILS, CUISINE, MUSIC, AND GREAT COMPANY.",
@@ -79,6 +79,12 @@
  "date": "August 30th 2024",
  "description": "She’s not just our cat; she’s everyone’s cat. A true favorite among our customers, Ercan has a special way of making people feel at home.",
  "descriptiontwo": "Ercan has been a part of Fayn since the very beginning, even before we officially opened our doors. She wandered in during the construction phase and decided to stay, making Fayn her home. Always calm and ever-present, Ercan has become a favorite among our customers, bringing warmth and charm to our space. Whether she’s lounging in her favorite spot or quietly keeping us company, Fayn wouldn’t be the same without her!"
+},
+"faynMacfit": {
+ "title": "Fayn x MACFit: Where Movement Meets the Coast",
+ "date": "September 3th 2025",
+ "description": "As Salute Group, we proudly brought together the dynamic world of fitness and the free spirit of the coast through a special collaboration between Fayn’99 Beach and MACFit. From sunrise workouts to stretching sessions under the sun, this unique event turned movement into a way of life.",
+ "descriptiontwo": "Set against the iconic beachfront atmosphere of Fayn’99, participants elevated their energy through group training and enjoyed a fitness experience immersed in nature. Health, lifestyle, and fun were seamlessly blended in this unforgettable gathering."
 },
 "aboutus": {
  "title": "ABOUT US",
@@ -162,6 +168,10 @@
   "meet_ercan": {
     "title": "MEET ERCAN - FAYN'S BELOVED RESIDENT CAT",
     "description": "She’s not just our cat; she’s everyone’s cat. A true favorite among our customers, Ercan has a special way of making people feel at home."
+  },
+  "fayn_macfit": {
+    "title": "Fayn x MACFit: Where Movement Meets the Coast",
+    "description": "As Salute Group, we proudly brought together the dynamic world of fitness and the free spirit of the coast through a special collaboration between Fayn’99 Beach and MACFit. From sunrise workouts to stretching sessions under the sun, this unique event turned movement into a way of life."
   }
 }
 }

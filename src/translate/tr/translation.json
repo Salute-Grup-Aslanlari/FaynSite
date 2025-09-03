@@ -23,9 +23,9 @@
   "menu": "MENÜ",
   "exploreMenu": "Menüyü Keşfet",
   "seeMore": "DAHA FAZLA",
-  "eatFine": "EAT FINE",
-  "drinkFine": "DRINK FINE",
-  "feelFayn": "FEEL FAYN",
+ "eatFine": "𝐄𝐚𝐭 𝐟𝐢𝐧𝐞,",
+  "drinkFine": "𝐃𝐫𝐢𝐧𝐤 𝐟𝐢𝐧𝐞;",
+  "feelFayn": "𝐅𝐄𝐄𝐋 𝐅𝐀𝐘𝐍.",
   "description": "Olağanüstü lezzetlerin unutulmaz deneyimlerle buluştuğu yere, Fayn’a hoş geldiniz. Lezzet ve konforun buluştuğu bu dünyaya adım atın; yemeğin ve eğlencenin deneyimini Fayn dokunuşuyla bambaşka bir seviyeye taşıyalım.",
   "whoweareTitle": "BİZ KİMİZ?",
   "whoweareDescription": "FAYN, KONUKLARIN KOKTEYL, MUTFAK, CANLI MÜZİK VE HARİKA BİR ŞİRKETLE EĞLENEBİLECEĞİ CANLI BİR BULUŞMA YERİDİR.",
@@ -79,6 +79,12 @@
  "date": "30 Ağustos 2024",
  "description": "O sadece Fayn'ın değil, herkesin kedisi. Müşterilerimizin gözdesi olan Ercan, insanlara kendilerini evlerinde hissettirme konusunda özel bir yeteneğe sahip.",
  "descriptiontwo": "Ercan, Fayn’in bir parçası olalı çok uzun zaman oldu, hatta kapılarımızı herkese açmadan önce bile buradaydı. İnşaat aşamasında gelen Ercan, o günden beri Fayn’i evi olarak benimsedi. Her zaman sakin ve hep bizimle olan Ercan, müşterilerimizin favorisi haline gelerek mekanımıza sevgi katıyor. İster en sevdiği köşede dinleniyor olsun ister sessizce bize eşlik etsin, Fayn onsuz asla Fayn olmazdı!"
+},
+"faynMacfit": {
+ "title": "Fayn x MACFit: Hareketin Sahille Buluştuğu Nokta",
+ "date": "3 Eylül 2025",
+ "description": "Salute Group olarak, Fayn’99 Beach ve MACFit iş birliğinde gerçekleştirdiğimiz özel etkinlikte, fitness dinamiğini sahilin özgür ruhuyla bir araya getirdik. Gün doğumu antrenmanlarından güneş altında esneme seanslarına uzanan bu benzersiz etkinlik, hareketi yaşamın bir parçası haline getirdi.",
+ "descriptiontwo": "Fayn’99’un ikonik sahil atmosferinde gerçekleşen etkinlikte katılımcılar, grup antrenmanları eşliğinde enerjilerini yükseltti, doğayla iç içe bir spor deneyimi yaşadı. Sağlık, yaşam stili ve eğlence bu buluşmada harmanlandı."
 },
 "aboutus": {
  "title": "HAKKIMIZDA",
@@ -162,6 +168,10 @@
   "meet_ercan": {
     "title": "FAYN'IN SEVİLEN SAKİNİ ERCAN'LA TANIŞIN",
     "description": "O sadece bizim kedimiz değil; herkesin kedisi. Müşterilerimiz arasında gerçek bir favori olan Ercan'ın insanları evlerinde hissettiren özel bir yanı var."
+  },
+   "fayn_macfit": {
+    "title": "Fayn x MACFit: Hareketin Sahille Buluştuğu Nokta",
+    "description": "Salute Group olarak, Fayn’99 Beach ve MACFit iş birliğinde gerçekleştirdiğimiz özel etkinlikte, fitness dinamiğini sahilin özgür ruhuyla bir araya getirdik. Gün doğumu antrenmanlarından güneş altında esneme seanslarına uzanan bu benzersiz etkinlik, hareketi yaşamın bir parçası haline getirdi."
   }
 }
 }

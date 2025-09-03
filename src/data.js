@@ -38,6 +38,14 @@ export const projects = [
       date: "January 24, 2025",
       link: "/Projects/ercan",
       color: "#ff7f07"
+    },
+    {
+      titleKey: "projects.fayn_macfit.title",
+      descriptionKey: "projects.fayn_macfit.description",
+      src: "/assets/fayn99xMACFit-13.jpg",
+      date: "January 24, 2025",
+      link: "/Projects/fayn-macfit",
+      color: "#ffffff"
     }
   ];
  export const locations = [
