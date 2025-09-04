@@ -21,7 +21,7 @@ const Header = () => {
           “{t('eatFine')}”
         </h1>
         <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-9xl mb-2 opacity-0 animate-fade-in animate-delay-1500" style={{ fontFamily: 'Salina-Book, sans-serif' }}>
-          {t('drinkFine')},
+          {t('drinkFine')}
         </h1>
         <h2 className="text-5xl sm:text-6xl md:text-7xl lg:text-9xl mb-2 opacity-0 animate-fade-in animate-delay-2000" style={{ fontFamily: 'Salina-MediumItalic, sans-serif' }}>
           {t('feelFayn')}”
